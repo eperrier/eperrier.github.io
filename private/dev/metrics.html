@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metrics - Private Codex Dashboard (Local Prototype)</title>
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel-strong: #313338;
+      --panel-soft: #3a3d43;
+      --edge: #40444b;
+      --text: #f2f3f5;
+      --muted: #b5bac1;
+      --accent: #5ca9ff;
+      --status-running: #3ea6ff;
+      --status-complete: #3ba55d;
+      --status-error: #ed4245;
+      --status-warn: #f0b232;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: 76px 220px 1fr;
+      min-height: 100vh;
+    }
+
+    .server-rail {
+      background: #111214;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #0f1012;
+    }
+
+    .server-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--panel-strong);
+      border: 1px solid #0f1012;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .server-dot.active {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .module-nav {
+      background: var(--panel);
+      padding: 18px 16px;
+      border-right: 1px solid var(--edge);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .module-nav h3 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-list a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      background: transparent;
+    }
+
+    .module-list a.active {
+      background: var(--panel-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .module-list a:hover {
+      background: #34373d;
+    }
+
+    .main-panel {
+      padding: 28px 28px 48px;
+      background: linear-gradient(135deg, #1f2125 0%, #23262b 100%);
+    }
+
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .main-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .main-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card + .card {
+      margin-top: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .metric-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .metric-card h3 {
+      margin: 0;
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .metric-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .metric-list strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    @media (max-width: 980px) {
+      .app-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .server-rail {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid #0f1012;
+      }
+
+      .module-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--edge);
+        overflow-x: auto;
+      }
+
+      .module-nav h3 {
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+
+      .module-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      .module-list a {
+        white-space: nowrap;
+      }
+
+      .main-panel {
+        padding: 22px 18px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="server-rail">
+      <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
+      <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
+    </aside>
+
+    <aside class="module-nav">
+      <h3>Modules</h3>
+      <nav>
+        <ul class="module-list">
+          <li><a href="dashboard.html">Overview</a></li>
+          <li><a href="activity.html">Activity</a></li>
+          <li><a href="incidents.html">Incidents</a></li>
+          <li><a class="active" href="metrics.html">Metrics</a></li>
+          <li><a href="agents.html">Agents</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="main-header">
+        <h1>Metrics</h1>
+        <p>Snapshot of key health indicators per repo.</p>
+      </header>
+
+      <section class="card">
+        <h2>Repo Metrics</h2>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <h3>repo-alpha</h3>
+            <ul class="metric-list">
+              <li><strong>Success rate:</strong> 96%</li>
+              <li><strong>Avg build time:</strong> 11m 24s</li>
+              <li><strong>Open incidents:</strong> 1</li>
+              <li><strong>Last deploy:</strong> 2025-12-26</li>
+            </ul>
+          </div>
+          <div class="metric-card">
+            <h3>repo-beta</h3>
+            <ul class="metric-list">
+              <li><strong>Success rate:</strong> 94%</li>
+              <li><strong>Avg smoke test:</strong> 6m 18s</li>
+              <li><strong>Open incidents:</strong> 1</li>
+              <li><strong>Last deploy:</strong> 2025-12-25</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>repo-beta Updates (Local Prototype)</title>
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel-strong: #313338;
+      --panel-soft: #3a3d43;
+      --edge: #40444b;
+      --text: #f2f3f5;
+      --muted: #b5bac1;
+      --accent: #5ca9ff;
+      --status-running: #3ea6ff;
+      --status-complete: #3ba55d;
+      --status-error: #ed4245;
+      --status-warn: #f0b232;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: 76px 220px 1fr;
+      min-height: 100vh;
+    }
+
+    .server-rail {
+      background: #111214;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #0f1012;
+    }
+
+    .server-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--panel-strong);
+      border: 1px solid #0f1012;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .server-dot.active {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .module-nav {
+      background: var(--panel);
+      padding: 18px 16px;
+      border-right: 1px solid var(--edge);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .module-nav h3 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-list a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      background: transparent;
+    }
+
+    .module-list a.active {
+      background: var(--panel-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .module-list a:hover {
+      background: #34373d;
+    }
+
+    .main-panel {
+      padding: 28px 28px 48px;
+      background: linear-gradient(135deg, #1f2125 0%, #23262b 100%);
+    }
+
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .main-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .main-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card + .card {
+      margin-top: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .mini-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mini-card .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+
+    .mini-card strong {
+      font-size: 16px;
+    }
+
+    .mini-card .note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .status-pill.running {
+      background: rgba(62, 166, 255, 0.15);
+      color: var(--status-running);
+    }
+
+    .status-pill.complete {
+      background: rgba(59, 165, 93, 0.15);
+      color: var(--status-complete);
+    }
+
+    .status-pill.error {
+      background: rgba(237, 66, 69, 0.15);
+      color: var(--status-error);
+    }
+
+    .activity-list,
+    .incident-list,
+    .experiment-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .activity-item,
+    .incident-item,
+    .experiment-item {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .metric-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .metric-card strong {
+      font-size: 18px;
+    }
+
+    section[data-repo] {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 360px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    section[data-repo] article {
+      border: 1px solid var(--edge);
+      border-left: 6px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #2f3136;
+    }
+
+    section[data-repo] article h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    section[data-repo] article p {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section[data-repo] article p:last-child {
+      margin-bottom: 0;
+    }
+
+    section[data-repo] article[data-status="running"] {
+      border-left-color: var(--status-running);
+      background: rgba(62, 166, 255, 0.08);
+    }
+
+    section[data-repo] article[data-status="complete"] {
+      border-left-color: var(--status-complete);
+      background: rgba(59, 165, 93, 0.1);
+    }
+
+    section[data-repo] article[data-status="error"] {
+      border-left-color: var(--status-error);
+      background: rgba(237, 66, 69, 0.1);
+    }
+
+    @media (max-width: 980px) {
+      .app-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .server-rail {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid #0f1012;
+      }
+
+      .module-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--edge);
+        overflow-x: auto;
+      }
+
+      .module-nav h3 {
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+
+      .module-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      .module-list a {
+        white-space: nowrap;
+      }
+
+      .main-panel {
+        padding: 22px 18px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="server-rail">
+      <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
+      <a class="server-dot active" href="repo-beta.html" title="repo-beta">RB</a>
+    </aside>
+
+    <aside class="module-nav">
+      <h3>Repo Modules</h3>
+      <nav>
+        <ul class="module-list">
+          <li><a class="active" href="#overview">Overview</a></li>
+          <li><a href="#activity">Activity</a></li>
+          <li><a href="#incidents">Incidents</a></li>
+          <li><a href="#metrics">Metrics</a></li>
+          <li><a href="#experiments">Experiments</a></li>
+          <li><a href="#history">History</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="main-header">
+        <h1>repo-beta</h1>
+        <p>Agent: codex-beta · Local prototype with module sections.</p>
+      </header>
+
+      <section class="card" id="overview">
+        <h2>Overview</h2>
+        <div class="overview-grid">
+          <div class="mini-card">
+            <span class="label">Latest status</span>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Incident retro published</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Last update</span>
+            <strong>2025-12-27 07:05 ET</strong>
+            <div class="note">Stage: postmortem</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Agent</span>
+            <strong>codex-beta</strong>
+            <div class="note">Region coverage: 3</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Recent outcome</span>
+            <strong>Sync job error</strong>
+            <div class="note">Upstream API outage</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="activity">
+        <h2>Recent Activity</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Incident retro published</strong>
+              <div class="item-meta">Stage: postmortem</div>
+            </div>
+            <div class="item-meta">2025-12-27 07:05 ET</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Hotfix verification</strong>
+              <div class="item-meta">Stage: smoke-tests</div>
+            </div>
+            <div class="item-meta">2025-12-27 05:20 ET</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Weekly metrics compiled</strong>
+              <div class="item-meta">Stage: reporting</div>
+            </div>
+            <div class="item-meta">2025-12-26 21:45 ET</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="incidents">
+        <h2>Errors / Incidents</h2>
+        <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Sync job failed</strong>
+              <div class="item-meta">Upstream API returned 503 for 9 minutes.</div>
+            </div>
+            <div class="item-meta">2025-12-27 03:10 ET</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="metrics">
+        <h2>Metrics Snapshot</h2>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span>Success rate</span>
+            <strong>94%</strong>
+            <div class="item-meta">Last 24 hours</div>
+          </div>
+          <div class="metric-card">
+            <span>Avg smoke test</span>
+            <strong>6m 18s</strong>
+            <div class="item-meta">Rolling 10 runs</div>
+          </div>
+          <div class="metric-card">
+            <span>Open incidents</span>
+            <strong>1</strong>
+            <div class="item-meta">Upstream outage</div>
+          </div>
+          <div class="metric-card">
+            <span>Last deploy</span>
+            <strong>2025-12-25</strong>
+            <div class="item-meta">Production</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="experiments">
+        <h2>Experiments</h2>
+        <ul class="experiment-list">
+          <li class="experiment-item">
+            <div>
+              <strong>Regional canary rollout</strong>
+              <div class="item-meta">Status: running · Target: reduce incident blast radius</div>
+            </div>
+            <div class="item-meta">Owner: codex-beta</div>
+          </li>
+          <li class="experiment-item">
+            <div>
+              <strong>Retry backoff tuning</strong>
+              <div class="item-meta">Status: complete · Result: 8% fewer errors</div>
+            </div>
+            <div class="item-meta">Owner: reliability group</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="history">
+        <h2>Update History (Append-only)</h2>
+        <section data-repo="repo-beta" data-agent="codex-beta">
+          <article data-status="complete" data-time="2025-12-27T07:05:00-05:00">
+            <h4>Incident retro published</h4>
+            <p><strong>Stage:</strong> postmortem</p>
+            <p><strong>Notes:</strong> Timeline and action items shared with the reliability group.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-27T05:20:00-05:00">
+            <h4>Hotfix verification</h4>
+            <p><strong>Stage:</strong> smoke-tests</p>
+            <p><strong>Notes:</strong> Validating patch 1.12.4 across three regions.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-27T03:10:00-05:00">
+            <h4>Sync job failed</h4>
+            <p><strong>Stage:</strong> ingest</p>
+            <p><strong>Notes:</strong> Upstream API returned 503 for 9 minutes.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T21:45:00-05:00">
+            <h4>Weekly metrics compiled</h4>
+            <p><strong>Stage:</strong> reporting</p>
+            <p><strong>Notes:</strong> KPI snapshot generated for week ending Dec 26.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

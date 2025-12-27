@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>repo-alpha Updates (Local Prototype)</title>
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel-strong: #313338;
+      --panel-soft: #3a3d43;
+      --edge: #40444b;
+      --text: #f2f3f5;
+      --muted: #b5bac1;
+      --accent: #5ca9ff;
+      --status-running: #3ea6ff;
+      --status-complete: #3ba55d;
+      --status-error: #ed4245;
+      --status-warn: #f0b232;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: 76px 220px 1fr;
+      min-height: 100vh;
+    }
+
+    .server-rail {
+      background: #111214;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #0f1012;
+    }
+
+    .server-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--panel-strong);
+      border: 1px solid #0f1012;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .server-dot.active {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .module-nav {
+      background: var(--panel);
+      padding: 18px 16px;
+      border-right: 1px solid var(--edge);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .module-nav h3 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-list a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      background: transparent;
+    }
+
+    .module-list a.active {
+      background: var(--panel-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .module-list a:hover {
+      background: #34373d;
+    }
+
+    .main-panel {
+      padding: 28px 28px 48px;
+      background: linear-gradient(135deg, #1f2125 0%, #23262b 100%);
+    }
+
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .main-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .main-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card + .card {
+      margin-top: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .mini-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mini-card .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+
+    .mini-card strong {
+      font-size: 16px;
+    }
+
+    .mini-card .note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .status-pill.running {
+      background: rgba(62, 166, 255, 0.15);
+      color: var(--status-running);
+    }
+
+    .status-pill.complete {
+      background: rgba(59, 165, 93, 0.15);
+      color: var(--status-complete);
+    }
+
+    .status-pill.error {
+      background: rgba(237, 66, 69, 0.15);
+      color: var(--status-error);
+    }
+
+    .activity-list,
+    .incident-list,
+    .experiment-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .activity-item,
+    .incident-item,
+    .experiment-item {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .metric-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .metric-card strong {
+      font-size: 18px;
+    }
+
+    section[data-repo] {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 360px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    section[data-repo] article {
+      border: 1px solid var(--edge);
+      border-left: 6px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #2f3136;
+    }
+
+    section[data-repo] article h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    section[data-repo] article p {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section[data-repo] article p:last-child {
+      margin-bottom: 0;
+    }
+
+    section[data-repo] article[data-status="running"] {
+      border-left-color: var(--status-running);
+      background: rgba(62, 166, 255, 0.08);
+    }
+
+    section[data-repo] article[data-status="complete"] {
+      border-left-color: var(--status-complete);
+      background: rgba(59, 165, 93, 0.1);
+    }
+
+    section[data-repo] article[data-status="error"] {
+      border-left-color: var(--status-error);
+      background: rgba(237, 66, 69, 0.1);
+    }
+
+    @media (max-width: 980px) {
+      .app-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .server-rail {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid #0f1012;
+      }
+
+      .module-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--edge);
+        overflow-x: auto;
+      }
+
+      .module-nav h3 {
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+
+      .module-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      .module-list a {
+        white-space: nowrap;
+      }
+
+      .main-panel {
+        padding: 22px 18px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="server-rail">
+      <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot active" href="repo-alpha.html" title="repo-alpha">RA</a>
+      <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
+    </aside>
+
+    <aside class="module-nav">
+      <h3>Repo Modules</h3>
+      <nav>
+        <ul class="module-list">
+          <li><a class="active" href="#overview">Overview</a></li>
+          <li><a href="#activity">Activity</a></li>
+          <li><a href="#incidents">Incidents</a></li>
+          <li><a href="#metrics">Metrics</a></li>
+          <li><a href="#experiments">Experiments</a></li>
+          <li><a href="#history">History</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="main-header">
+        <h1>repo-alpha</h1>
+        <p>Agent: codex-alpha · Local prototype with module sections.</p>
+      </header>
+
+      <section class="card" id="overview">
+        <h2>Overview</h2>
+        <div class="overview-grid">
+          <div class="mini-card">
+            <span class="label">Latest status</span>
+            <span class="status-pill running">Running</span>
+            <div class="note">Nightly validation in progress</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Last update</span>
+            <strong>2025-12-27 06:42 ET</strong>
+            <div class="note">Stage: test-suite</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Agent</span>
+            <strong>codex-alpha</strong>
+            <div class="note">Queue: 142 checks</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Recent outcome</span>
+            <strong>Deploy blocked</strong>
+            <div class="note">Migration pending review</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="activity">
+        <h2>Recent Activity</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Nightly validation in progress</strong>
+              <div class="item-meta">Stage: test-suite</div>
+            </div>
+            <div class="item-meta">2025-12-27 06:42 ET</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Release candidate packaged</strong>
+              <div class="item-meta">Stage: build</div>
+            </div>
+            <div class="item-meta">2025-12-27 02:15 ET</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Schema migration approved</strong>
+              <div class="item-meta">Stage: review</div>
+            </div>
+            <div class="item-meta">2025-12-26 18:40 ET</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="incidents">
+        <h2>Errors / Incidents</h2>
+        <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Deployment blocked</strong>
+              <div class="item-meta">Missing database migration. Staging halted.</div>
+            </div>
+            <div class="item-meta">2025-12-26 22:05 ET</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="metrics">
+        <h2>Metrics Snapshot</h2>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span>Success rate</span>
+            <strong>96%</strong>
+            <div class="item-meta">Last 24 hours</div>
+          </div>
+          <div class="metric-card">
+            <span>Avg build time</span>
+            <strong>11m 24s</strong>
+            <div class="item-meta">Rolling 10 builds</div>
+          </div>
+          <div class="metric-card">
+            <span>Open incidents</span>
+            <strong>1</strong>
+            <div class="item-meta">Deployment blocked</div>
+          </div>
+          <div class="metric-card">
+            <span>Last deploy</span>
+            <strong>2025-12-26</strong>
+            <div class="item-meta">Staging</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="experiments">
+        <h2>Experiments</h2>
+        <ul class="experiment-list">
+          <li class="experiment-item">
+            <div>
+              <strong>Test-suite parallelism v2</strong>
+              <div class="item-meta">Status: running · Target: reduce runtime 20%</div>
+            </div>
+            <div class="item-meta">Owner: codex-alpha</div>
+          </li>
+          <li class="experiment-item">
+            <div>
+              <strong>Cache warm-up strategy</strong>
+              <div class="item-meta">Status: complete · Result: 12% faster builds</div>
+            </div>
+            <div class="item-meta">Owner: release squad</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="history">
+        <h2>Update History (Append-only)</h2>
+        <section data-repo="repo-alpha" data-agent="codex-alpha">
+          <article data-status="running" data-time="2025-12-27T06:42:00-05:00">
+            <h4>Nightly validation in progress</h4>
+            <p><strong>Stage:</strong> test-suite</p>
+            <p><strong>Notes:</strong> 142 checks queued, 38 completed. Waiting on integration tests.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T02:15:00-05:00">
+            <h4>Release candidate packaged</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Version 2.8.0-rc.1 compiled and uploaded to artifact store.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-26T22:05:00-05:00">
+            <h4>Deployment blocked</h4>
+            <p><strong>Stage:</strong> deploy</p>
+            <p><strong>Notes:</strong> Staging rollout halted due to missing database migration.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T18:40:00-05:00">
+            <h4>Schema migration approved</h4>
+            <p><strong>Stage:</strong> review</p>
+            <p><strong>Notes:</strong> Migration plan reviewed and signed off by data team.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

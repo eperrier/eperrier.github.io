@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Incidents - Private Codex Dashboard (Local Prototype)</title>
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel-strong: #313338;
+      --panel-soft: #3a3d43;
+      --edge: #40444b;
+      --text: #f2f3f5;
+      --muted: #b5bac1;
+      --accent: #5ca9ff;
+      --status-running: #3ea6ff;
+      --status-complete: #3ba55d;
+      --status-error: #ed4245;
+      --status-warn: #f0b232;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: 76px 220px 1fr;
+      min-height: 100vh;
+    }
+
+    .server-rail {
+      background: #111214;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #0f1012;
+    }
+
+    .server-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--panel-strong);
+      border: 1px solid #0f1012;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .server-dot.active {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .module-nav {
+      background: var(--panel);
+      padding: 18px 16px;
+      border-right: 1px solid var(--edge);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .module-nav h3 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-list a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      background: transparent;
+    }
+
+    .module-list a.active {
+      background: var(--panel-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .module-list a:hover {
+      background: #34373d;
+    }
+
+    .main-panel {
+      padding: 28px 28px 48px;
+      background: linear-gradient(135deg, #1f2125 0%, #23262b 100%);
+    }
+
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .main-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .main-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card + .card {
+      margin-top: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .status-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .status-table th,
+    .status-table td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--edge);
+    }
+
+    .status-table th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .status-pill.error {
+      background: rgba(237, 66, 69, 0.15);
+      color: var(--status-error);
+    }
+
+    .status-pill.warn {
+      background: rgba(240, 178, 50, 0.18);
+      color: var(--status-warn);
+    }
+
+    .repo-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .repo-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 980px) {
+      .app-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .server-rail {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid #0f1012;
+      }
+
+      .module-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--edge);
+        overflow-x: auto;
+      }
+
+      .module-nav h3 {
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+
+      .module-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      .module-list a {
+        white-space: nowrap;
+      }
+
+      .main-panel {
+        padding: 22px 18px 36px;
+      }
+
+      .status-table thead {
+        display: none;
+      }
+
+      .status-table,
+      .status-table tbody,
+      .status-table tr,
+      .status-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .status-table tr {
+        border: 1px solid var(--edge);
+        border-radius: 12px;
+        padding: 12px;
+        margin-bottom: 12px;
+        background: var(--panel);
+      }
+
+      .status-table td {
+        border: none;
+        padding: 6px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 13px;
+      }
+
+      .status-table td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="server-rail">
+      <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
+      <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
+    </aside>
+
+    <aside class="module-nav">
+      <h3>Modules</h3>
+      <nav>
+        <ul class="module-list">
+          <li><a href="dashboard.html">Overview</a></li>
+          <li><a href="activity.html">Activity</a></li>
+          <li><a class="active" href="incidents.html">Incidents</a></li>
+          <li><a href="metrics.html">Metrics</a></li>
+          <li><a href="agents.html">Agents</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="main-header">
+        <h1>Incidents</h1>
+        <p>Error and warning events across repos.</p>
+      </header>
+
+      <section class="card">
+        <h2>Active Issues</h2>
+        <table class="status-table">
+          <thead>
+            <tr>
+              <th>Repo</th>
+              <th>Severity</th>
+              <th>When</th>
+              <th>Summary</th>
+              <th>Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-alpha.html">repo-alpha</a></td>
+              <td data-label="Severity"><span class="status-pill error">Error</span></td>
+              <td data-label="When">2025-12-26 22:05 ET</td>
+              <td data-label="Summary">Deployment blocked due to missing migration</td>
+              <td data-label="Owner">codex-alpha</td>
+            </tr>
+            <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-beta.html">repo-beta</a></td>
+              <td data-label="Severity"><span class="status-pill warn">Warning</span></td>
+              <td data-label="When">2025-12-27 03:10 ET</td>
+              <td data-label="Summary">Upstream API 503 caused ingest failure</td>
+              <td data-label="Owner">codex-beta</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
