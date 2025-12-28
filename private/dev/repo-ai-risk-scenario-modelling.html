@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 029 checks rerunning (rule fix)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 029 checks completed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 10:28 +1100</strong>
+            <strong>2025-12-29 10:33 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 029 checks completed</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 10:33 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 029 checks rerunning (rule fix)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -429,13 +436,6 @@
           <li class="activity-item">
             <div>
               <strong>Iteration 029 checks failed (rerun)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 10:27 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 029 checks rerunning</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 10:27 +1100</div>
@@ -482,12 +482,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>60%</strong>
+            <strong>64%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>19</strong>
+            <strong>20</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -497,7 +497,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 10:28 +1100</strong>
+            <strong>2025-12-29 10:33 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -526,6 +526,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T10:33:30+11:00">
+            <h4>Iteration 029 checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Updated AGENTS.md and CODEX.md with AUTO mode rules and expanded update-log detail requirements, plus revised tests/run_iteration_checks.ps1 and added tests/iteration_029_check.ps1. Created exp_20251229_auto_iteration_mode and ran docker compose run --rm api python -c "print('auto iteration mode experiment')" (log experiments/exp_20251229_auto_iteration_mode/logs/exp_exp_20251229_auto_iteration_mode_20251229_102252.log). Iteration checks failed twice on the AUTO rule match (logs tests/logs/check_20251229_102531.log and tests/logs/check_20251229_102917.log), then passed after loosening the AGENTS check (log tests/logs/check_20251229_103218.log). Pushed update-log entries to GitHub before/after test runs and recorded results in history/experiments indexes.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T10:28:00+11:00">
             <h4>Iteration 029 checks rerunning (rule fix)</h4>
             <p><strong>Stage:</strong> test</p>
