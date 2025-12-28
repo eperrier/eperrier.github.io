@@ -393,12 +393,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks passed</div>
+            <div class="note">Automated status log updates</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-28 22:55 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-28 22:56 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -418,6 +418,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Automated status log updates</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-28 22:56 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration checks passed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -429,13 +436,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-28 22:53 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks failed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-28 22:52 +1100</div>
           </li>
         </ul>
       </section>
@@ -463,7 +463,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>99</strong>
+            <strong>100</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -473,7 +473,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-28 22:55 +1100</strong>
+            <strong>2025-12-28 22:56 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -502,7 +502,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="lma-agent-studio" data-agent="Codex">
-                    <article data-status="complete" data-time="2025-12-28T22:55:58+11:00">
+                      <article data-status="complete" data-time="2025-12-28T22:56:13+11:00">
+            <h4>Automated status log updates</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added post-commit hook and scripts to auto-update and push the update log; stabilized org-builder chart toggle test.</p>
+          </article><article data-status="complete" data-time="2025-12-28T22:55:58+11:00">
             <h4>Iteration checks passed</h4>
             <p><strong>Stage:</strong> test</p>
             <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after stabilizing org-builder chart toggle test.</p>
