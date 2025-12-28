@@ -415,9 +415,9 @@
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-28 23:10 +1100</td>
+              <td data-label="Last Update">2025-12-28 23:35 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Stabilized org-builder tests and update log automation</td>
+              <td data-label="Summary">Enforced newest-first update log ordering</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-beta.html">repo-beta</a></td>
@@ -446,59 +446,77 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="lma-agent-studio" data-agent="Codex">
-                                        <article data-status="complete" data-time="2025-12-28T23:10:48+11:00">
+              <article data-status="complete" data-time="2025-12-28T23:35:35+11:00">
+                <h4>Enforced newest-first update log ordering</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Update log insertion now sorts entries by data-time descending to keep newest entries first.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T23:10:48+11:00">
                 <h4>Stabilized org-builder tests and update log automation</h4>
                 <p><strong>Stage:</strong> edit</p>
                 <p><strong>Notes:</strong> Scoped division editor locator and updated chart toggle assertions; refined status log auto-push behavior for local commits.</p>
-              </article><article data-status="complete" data-time="2025-12-28T23:10:34+11:00">
+              </article>
+              <article data-status="complete" data-time="2025-12-28T23:10:34+11:00">
                 <h4>Iteration checks passed</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after org-builder chart toggle assertion updates.</p>
-              </article><article data-status="running" data-time="2025-12-28T23:07:39+11:00">
+              </article>
+              <article data-status="running" data-time="2025-12-28T23:07:39+11:00">
                 <h4>Started iteration checks</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after org-builder collapse assertion adjustment.</p>
-              </article><article data-status="error" data-time="2025-12-28T23:07:24+11:00">
+              </article>
+              <article data-status="error" data-time="2025-12-28T23:07:24+11:00">
                 <h4>Iteration checks failed</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed: org-builder collapse toggle assertion missing Organisation editor.</p>
-              </article><article data-status="running" data-time="2025-12-28T23:02:46+11:00">
+              </article>
+              <article data-status="running" data-time="2025-12-28T23:02:46+11:00">
                 <h4>Started iteration checks</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after stabilizing org-builder locators.</p>
-              </article><article data-status="error" data-time="2025-12-28T23:02:30+11:00">
+              </article>
+              <article data-status="error" data-time="2025-12-28T23:02:30+11:00">
                 <h4>Iteration checks failed</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed: org-builder placeholder strictness and collapse toggle timeouts.</p>
-              </article><article data-status="running" data-time="2025-12-28T22:57:44+11:00">
+              </article>
+              <article data-status="running" data-time="2025-12-28T22:57:44+11:00">
                 <h4>Started iteration checks</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after update-log push isolation changes.</p>
-              </article><article data-status="complete" data-time="2025-12-28T22:56:13+11:00">
+              </article>
+              <article data-status="complete" data-time="2025-12-28T22:56:13+11:00">
                 <h4>Automated status log updates</h4>
                 <p><strong>Stage:</strong> edit</p>
                 <p><strong>Notes:</strong> Added post-commit hook and scripts to auto-update and push the update log; stabilized org-builder chart toggle test.</p>
-              </article><article data-status="complete" data-time="2025-12-28T22:55:58+11:00">
+              </article>
+              <article data-status="complete" data-time="2025-12-28T22:55:58+11:00">
                 <h4>Iteration checks passed</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after stabilizing org-builder chart toggle test.</p>
-              </article><article data-status="running" data-time="2025-12-28T22:53:12+11:00">
+              </article>
+              <article data-status="running" data-time="2025-12-28T22:53:12+11:00">
                 <h4>Started iteration checks</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after org-builder UI test stabilization.</p>
-              </article><article data-status="error" data-time="2025-12-28T22:52:58+11:00">
+              </article>
+              <article data-status="error" data-time="2025-12-28T22:52:58+11:00">
                 <h4>Iteration checks failed</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed: org-builder chart expand test timed out waiting for Collapse chart.</p>
-              </article><article data-status="running" data-time="2025-12-28T22:47:28+11:00">
+              </article>
+              <article data-status="running" data-time="2025-12-28T22:47:28+11:00">
                 <h4>Started iteration checks</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after update-log automation changes.</p>
-              </article><article data-status=\"complete\" data-time=\"2025-12-28T21:37:50+11:00\">
+              </article>
+              <article data-status=\"complete\" data-time=\"2025-12-28T21:37:50+11:00\">
                 <h4>Recorded manual update to status log</h4>
                 <p><strong>Stage:</strong> docs</p>
                 <p><strong>Notes:</strong> Committed latest manual edits to the update log.</p>
-              </article><article data-status="complete" data-time="2025-12-28T21:17:27+11:00">
+              </article>
+              <article data-status="complete" data-time="2025-12-28T21:17:27+11:00">
                 <h4>Synced update log with history entries</h4>
                 <p><strong>Stage:</strong> docs</p>
                 <p><strong>Notes:</strong> Prepended history.md entries into the update log.</p>
