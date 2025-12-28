@@ -27,6 +27,6 @@ jobs:
             echo "No dashboard changes to commit."
             exit 0
           fi
-          git add private/dev/dashboard.html
-          git commit -m "Rebuild dashboard"
+          git add private/dev/dashboard.html private/dev/repo-*.html
+          git commit -m "Rebuild dashboard pages"
           git push
