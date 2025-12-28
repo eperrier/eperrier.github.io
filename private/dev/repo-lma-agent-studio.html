@@ -392,13 +392,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Synced update log with history entries</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Started iteration checks</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-28 21:17 +1100</strong>
-            <div class="note">Stage: docs</div>
+            <strong>2025-12-28 22:47 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -418,6 +418,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Started iteration checks</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-28 22:47 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Synced update log with history entries</strong>
               <div class="item-meta">Stage: docs</div>
             </div>
@@ -426,13 +433,6 @@
           <li class="activity-item">
             <div>
               <strong>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</strong>
-              <div class="item-meta">Stage: docs</div>
-            </div>
-            <div class="item-meta">2025-12-28 23:59 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 3.8.1 - Proposal pipeline (schema + policy gate)</strong>
               <div class="item-meta">Stage: docs</div>
             </div>
             <div class="item-meta">2025-12-28 23:59 +1100</div>
@@ -463,7 +463,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>95</strong>
+            <strong>96</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -473,7 +473,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-28 21:17 +1100</strong>
+            <strong>2025-12-28 22:47 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -502,7 +502,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="lma-agent-studio" data-agent="Codex">
-            <article data-status=\"complete\" data-time=\"2025-12-28T21:37:50+11:00\">
+              <article data-status="running" data-time="2025-12-28T22:47:28+11:00">
+            <h4>Started iteration checks</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after update-log automation changes.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-28T21:37:50+11:00\">
             <h4>Recorded manual update to status log</h4>
             <p><strong>Stage:</strong> docs</p>
             <p><strong>Notes:</strong> Committed latest manual edits to the update log.</p>
