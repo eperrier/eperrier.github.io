@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 029 checks failed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 029 checks rerunning</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 10:26 +1100</strong>
+            <strong>2025-12-29 10:27 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 029 checks rerunning</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 10:27 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 029 checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 10:26 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 029 starting — AUTO mode rules</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-29 10:23 +1100</div>
           </li>
         </ul>
       </section>
@@ -480,7 +480,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>16</strong>
+            <strong>17</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -490,7 +490,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 10:26 +1100</strong>
+            <strong>2025-12-29 10:27 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -519,6 +519,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T10:27:00+11:00">
+            <h4>Iteration 029 checks rerunning</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after confirming AGENTS.md includes AUTO mode rules. This rerun will validate CODEX/AGENTS updates, verify experiment indexes, and execute docker compose build/up plus Playwright. Results will be captured in a new tests/logs/check_<timestamp>.log.</p>
+          </article>
           <article data-status="error" data-time="2025-12-29T10:26:30+11:00">
             <h4>Iteration 029 checks failed</h4>
             <p><strong>Stage:</strong> test</p>
