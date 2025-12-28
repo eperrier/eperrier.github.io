@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot active" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Docker Hub cleanup rule applied</div>
+            <div class="note">GPU fallback automation applied</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 01:33 -0500</strong>
-            <div class="note">Stage: build</div>
+            <strong>2025-12-29 02:07 -0500</strong>
+            <div class="note">Stage: deploy</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Docker Hub cleanup rule applied</strong>
-              <div class="item-meta">Stage: build</div>
+              <strong>GPU fallback automation applied</strong>
+              <div class="item-meta">Stage: deploy</div>
             </div>
-            <div class="item-meta">2025-12-29 01:33 -0500</div>
+            <div class="item-meta">2025-12-29 02:07 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for cleanup change</strong>
+              <strong>Iteration checks completed for fallback changes</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 01:32 -0500</div>
+            <div class="item-meta">2025-12-29 02:06 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started for Docker Hub cleanup</strong>
+              <strong>Iteration checks started for GPU fallback</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 01:30 -0500</div>
+            <div class="item-meta">2025-12-29 02:05 -0500</div>
           </li>
         </ul>
       </section>
@@ -461,12 +461,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>86%</strong>
+            <strong>89%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>11</strong>
+            <strong>14</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 01:33 -0500</strong>
+            <strong>2025-12-29 02:07 -0500</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T02:07:00-05:00">
+            <h4>GPU fallback automation applied</h4>
+            <p><strong>Stage:</strong> deploy</p>
+            <p><strong>Notes:</strong> Added retry workflow and timeout-driven GPU escalation for Runpod runs.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T02:06:00-05:00">
+            <h4>Iteration checks completed for fallback changes</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Verified updated workflows, entrypoint status file, and docs.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T02:05:00-05:00">
+            <h4>Iteration checks started for GPU fallback</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running automated checks for Runpod fallback and retry workflow updates.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T01:33:00-05:00">
             <h4>Docker Hub cleanup rule applied</h4>
             <p><strong>Stage:</strong> build</p>
