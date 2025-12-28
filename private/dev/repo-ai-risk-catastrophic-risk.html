@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed</div>
+            <div class="note">Docker Hub cleanup rule applied</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 01:21 -0500</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-29 01:33 -0500</strong>
+            <div class="note">Stage: build</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Docker Hub cleanup rule applied</strong>
+              <div class="item-meta">Stage: build</div>
             </div>
-            <div class="item-meta">2025-12-29 01:21 -0500</div>
+            <div class="item-meta">2025-12-29 01:33 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started</strong>
+              <strong>Iteration checks completed for cleanup change</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 01:20 -0500</div>
+            <div class="item-meta">2025-12-29 01:32 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Initialized update log + dashboard publisher</strong>
-              <div class="item-meta">Stage: docs</div>
+              <strong>Iteration checks started for Docker Hub cleanup</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 01:10 -0500</div>
+            <div class="item-meta">2025-12-29 01:30 -0500</div>
           </li>
         </ul>
       </section>
@@ -461,12 +461,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>80%</strong>
+            <strong>86%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>8</strong>
+            <strong>11</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 01:21 -0500</strong>
+            <strong>2025-12-29 01:33 -0500</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T01:33:00-05:00">
+            <h4>Docker Hub cleanup rule applied</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Build workflow now keeps only the two most recent image tags.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T01:32:00-05:00">
+            <h4>Iteration checks completed for cleanup change</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Verified workflow updates and retention note checks.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T01:30:00-05:00">
+            <h4>Iteration checks started for Docker Hub cleanup</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Validating workflow updates for Docker Hub tag retention.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T01:21:00-05:00">
             <h4>Iteration checks completed</h4>
             <p><strong>Stage:</strong> test</p>
