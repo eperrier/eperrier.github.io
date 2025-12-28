@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lma-agent-studio Updates (Local Prototype)</title>
+  <style>
+    :root {
+      --bg: #1e1f22;
+      --panel: #2b2d31;
+      --panel-strong: #313338;
+      --panel-soft: #3a3d43;
+      --edge: #40444b;
+      --text: #f2f3f5;
+      --muted: #b5bac1;
+      --accent: #5ca9ff;
+      --status-running: #3ea6ff;
+      --status-complete: #3ba55d;
+      --status-error: #ed4245;
+      --status-warn: #f0b232;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: 76px 220px 1fr;
+      min-height: 100vh;
+    }
+
+    .server-rail {
+      background: #111214;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #0f1012;
+    }
+
+    .server-dot {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--panel-strong);
+      border: 1px solid #0f1012;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .server-dot.active {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .module-nav {
+      background: var(--panel);
+      padding: 18px 16px;
+      border-right: 1px solid var(--edge);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .module-nav h3 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-list a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      background: transparent;
+    }
+
+    .module-list a.active {
+      background: var(--panel-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .module-list a:hover {
+      background: #34373d;
+    }
+
+    .main-panel {
+      padding: 28px 28px 48px;
+      background: linear-gradient(135deg, #1f2125 0%, #23262b 100%);
+    }
+
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .main-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .main-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card + .card {
+      margin-top: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .mini-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mini-card .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+
+    .mini-card strong {
+      font-size: 16px;
+    }
+
+    .mini-card .note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .status-pill.running {
+      background: rgba(62, 166, 255, 0.15);
+      color: var(--status-running);
+    }
+
+    .status-pill.complete {
+      background: rgba(59, 165, 93, 0.15);
+      color: var(--status-complete);
+    }
+
+    .status-pill.error {
+      background: rgba(237, 66, 69, 0.15);
+      color: var(--status-error);
+    }
+
+    .activity-list,
+    .incident-list,
+    .experiment-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .activity-item,
+    .incident-item,
+    .experiment-item {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .metric-card {
+      background: var(--panel-strong);
+      border: 1px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .metric-card strong {
+      font-size: 18px;
+    }
+
+    section[data-repo] {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 360px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    section[data-repo] article {
+      border: 1px solid var(--edge);
+      border-left: 6px solid var(--edge);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #2f3136;
+    }
+
+    section[data-repo] article h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    section[data-repo] article p {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section[data-repo] article p:last-child {
+      margin-bottom: 0;
+    }
+
+    section[data-repo] article[data-status="running"] {
+      border-left-color: var(--status-running);
+      background: rgba(62, 166, 255, 0.08);
+    }
+
+    section[data-repo] article[data-status="complete"] {
+      border-left-color: var(--status-complete);
+      background: rgba(59, 165, 93, 0.1);
+    }
+
+    section[data-repo] article[data-status="error"] {
+      border-left-color: var(--status-error);
+      background: rgba(237, 66, 69, 0.1);
+    }
+
+    @media (max-width: 980px) {
+      .app-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .server-rail {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid #0f1012;
+      }
+
+      .module-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--edge);
+        overflow-x: auto;
+      }
+
+      .module-nav h3 {
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+
+      .module-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      .module-list a {
+        white-space: nowrap;
+      }
+
+      .main-panel {
+        padding: 22px 18px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="server-rail">
+      <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot active" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
+      <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
+      <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
+    </aside>
+
+    <aside class="module-nav">
+      <h3>Repo Modules</h3>
+      <nav>
+        <ul class="module-list">
+          <li><a class="active" href="#overview">Overview</a></li>
+          <li><a href="#activity">Activity</a></li>
+          <li><a href="#incidents">Incidents</a></li>
+          <li><a href="#metrics">Metrics</a></li>
+          <li><a href="#experiments">Experiments</a></li>
+          <li><a href="#history">History</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="main-header">
+        <h1>lma-agent-studio</h1>
+        <p>Agent: Codex - Local prototype with module sections.</p>
+      </header>
+
+      <section class="card" id="overview">
+        <h2>Overview</h2>
+        <div class="overview-grid">
+          <div class="mini-card">
+            <span class="label">Latest status</span>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Synced update log with history entries</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Last update</span>
+            <strong>2025-12-28 21:17 +1100</strong>
+            <div class="note">Stage: docs</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Agent</span>
+            <strong>Codex</strong>
+            <div class="note">Status feed active</div>
+          </div>
+          <div class="mini-card">
+            <span class="label">Recent outcome</span>
+            <strong>No incidents</strong>
+            <div class="note">Latest activity looks healthy.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="activity">
+        <h2>Recent Activity</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Synced update log with history entries</strong>
+              <div class="item-meta">Stage: docs</div>
+            </div>
+            <div class="item-meta">2025-12-28 21:17 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</strong>
+              <div class="item-meta">Stage: docs</div>
+            </div>
+            <div class="item-meta">2025-12-28 23:59 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 3.8.1 - Proposal pipeline (schema + policy gate)</strong>
+              <div class="item-meta">Stage: docs</div>
+            </div>
+            <div class="item-meta">2025-12-28 23:59 +1100</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="incidents">
+        <h2>Errors / Incidents</h2>
+        <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>No incidents reported</strong>
+              <div class="item-meta">All clear in recent updates.</div>
+            </div>
+            <div class="item-meta">-</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="metrics">
+        <h2>Metrics Snapshot</h2>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span>Success rate</span>
+            <strong>100%</strong>
+            <div class="item-meta">Recent updates</div>
+          </div>
+          <div class="metric-card">
+            <span>Total updates</span>
+            <strong>95</strong>
+            <div class="item-meta">Logged entries</div>
+          </div>
+          <div class="metric-card">
+            <span>Open incidents</span>
+            <strong>0</strong>
+            <div class="item-meta">Error entries</div>
+          </div>
+          <div class="metric-card">
+            <span>Last update</span>
+            <strong>2025-12-28 21:17 +1100</strong>
+            <div class="item-meta">Most recent entry</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="experiments">
+        <h2>Experiments</h2>
+        <ul class="experiment-list">
+          <li class="experiment-item">
+            <div>
+              <strong>Experiment backlog</strong>
+              <div class="item-meta">Status: pending · Capture experiments in updates.</div>
+            </div>
+            <div class="item-meta">Owner: Codex</div>
+          </li>
+          <li class="experiment-item">
+            <div>
+              <strong>Automation improvements</strong>
+              <div class="item-meta">Status: planning · Track automation tweaks.</div>
+            </div>
+            <div class="item-meta">Owner: engineering</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="history">
+        <h2>Update History (Append-only)</h2>
+        <section data-repo="lma-agent-studio" data-agent="Codex">
+            <article data-status=\"complete\" data-time=\"2025-12-28T21:37:50+11:00\">
+            <h4>Recorded manual update to status log</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Committed latest manual edits to the update log.</p>
+          </article><article data-status="complete" data-time="2025-12-28T21:17:27+11:00">
+            <h4>Synced update log with history entries</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Prepended history.md entries into the update log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:59+11:00">
+            <h4>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add bulk goal entry; enrich generated plans with org/division/agent assignments; allow graph view edits (add steps/edges/time steps) with connect tooling; update workflow UI formatting for actor/interaction details. Runtime change: workflow planning supports bulk goals, generated assignments, and interactive graph edits for steps/edges.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:58+11:00">
+            <h4>Iteration 3.8.1 - Proposal pipeline (schema + policy gate)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow proposal schema + validation endpoint; gate acceptance behind explicit accept; store provenance metadata for LLM proposals and manual defaults. Runtime change: workflows can be proposed and explicitly accepted before saving, with provenance recorded.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:57+11:00">
+            <h4>Iteration 3.8.1 (UI wiring) - Proposal pipeline acceptance</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: wire proposal validate/accept flow into workflow generation UI; require accepted_by and surface validation errors. Runtime change: workflow plan generation can be validated and accepted into saved workflows with explicit acceptance metadata.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:56+11:00">
+            <h4>Iteration 3.8.2 - Agent capsule schema (memory/tools/cognition)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: add structured capsule fields, validate updates, and expose UI editing; add API + UI coverage for capsule persistence. Runtime change: agents now store and surface structured capsule metadata for memory, tools, and cognition.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:59+11:00">
+            <h4>Iteration 3.7.10 - Loop handling + max-iteration guard</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: allow loop edges in deterministic execution; enforce max-iteration guard; emit loop telemetry events and surface loop outcomes in run summary. Runtime change: workflow runs stop safely after the configured max iterations when cycles are present.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:58+11:00">
+            <h4>Iteration 3.7.9 - Workflow run engine (stub)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow run table/repo + endpoints; execute workflows deterministically via DAG order; emit JSONL run events with step/run statuses; expose run history + events inspection. Runtime change: workflows can be executed in deterministic simulation mode with persisted run history and events.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:57+11:00">
+            <h4>Iteration 3.7.8B - Time-step layering + subgraph scaffolding (LLM-assisted, gated)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow time_steps schema + persistence via workflow artifacts; validate time-step subgraph edges/actors and sanitize LLM-generated time_steps; surface Time steps viewer tab with read-only task/edge summary. Runtime change: workflows can store and display per-time-step subgraph proposals (read-only) alongside main steps/edges.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:56+11:00">
+            <h4>Iteration 3.7.8C - Program workflow dependency graph</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow dependency model + CRUD validation; render Program/Portfolio dependency graph with readiness counts/filters and dependency editor; enable open-on-select from the graph/list. Runtime change: projects can express and visualize workflow dependencies with ready/blocked indicators.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:55+11:00">
+            <h4>Iteration 3.7.8B (adjustment) - Allow time-step cycles without loop guard metadata</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: relax time-step subgraph validation to permit cycles without loop guard metadata. Runtime change: time-step subgraphs can contain cycles without metadata guards.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:54+11:00">
+            <h4>Iteration 3.7.8B (adjustment) - Remove workflow generation timeout</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: remove the 2-minute workflow generation abort to allow long-running calls. Runtime change: workflow generation no longer auto-aborts after 120 seconds.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:53+11:00">
+            <h4>Iteration 3.7.8B (adjustment) - Faster workflow generation defaults</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: default workflow generation reasoning/verbosity to low for rapid prototyping. Runtime change: workflow generation defaults to low reasoning and low verbosity.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:52+11:00">
+            <h4>Iteration 3.7.8B (adjustment) - Prototype toggle + graph viewer usability</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: add a header prototype-mode toggle to flip low/medium generation defaults; allow graph pane resize/scroll and clamp node labels to fit. Runtime change: workflow graph view can be resized/scrolled, and prototype mode is one click in the header.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-27T23:59:51+11:00">
+            <h4>Iteration 3.7.8B (adjustment) - Workflow viewer levels + generation refresh</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: auto-focus draft view after plan generation; add division/agent level filters with list/graph/time-step views; enable graph panning and two-axis resize. Runtime change: generated plans appear immediately in the viewer; workflow views can be filtered by division or agent level with scrollable, draggable graphs.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:59+11:00">
+            <h4>Iteration 3.7.8 - System entities (workflow steps)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: confirm system as a first-class workflow actor and enforce scope validation; add API + UI coverage for system step display. Runtime change: workflows can reference systems in steps and display them in the viewer.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:58+11:00">
+            <h4>Iteration 3.7.8A (docs) - Time-step plan scaffolding insertion</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: add roadmap iteration for per-time-step subgraph scaffolding; note LLM per-time-step subgraph requirement and read-only UI summary (no editor yet). Runtime change: none (documentation only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:57+11:00">
+            <h4>Iteration 3.7.7 - Interaction step schema</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: add interaction source/target/type fields to workflow steps (API + UI); validate interaction fields + scope; show interaction details in viewer; add API + UI coverage. Runtime change: workflows can model interactions with explicit source/target/type fields.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:56+11:00">
+            <h4>Iteration 3.7.4D (docs/tests) - Workflow save persistence reminder</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: add roadmap reminder that all project data (including workflow module data) must persist to DB on save; wait for active organisation after create in org builder UI test to avoid race. Runtime change: none (documentation/tests only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:55+11:00">
+            <h4>Iteration 3.7.4I - Workflow generation actor scope sanitization</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: strip out-of-scope actor refs from generated steps (primary + metadata); keep save-time validation strict; add unit coverage for sanitized steps. Runtime change: generation no longer fails when the LLM emits actor ids outside the declared scope; steps default to unassigned instead.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:54+11:00">
+            <h4>Iteration 3.7.4H - Workflow generation branch/join sanitization</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: downgrade invalid branch/join edges from LLM plans to `next` when join targets are missing or unreachable; prevent generation failures from partial branch graphs; keep save-time validation unchanged. Runtime change: plan generation no longer fails when the LLM omits join targets; generated plans remain saveable.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:53+11:00">
+            <h4>Iteration 3.7.4G - Workflow generation stability + org draft preservation</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: validate workflow generation scope before LLM calls; route plan generation to direct API to avoid proxy resets; preserve division draft inputs when activating a newly created org. Runtime change: workflow plan generation returns fast scope errors instead of hanging proxy requests; division drafts no longer get wiped during org activation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:52+11:00">
+            <h4>Iteration 3.7.4F - Workflow generation scope narrowing</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: load org context only for scoped org/division/agent IDs; avoid loading full project org structures when not needed; allocation panel labels now use registry names for agents/divisions/orgs; preserve in-progress org builder structure when registry refreshes. Runtime change: workflow generation pulls smaller, scoped org context and avoids backend resets from oversized org fetches; task allocation shows stable entity names; org builder no longer loses newly added divisions during registry refresh.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:51+11:00">
+            <h4>Iteration 3.7.4E - Workflow generation guardrails</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: truncate oversized org context before prompt build; reject prompts that exceed safe size with a clear error message. Runtime change: workflow plan generation avoids API crashes from oversized context and returns a 400 with guidance when scope is too large.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:50+11:00">
+            <h4>Iteration 3.7.4D - System registry (API + UI)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: add system CRUD API + UI registry; allow system selection in workflow scope/actors; enforce system ID scope validation on workflow save/generate. Runtime change: workflow tab exposes a System registry panel and scoped system selectors; org creation preserves in-flight structure when the org record is created.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:49+11:00">
+            <h4>Iteration 3.7.4C - Goal-driven plan generation (LLM-assisted, gated) + step multi-assign</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow plan generation endpoint (LLM/mock) with scope/graph validation; require explicit accept/discard before overwriting drafts; record provenance metadata; enable multi-assignment on steps via extra actor selectors and actor_refs metadata; guard org registry loads against stale responses. Runtime change: workflow editor can generate a draft plan from goals (LLM or mock) and apply it explicitly; steps can reference multiple actors; org creation no longer races against registry refresh.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:48+11:00">
+            <h4>Iteration 3.7.4B - Task allocation panel (org/division/agent) + workflow viewer refresh</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add task allocation panel with org/division/agent pivots, per-entity task lists, filters/counts, and derived persistence from steps; workflow view now previews draft steps/goals/edges before save. Runtime change: workflow editor shows per-entity task allocations; workflow viewer updates live with draft content.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-26T23:59:47+11:00">
+            <h4>Iteration 3.7.4A - Org scope selector + load org context</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: replace workflow scope ID inputs with registry-backed org/division/agent selectors (optional systems); add &quot;Select entire organisation&quot; + &quot;Load org to workflow&quot;; update workflow editor copy for org-first planning; scope actor options to org context. Runtime change: workflow drafts can be scoped from the org registry without manual IDs; workflow tab now ensures org registry loads when opening the module.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-24T23:59:59+11:00">
+            <h4>Iteration 3.6.13 - Org reset, delete actions, topology inspector</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: clear org editor state when active org is missing or reset; add agent delete control + safer division delete cleanup; surface division/agent topology relations in editors. Runtime change: new org creation no longer inherits stale divisions/agents; org builder lets you delete agents and shows per-entity topology with relation deletes.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:59+11:00">
+            <h4>Iteration 3.7.9 - Workflow Milestone 2A plan</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: add Milestone 2A breakdown for org-scoped workflow planning, task allocation, and LLM-assisted plan generation; specify verification per iteration. Runtime change: none (planning document only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:58+11:00">
+            <h4>Iteration 3.7.5-3.7.6 - Workflow authoring editor + edge editing</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow editor for title/description/scope; add goal + step authoring with actor selection; persist workflows to API and round-trip in registry; add edge editor with UI validation for branch/join and save. Runtime change: workflows can be authored manually in the Workflow tab (steps/goals/edges) and saved to the API.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:57+11:00">
+            <h4>Iteration 3.7.8 - Workflow graph validation rules</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: enforce branch/join consistency, loop guard validation for cycles, and required goals/steps; add API validation tests for graph rules. Runtime change: invalid workflow graphs are rejected on save (cycles require loop guard metadata).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:56+11:00">
+            <h4>Iteration 3.7.7 - Change budget update</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: raise default change budget to max modified files = 14 and max new files = 8. Runtime change: none (process-only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:55+11:00">
+            <h4>Iteration 3.7.6 - Workflow best-practice guidance (docs)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: add workflow best-practice guidance to milestone 0 doc set (milestone doc + ontology + governance); align milestone 0 roadmap to include the guidance deliverable; stabilize org-builder chart toggle UI test assertion. Runtime change: none (documentation only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:54+11:00">
+            <h4>Iteration 3.7.5 - Workflow persistence + CRUD API</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: define workflow schemas (scope, actors, goals, steps, edges, artifacts); add workflow tables + repository persistence; implement CRUD API with validation; add workflow API coverage and harden org-builder UI test setup. Runtime change: workflows are now stored in the database and available via `/workflows` CRUD endpoints (registry reflects persisted data).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:53+11:00">
+            <h4>Iteration 3.7.3-3.7.4 - Workflow module registry + viewer</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: add Workflow module tab with registry list; load workflows from API-backed registry data in `workflow/registry.json`; render read-only workflow viewer with steps/edges and add Playwright coverage. Runtime change: workflows are now viewable in a dedicated Workflow tab with registry/search and a read-only viewer; API exposes `/workflows` endpoints.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:52+11:00">
+            <h4>Iteration 3.6.22 - Workflow Milestone 0 governance split</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: split milestone 0 docs into overview + ontology + governance; document validation gates and provenance rules. Runtime change: none (design-only documentation).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:51+11:00">
+            <h4>Iteration 3.6.21 - Workflow Milestone 0 design spec</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: document workflow ontology, interaction relations, and governance/validation gates in a new `workflow/` subfolder. Runtime change: none (design-only documentation).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:50+11:00">
+            <h4>Iteration 3.6.20 - Workflow roadmap doc</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: produce detailed workflow milestones/iterations; align with current codebase and automation/testing discipline. Runtime change: none (planning document only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:49+11:00">
+            <h4>Iteration 3.6.19 - Playwright stability + ID fallback</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: harden ID generation for browsers without `crypto.randomUUID`; tighten org builder UI locators; stabilize UI checks to avoid strict-mode collisions. Runtime change: UI now falls back to a deterministic ID generator when `crypto.randomUUID` is unavailable; org builder tests target specific panels for divisions and chart toggles.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:48+11:00">
+            <h4>Iteration 3.6.18 - Playwright UI testing + automated GUI checks</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add Playwright as a web dev dependency; introduce Playwright config and org builder UI tests; wire UI checks into iteration checks; keep compose smoke teardown intact. Runtime change: iteration checks now run Playwright UI tests against the live app after smoke checks; failures block completion the same as API smoke failures.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:47+11:00">
+            <h4>Iteration 3.6.17 - Test automation review</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: review iteration checks for automatic UI testing gaps; package Codex rules for reuse. Runtime change: none (added `codex-rules.zip` bundle of Codex rules/templates).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:46+11:00">
+            <h4>Iteration 3.6.16 - UI smoke pass + automation review</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: run iteration checks (including web root smoke) on request; review why auto-run tests may not trigger. Runtime change: none (verification-only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:45+11:00">
+            <h4>Iteration 3.6.14 - Org-scoped agents + GitHub pre-push skip</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: scope org module agent lists/relations to associated agents only; skip iteration checks on GitHub pre-push. Runtime change: org builder charts/lists only include agents assigned to the active organisation; pushing to GitHub no longer runs iteration checks.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:44+11:00">
+            <h4>Iteration 3.6.15 - Org save/delete + chart expand + agent scope guard</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add manual save button for org structure; allow registry deletes; reset org-scoped agents/profiles to assignments only (API + UI); add expandable org chart panel. Runtime change: org registry no longer mixes agents across orgs; org chart can expand to full builder width/height; manual Save organisation button persists structure on demand.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:43+11:00">
+            <h4>Iteration 3.6.12 - Org proposal accept fixes + header save button</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: insert structure_json on org create to avoid 500s; add new-organisation reset; ensure accept proposal switches to builder and fills editor; add top-header Save Workspace button. Runtime change: org creation no longer trips DB constraint; org proposal accept populates divisions; workspace save is one click in the header.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:42+11:00">
+            <h4>Iteration 3.6.11 - Org module tabs + registry tiles</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add builder/registry tabs in Org module; move org registry list to its own tab; show organisation/division/agent tiles for selected org; keep divisions panel separate from agents panel. Runtime change: Org module now has chrome-style tabs with a registry view that renders tiled divisions/agents.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:41+11:00">
+            <h4>Iteration 3.6.10 - Org editor panels + agent list tiles</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: replace org inspector with organisation/division/agent editors; split agent list into list/tiles toggle; Configure now loads the agent editor; remove legacy authority/rules panels. Runtime change: Org tab uses right-column editors for organisation/division/agent updates and supports tile view for agent listings.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:40+11:00">
+            <h4>Iteration 3.6.9 - Org tab JSX nesting cleanup</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: close org generation card without collapsing the left column; remove temporary debug scripts. Runtime change: org tab JSX builds cleanly without parse errors.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:39+11:00">
+            <h4>Iteration 3.6.8 - Org tab layout fix + agent generation UX wiring</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: restore org tab grid nesting so inspector renders as a right column; ensure agent generation + org inspector JSX compiles; keep Home-only right panel behavior intact. Runtime change: org tab renders correctly with inspector column; build/test pipeline no longer fails on JSX parse.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:38+11:00">
+            <h4>Iteration 3.6.7 - Compose smoke teardown</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A: compose smoke now shuts down containers after tests complete. Runtime change: none (test harness only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:37+11:00">
+            <h4>Iteration 3.6.6 - Organisation registry persistence + relational charts</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: organisations now persist in the SQLite registry with full relational structure (divisions/assignments/relations/rules/layouts); generated org agents are saved via the agent registry; org selection hydrates saved structure; org charts auto-generate baseline relations and remain interactive; workspace panel is Home-only. Runtime change: org registry is backed by DB persistence with auto-save for structure edits; registry panels are searchable/expandable.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:36+11:00">
+            <h4>Iteration 3.6.5 - Workspace registry auto-save + searchable directories</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: org changes auto-save to DB (project auto-created if needed); workspace registry stays persisted; scenario/agent/org tabs add expandable, searchable directories; workspace selection now auto-links to a DB project for persistence. Runtime change: workspace state auto-saves and updates timestamps without manual Save; directory panels added.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-25T23:59:35+11:00">
+            <h4>Iteration 3.6.4 - Org registry sync, interactive chart tools, workspace panel toggle</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: organisation registry selection now hydrates saved divisions/agent assignments without overwriting; org chart adds in-canvas tools (add division, add connector, auto layout) plus structure auto-generation; workspace panel fully hides once a workspace is loaded. Runtime change: registry shows stored counts; org charts can be edited from the canvas and auto-generate baseline structure; left workspace panel can collapse for focus.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:59+11:00">
+            <h4>Added iteration workflow scaffolding: `tests/run_iteration_checks.ps1`, `tests/iteration_check.ps1`, and `ITERATION_PROMPT_TEMPLATE.md`</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:58+11:00">
+            <h4>Added `plan.md` template to align roadmap documentation</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:57+11:00">
+            <h4>Normalized CODEX docs to ASCII-safe punctuation for reliable prompt copy/paste</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:56+11:00">
+            <h4>Updated `agents.md` with explicit iteration workflow, change budget, and verification rules</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:55+11:00">
+            <h4>Added `make checks` target and a pre-push hook to run iteration checks; set repo hooks path to `.githooks`</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:54+11:00">
+            <h4>Added Codex prompt runner: `/codex/execute` API with PROMPT conversion, and a Home-tab UI panel for convert/execute</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:53+11:00">
+            <h4>Removed the Codex prompt runner panel from Home; added org generation status timing and reduced org chart drag jitter</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:52+11:00">
+            <h4>Added org generation experiment runner and documented schema/experiment results in `experiments.md`</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:51+11:00">
+            <h4>Switched default model to gpt-5.2 across API, UI, and experiment harness</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:50+11:00">
+            <h4>Reduced org module jitter by skipping workspace persistence during drags and disabling scroll anchoring; generated agents now appear in the Agents module immediately</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:49+11:00">
+            <h4>Throttled org chart drag updates and hardened drag cleanup to prevent UI jitter from Division lists downward</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:48+11:00">
+            <h4>Strengthened org generation prompt/normalization to ensure roles, relations, and rules populate; auto-assign generated agents to divisions and hydrate org panels immediately; added layout containment plus body scroll anchor disable to reduce org module jitter</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:47+11:00">
+            <h4>Expanded org generation experiments to validate agent-agent relations, rules, and missing roles; logged latest results (baseline local API unavailable)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:46+11:00">
+            <h4>Experiment results (2025-12-23T13:38:36Z): baseline gpt-5.2 missed division-to-agent relations; structured outputs passed ontology checks</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:45+11:00">
+            <h4>Experiment results (2025-12-23T13:41:03Z): baseline gpt-5.2 passed all ontology checks; structured outputs failed JSON parse on this run</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-23T23:59:44+11:00">
+            <h4>Next steps: add structured-output retry/repair and/or strict JSON parsing safeguards, then decide whether to keep baseline or structured path as default; add UI/UX validation for populated Divisions/Agent assignments/Relations/Rules panels; run a manual jitter check in the org module and capture any remaining jitter repro steps</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:59+11:00">
+            <h4>Captured run failure for c51a9e0a-b9fc-432c-bc33-5ad9204cad24 (OpenAI Responses incomplete/max_output_tokens -&gt; RUN_FAILED) and logged locations: `logs/runs/...jsonl|.log`</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:58+11:00">
+            <h4>Hardened model calls: double backoff on incomplete/max_output_tokens, require_model defaults keep verbosity low and max_output_tokens ≥3000; step-tagged telemetry fields added</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:57+11:00">
+            <h4>UI tweaks: summary-first inspectors with JSON toggle; timeline groups events by step; added max time steps input (engine loop not yet implemented)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:56+11:00">
+            <h4>Remaining work agreed (Plan items 3-5):</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Implement multi-step loop with `max_time_steps` limit, emitting STEP_STARTED/STEP_ENDED and per-step MODEL_* events. Surface per-step agent interaction in UI live view (using streamed events).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:55+11:00">
+            <h4>Conversation context recorded per request</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:54+11:00">
+            <h4>Added Scenario Builder module (CRUD, workspace-scoped) with active scenario shared to Run Simulation</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:53+11:00">
+            <h4>Iteration 3.3.1 - Workspace Save/Load + runtime error fix</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-E: runtime UI error resolved; explicit File/Home Save + Load; full workspace state persisted and restored; no data loss across reloads when Save/Load is used. Runtime change: explicit workspace persistence controls (Save/Load) added.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:52+11:00">
+            <h4>Iteration 3.3.2 - Fix async run refresh and proxy ECONNRESET</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: async run resets selected run state; selected status reflects newest run; /runs proxy no longer errors under normal usage; no other runtime/UI changes. Runtime change: async run state now refreshes correctly.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:51+11:00">
+            <h4>Iteration 3.3.3 â€” Remove New project box; add Selected Run chooser</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: New project UI removed; Selected Run panel enables explicit run selection; displayed run data updates immediately; no backend changes. Runtime change: explicit run selection in UI.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:50+11:00">
+            <h4>Iteration 3.3.4 - Remove Projects panel from UI</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: Projects panel removed; workspace/run functionality preserved. Runtime change: UI-only removal.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:49+11:00">
+            <h4>Iteration 3.5 - Legal Agent Builder (workspace-scoped)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: Agent identity/personality persisted; prompt scaffolding editable per workspace. Runtime change: agent CRUD + scaffolding added.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:48+11:00">
+            <h4>Iteration 3.6 - Organisation Builder (workspace-scoped)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-B: Org topology persisted per workspace; visual layout reflects model. Runtime change: organisation builder UI added.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:47+11:00">
+            <h4>Iteration 3.6.1 - Organisation ontology: CRUD, relations, and rules</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-E: org CRUD; ontology divisions; typed relations with direction; switchable authority/workflow views; descriptive rules persisted. Runtime change: none (ontology only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:46+11:00">
+            <h4>Iteration 3.6.2 - Organisation &amp; agent ontology: authority, autonomy, and rule scope</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-G: divisional charts + division-agent topology; agent-to-agent topology distinct from divisions; rule scoping for organisation/division/agent; optional legal personhood typing; explicit authority sources; explicit autonomy levels + approval principals; interaction roles require principals. Runtime change: none (ontology only).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-22T23:59:45+11:00">
+            <h4>Iteration 3.6.3 - Organisation persistence, relation visualisation, and LLM generation</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-G: Save Workspace persists full organisation/relations state; charts render division, division-agent, and agent-agent relations with directional connectors; organisation descriptions are first-class persisted data; LLM-generated organisations conform to ontology and are previewed before acceptance; manual and generated creation paths coexist. Runtime change: none (ontology and persistence only). ## Comment</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-21T23:59:59+11:00">
+            <h4>Hardened () OpenAI Responses output parsing to handle nested content and JSON output types, preventing empty-text failures</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-21T23:59:58+11:00">
+            <h4>Updated the UI model list to surface gpt-5.2 and remove gpt-5-mini</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-21T23:59:57+11:00">
+            <h4>Added Responses status/error inspection so empty-text probe failures surface actual API status metadata</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-21T23:59:56+11:00">
+            <h4>Made the OpenAI probe use low reasoning and a safer token budget to avoid incomplete responses</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-21T23:59:55+11:00">
+            <h4>Added `/logs` support: app/project/run logs plus mirrored run telemetry JSONL</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-21T23:59:54+11:00">
+            <h4>Adjusted run defaults to reduce incomplete Responses output (medium reasoning, higher token budget)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Logged update from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T19:43:02+11:00">
+            <h4>Prepared update logging and workflow publishing</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Added update log rules and publishing workflow scaffolding.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T19:19:45+11:00">
+            <h4>Added update logging scaffolding</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Created update log structure and added dashboard publishing workflow.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T18:30:00+11:00">
+            <h4>Initialized update log</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Added starter entries for status tracking.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T17:45:00+11:00">
+            <h4>Baseline status entry</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Recorded initial documentation update.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T17:00:00+11:00">
+            <h4>Project log setup</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Prepared log format for future updates.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

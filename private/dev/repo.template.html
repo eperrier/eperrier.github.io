@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>repo-beta Updates (Local Prototype)</title>
+  <title>{{REPO_NAME}} Updates (Local Prototype)</title>
   <style>
     :root {
       --bg: #1e1f22;
@@ -361,10 +361,7 @@
 <body>
   <div class="app-shell">
     <aside class="server-rail">
-      <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
-      <a class="server-dot active" href="repo-beta.html" title="repo-beta">RB</a>
-      <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
+{{SERVER_RAIL}}
     </aside>
 
     <aside class="module-nav">
@@ -383,8 +380,8 @@
 
     <main class="main-panel">
       <header class="main-header">
-        <h1>repo-beta</h1>
-        <p>Agent: codex-beta - Local prototype with module sections.</p>
+        <h1>{{REPO_NAME}}</h1>
+        <p>Agent: {{AGENT_NAME}} - Local prototype with module sections.</p>
       </header>
 
       <section class="card" id="overview">
@@ -392,23 +389,23 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Incident retro published</div>
+            <span class="status-pill {{LATEST_STATUS_CLASS}}">{{LATEST_STATUS_LABEL}}</span>
+            <div class="note">{{LATEST_SUMMARY}}</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-27 07:05 -0500</strong>
-            <div class="note">Stage: postmortem</div>
+            <strong>{{LATEST_TIME_DISPLAY}}</strong>
+            <div class="note">Stage: {{LATEST_STAGE}}</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
-            <strong>codex-beta</strong>
+            <strong>{{AGENT_NAME}}</strong>
             <div class="note">Status feed active</div>
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Sync job failed</strong>
-            <div class="note">Upstream API returned 503 for 9 minutes.</div>
+            <strong>{{RECENT_OUTCOME_TITLE}}</strong>
+            <div class="note">{{RECENT_OUTCOME_NOTE}}</div>
           </div>
         </div>
       </section>
@@ -416,113 +413,34 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
-          <li class="activity-item">
-            <div>
-              <strong>Incident retro published</strong>
-              <div class="item-meta">Stage: postmortem</div>
-            </div>
-            <div class="item-meta">2025-12-27 07:05 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Hotfix verification</strong>
-              <div class="item-meta">Stage: smoke-tests</div>
-            </div>
-            <div class="item-meta">2025-12-27 05:20 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Sync job failed</strong>
-              <div class="item-meta">Stage: ingest</div>
-            </div>
-            <div class="item-meta">2025-12-27 03:10 -0500</div>
-          </li>
+{{ACTIVITY_ITEMS}}
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
-          <li class="incident-item">
-            <div>
-              <strong>Sync job failed</strong>
-              <div class="item-meta">Upstream API returned 503 for 9 minutes.</div>
-            </div>
-            <div class="item-meta">2025-12-27 03:10 -0500</div>
-          </li>
+{{INCIDENT_ITEMS}}
         </ul>
       </section>
 
       <section class="card" id="metrics">
         <h2>Metrics Snapshot</h2>
         <div class="metric-grid">
-          <div class="metric-card">
-            <span>Success rate</span>
-            <strong>67%</strong>
-            <div class="item-meta">Recent updates</div>
-          </div>
-          <div class="metric-card">
-            <span>Total updates</span>
-            <strong>4</strong>
-            <div class="item-meta">Logged entries</div>
-          </div>
-          <div class="metric-card">
-            <span>Open incidents</span>
-            <strong>1</strong>
-            <div class="item-meta">Error entries</div>
-          </div>
-          <div class="metric-card">
-            <span>Last update</span>
-            <strong>2025-12-27 07:05 -0500</strong>
-            <div class="item-meta">Most recent entry</div>
-          </div>
+{{METRIC_CARDS}}
         </div>
       </section>
 
       <section class="card" id="experiments">
         <h2>Experiments</h2>
         <ul class="experiment-list">
-          <li class="experiment-item">
-            <div>
-              <strong>Experiment backlog</strong>
-              <div class="item-meta">Status: pending · Capture experiments in updates.</div>
-            </div>
-            <div class="item-meta">Owner: codex-beta</div>
-          </li>
-          <li class="experiment-item">
-            <div>
-              <strong>Automation improvements</strong>
-              <div class="item-meta">Status: planning · Track automation tweaks.</div>
-            </div>
-            <div class="item-meta">Owner: engineering</div>
-          </li>
+{{EXPERIMENT_ITEMS}}
         </ul>
       </section>
 
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
-        <section data-repo="repo-beta" data-agent="codex-beta">
-          <article data-status="complete" data-time="2025-12-27T07:05:00-05:00">
-            <h4>Incident retro published</h4>
-            <p><strong>Stage:</strong> postmortem</p>
-            <p><strong>Notes:</strong> Timeline and action items shared with the reliability group.</p>
-          </article>
-          <article data-status="running" data-time="2025-12-27T05:20:00-05:00">
-            <h4>Hotfix verification</h4>
-            <p><strong>Stage:</strong> smoke-tests</p>
-            <p><strong>Notes:</strong> Validating patch 1.12.4 across three regions.</p>
-          </article>
-          <article data-status="error" data-time="2025-12-27T03:10:00-05:00">
-            <h4>Sync job failed</h4>
-            <p><strong>Stage:</strong> ingest</p>
-            <p><strong>Notes:</strong> Upstream API returned 503 for 9 minutes.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-26T21:45:00-05:00">
-            <h4>Weekly metrics compiled</h4>
-            <p><strong>Stage:</strong> reporting</p>
-            <p><strong>Notes:</strong> KPI snapshot generated for week ending Dec 26.</p>
-          </article>
-        </section>
+{{HISTORY_SECTION}}
       </section>
     </main>
   </div>

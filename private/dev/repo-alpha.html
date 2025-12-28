@@ -362,8 +362,9 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot active" href="repo-alpha.html" title="repo-alpha">RA</a>
+      <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
+      <a class="server-dot active" href="repo-alpha.html" title="repo-alpha">RA</a>
     </aside>
 
     <aside class="module-nav">
@@ -383,7 +384,7 @@
     <main class="main-panel">
       <header class="main-header">
         <h1>repo-alpha</h1>
-        <p>Agent: codex-alpha · Local prototype with module sections.</p>
+        <p>Agent: codex-alpha - Local prototype with module sections.</p>
       </header>
 
       <section class="card" id="overview">
@@ -396,18 +397,18 @@
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-27 06:42 ET</strong>
+            <strong>2025-12-27 06:42 -0500</strong>
             <div class="note">Stage: test-suite</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
             <strong>codex-alpha</strong>
-            <div class="note">Queue: 142 checks</div>
+            <div class="note">Status feed active</div>
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Deploy blocked</strong>
-            <div class="note">Migration pending review</div>
+            <strong>Deployment blocked</strong>
+            <div class="note">Staging rollout halted due to missing database migration.</div>
           </div>
         </div>
       </section>
@@ -420,21 +421,21 @@
               <strong>Nightly validation in progress</strong>
               <div class="item-meta">Stage: test-suite</div>
             </div>
-            <div class="item-meta">2025-12-27 06:42 ET</div>
+            <div class="item-meta">2025-12-27 06:42 -0500</div>
           </li>
           <li class="activity-item">
             <div>
               <strong>Release candidate packaged</strong>
               <div class="item-meta">Stage: build</div>
             </div>
-            <div class="item-meta">2025-12-27 02:15 ET</div>
+            <div class="item-meta">2025-12-27 02:15 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Schema migration approved</strong>
-              <div class="item-meta">Stage: review</div>
+              <strong>Deployment blocked</strong>
+              <div class="item-meta">Stage: deploy</div>
             </div>
-            <div class="item-meta">2025-12-26 18:40 ET</div>
+            <div class="item-meta">2025-12-26 22:05 -0500</div>
           </li>
         </ul>
       </section>
@@ -445,9 +446,9 @@
           <li class="incident-item">
             <div>
               <strong>Deployment blocked</strong>
-              <div class="item-meta">Missing database migration. Staging halted.</div>
+              <div class="item-meta">Staging rollout halted due to missing database migration.</div>
             </div>
-            <div class="item-meta">2025-12-26 22:05 ET</div>
+            <div class="item-meta">2025-12-26 22:05 -0500</div>
           </li>
         </ul>
       </section>
@@ -457,23 +458,23 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>96%</strong>
-            <div class="item-meta">Last 24 hours</div>
+            <strong>67%</strong>
+            <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
-            <span>Avg build time</span>
-            <strong>11m 24s</strong>
-            <div class="item-meta">Rolling 10 builds</div>
+            <span>Total updates</span>
+            <strong>4</strong>
+            <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
             <strong>1</strong>
-            <div class="item-meta">Deployment blocked</div>
+            <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
-            <span>Last deploy</span>
-            <strong>2025-12-26</strong>
-            <div class="item-meta">Staging</div>
+            <span>Last update</span>
+            <strong>2025-12-27 06:42 -0500</strong>
+            <div class="item-meta">Most recent entry</div>
           </div>
         </div>
       </section>
@@ -483,17 +484,17 @@
         <ul class="experiment-list">
           <li class="experiment-item">
             <div>
-              <strong>Test-suite parallelism v2</strong>
-              <div class="item-meta">Status: running · Target: reduce runtime 20%</div>
+              <strong>Experiment backlog</strong>
+              <div class="item-meta">Status: pending Â· Capture experiments in updates.</div>
             </div>
             <div class="item-meta">Owner: codex-alpha</div>
           </li>
           <li class="experiment-item">
             <div>
-              <strong>Cache warm-up strategy</strong>
-              <div class="item-meta">Status: complete · Result: 12% faster builds</div>
+              <strong>Automation improvements</strong>
+              <div class="item-meta">Status: planning Â· Track automation tweaks.</div>
             </div>
-            <div class="item-meta">Owner: release squad</div>
+            <div class="item-meta">Owner: engineering</div>
           </li>
         </ul>
       </section>
