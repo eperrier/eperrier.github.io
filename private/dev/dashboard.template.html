@@ -374,9 +374,7 @@
 <body>
   <div class="app-shell">
     <aside class="server-rail">
-      <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-repo-beta.html" title="repo-beta">RB</a>
-      <a class="server-dot" href="repo-repo-alpha.html" title="repo-alpha">RA</a>
+{{SERVER_RAIL}}
     </aside>
 
     <aside class="module-nav">
@@ -411,20 +409,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-repo-beta.html">repo-beta</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-27 07:05 -0500</td>
-              <td data-label="Agent">codex-beta</td>
-              <td data-label="Summary">Incident retro published</td>
-            </tr>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-repo-alpha.html">repo-alpha</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-27 06:42 -0500</td>
-              <td data-label="Agent">codex-alpha</td>
-              <td data-label="Summary">Nightly validation in progress</td>
-            </tr>
+{{STATUS_ROWS}}
           </tbody>
         </table>
       </section>
@@ -432,62 +417,7 @@
       <section class="card">
         <h2>Repo Histories (Append-Only)</h2>
         <div class="history-grid">
-          <div class="repo-block">
-            <div class="repo-header">
-              <h3>repo-beta</h3>
-              <span>Agent: codex-beta</span>
-            </div>
-            <section data-repo="repo-beta" data-agent="codex-beta">
-              <article data-status="complete" data-time="2025-12-27T07:05:00-05:00">
-                <h4>Incident retro published</h4>
-                <p><strong>Stage:</strong> postmortem</p>
-                <p><strong>Notes:</strong> Timeline and action items shared with the reliability group.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-27T05:20:00-05:00">
-                <h4>Hotfix verification</h4>
-                <p><strong>Stage:</strong> smoke-tests</p>
-                <p><strong>Notes:</strong> Validating patch 1.12.4 across three regions.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-27T03:10:00-05:00">
-                <h4>Sync job failed</h4>
-                <p><strong>Stage:</strong> ingest</p>
-                <p><strong>Notes:</strong> Upstream API returned 503 for 9 minutes.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-26T21:45:00-05:00">
-                <h4>Weekly metrics compiled</h4>
-                <p><strong>Stage:</strong> reporting</p>
-                <p><strong>Notes:</strong> KPI snapshot generated for week ending Dec 26.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
-              <h3>repo-alpha</h3>
-              <span>Agent: codex-alpha</span>
-            </div>
-            <section data-repo="repo-alpha" data-agent="codex-alpha">
-              <article data-status="running" data-time="2025-12-27T06:42:00-05:00">
-                <h4>Nightly validation in progress</h4>
-                <p><strong>Stage:</strong> test-suite</p>
-                <p><strong>Notes:</strong> 142 checks queued, 38 completed. Waiting on integration tests.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-27T02:15:00-05:00">
-                <h4>Release candidate packaged</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Version 2.8.0-rc.1 compiled and uploaded to artifact store.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-26T22:05:00-05:00">
-                <h4>Deployment blocked</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Staging rollout halted due to missing database migration.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-26T18:40:00-05:00">
-                <h4>Schema migration approved</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Migration plan reviewed and signed off by data team.</p>
-              </article>
-            </section>
-          </div>
+{{HISTORY_BLOCKS}}
         </div>
       </section>
     </main>

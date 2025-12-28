@@ -1,0 +1,32 @@
+name: Rebuild dashboard from updates
+
+on:
+  push:
+    paths:
+      - "private/updates/updates-*.html"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build dashboard
+        run: python scripts/build_dashboard.py
+
+      - name: Commit dashboard changes
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No dashboard changes to commit."
+            exit 0
+          fi
+          git add private/dev/dashboard.html
+          git commit -m "Rebuild dashboard"
+          git push
