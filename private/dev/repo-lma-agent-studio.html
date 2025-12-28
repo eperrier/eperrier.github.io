@@ -392,8 +392,8 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration checks failed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Started iteration checks</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
@@ -418,6 +418,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Started iteration checks</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-28 23:07 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -426,13 +433,6 @@
           <li class="activity-item">
             <div>
               <strong>Started iteration checks</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-28 23:02 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-28 23:02 +1100</div>
@@ -477,7 +477,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>104</strong>
+            <strong>105</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -516,7 +516,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="lma-agent-studio" data-agent="Codex">
-                              <article data-status="error" data-time="2025-12-28T23:07:24+11:00">
+                                <article data-status="running" data-time="2025-12-28T23:07:39+11:00">
+            <h4>Started iteration checks</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after org-builder collapse assertion adjustment.</p>
+          </article><article data-status="error" data-time="2025-12-28T23:07:24+11:00">
             <h4>Iteration checks failed</h4>
             <p><strong>Stage:</strong> test</p>
             <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed: org-builder collapse toggle assertion missing Organisation editor.</p>
