@@ -363,9 +363,9 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
+      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
-      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
     </aside>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 029 starting — AUTO mode rules</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 00:42 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-29 10:23 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 029 starting — AUTO mode rules</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-29 10:23 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Update log detail rules recorded</strong>
+              <div class="item-meta">Stage: docs</div>
+            </div>
+            <div class="item-meta">2025-12-29 10:00 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration checks completed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 00:42 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks rerunning</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 00:41 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks failed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 00:41 +1100</div>
+            <div class="item-meta">2025-12-29 10:00 +1100</div>
           </li>
         </ul>
       </section>
@@ -468,12 +468,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>67%</strong>
+            <strong>75%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>10</strong>
+            <strong>14</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -483,7 +483,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 00:42 +1100</strong>
+            <strong>2025-12-29 10:23 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -512,6 +512,26 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T10:23:45+11:00">
+            <h4>Iteration 029 starting — AUTO mode rules</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Starting iteration 029 to add AUTO: multi-iteration rules and expanded update-log detail requirements. Planned edits in AGENTS.md and CODEX.md plus tests/run_iteration_checks.ps1 updates, followed by an experiment run and full iteration checks. This entry records the iteration subject before work begins.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T10:00:30+11:00">
+            <h4>Update log detail rules recorded</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Updated AGENTS.md to require detailed update-log Notes (files/areas, commands/tests, outcomes) and added a matching guard in tests/run_iteration_checks.ps1. Recorded exp_20251229_update_log_detail plus iteration_028 check script and history/experiment index updates.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T10:00:09+11:00">
+            <h4>Iteration checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Ran powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to execute docker compose build/up, API checks, and Playwright UI tests. Passed with log tests/logs/check_20251229_095925.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T09:59:16+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Starting tests/run_iteration_checks.ps1 to validate update-log rule changes and the new exp_20251229_update_log_detail entry. Expect docker compose build/up, API checks, and Playwright UI run.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
             <h4>Iteration checks completed</h4>
             <p><strong>Stage:</strong> test</p>

@@ -376,9 +376,9 @@
     <aside class="server-rail">
       <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
     </aside>
@@ -423,6 +423,13 @@
               <td data-label="Summary">Iteration checks completed</td>
             </tr>
             <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2025-12-29 10:23 +1100</td>
+              <td data-label="Agent">Codex</td>
+              <td data-label="Summary">Iteration 029 starting — AUTO mode rules</td>
+            </tr>
+            <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
               <td data-label="Last Update">2025-12-29 10:17 +1100</td>
@@ -435,13 +442,6 @@
               <td data-label="Last Update">2025-12-29 01:18 +1100</td>
               <td data-label="Agent">Codex</td>
               <td data-label="Summary">Ignored log artifacts in git</td>
-            </tr>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-29 00:42 +1100</td>
-              <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration checks completed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-beta.html">repo-beta</a></td>
@@ -509,6 +509,84 @@
                 <h4>Preparing adaptive experiment batch</h4>
                 <p><strong>Stage:</strong> deploy</p>
                 <p><strong>Notes:</strong> Configs staged for a multi-run adaptive suite.</p>
+              </article>
+            </section>
+          </div>
+          <div class="repo-block">
+            <div class="repo-header">
+              <h3>ai-risk-scenario-modelling</h3>
+              <span>Agent: Codex</span>
+            </div>
+            <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2025-12-29T10:23:45+11:00">
+                <h4>Iteration 029 starting — AUTO mode rules</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Starting iteration 029 to add AUTO: multi-iteration rules and expanded update-log detail requirements. Planned edits in AGENTS.md and CODEX.md plus tests/run_iteration_checks.ps1 updates, followed by an experiment run and full iteration checks. This entry records the iteration subject before work begins.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T10:00:30+11:00">
+                <h4>Update log detail rules recorded</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Updated AGENTS.md to require detailed update-log Notes (files/areas, commands/tests, outcomes) and added a matching guard in tests/run_iteration_checks.ps1. Recorded exp_20251229_update_log_detail plus iteration_028 check script and history/experiment index updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T10:00:09+11:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Ran powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to execute docker compose build/up, API checks, and Playwright UI tests. Passed with log tests/logs/check_20251229_095925.log.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T09:59:16+11:00">
+                <h4>Iteration checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting tests/run_iteration_checks.ps1 to validate update-log rule changes and the new exp_20251229_update_log_detail entry. Expect docker compose build/up, API checks, and Playwright UI run.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
+                <h4>Iteration checks rerunning</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
+                <h4>Iteration checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
+                <h4>Iteration checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
+                <h4>Initialized update log and publish workflow</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
+                <h4>Scenario builder refinements in progress</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
+                <h4>Baseline simulation verification pass</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
+                <h4>Agent substitution test run failed</h4>
+                <p><strong>Stage:</strong> incident</p>
+                <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
+                <h4>Dependency modeling defaults refreshed</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
+                <h4>Simulation service scaffolding underway</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
               </article>
             </section>
           </div>
@@ -1515,64 +1593,6 @@
                 <h4>Adjusted run defaults to reduce incomplete Responses output (medium reasoning, higher token budget)</h4>
                 <p><strong>Stage:</strong> docs</p>
                 <p><strong>Notes:</strong> Logged update from history.md.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
-              <h3>ai-risk-scenario-modelling</h3>
-              <span>Agent: Codex</span>
-            </div>
-            <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
-              <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
-                <h4>Iteration checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
-                <h4>Iteration checks rerunning</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
-                <h4>Iteration checks failed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
-                <h4>Iteration checks running</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
-                <h4>Initialized update log and publish workflow</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
-                <h4>Scenario builder refinements in progress</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
-                <h4>Baseline simulation verification pass</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
-                <h4>Agent substitution test run failed</h4>
-                <p><strong>Stage:</strong> incident</p>
-                <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
-                <h4>Dependency modeling defaults refreshed</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
-                <h4>Simulation service scaffolding underway</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
               </article>
             </section>
           </div>
