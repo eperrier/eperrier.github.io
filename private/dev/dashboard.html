@@ -375,9 +375,9 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
-      <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
     </aside>
@@ -415,6 +415,13 @@
           </thead>
           <tbody>
             <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-29 00:56 +1100</td>
+              <td data-label="Agent">Codex</td>
+              <td data-label="Summary">Recorded planning decision for 3.8.3</td>
+            </tr>
+            <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
               <td data-label="Last Update">2025-12-29 00:42 +1100</td>
@@ -427,13 +434,6 @@
               <td data-label="Last Update">2025-12-29 00:38 +1100</td>
               <td data-label="Agent">Codex</td>
               <td data-label="Summary">Iteration 136 verification completed</td>
-            </tr>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-28 23:59 +1100</td>
-              <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 3.8.3A - Goal-driven workflow generation + graph editing</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-beta.html">repo-beta</a></td>
@@ -458,121 +458,15 @@
         <div class="history-grid">
           <div class="repo-block">
             <div class="repo-header">
-              <h3>ai-risk-scenario-modelling</h3>
-              <span>Agent: Codex</span>
-            </div>
-            <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
-              <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
-                <h4>Iteration checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
-                <h4>Iteration checks rerunning</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
-                <h4>Iteration checks failed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
-                <h4>Iteration checks running</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
-                <h4>Initialized update log and publish workflow</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
-                <h4>Scenario builder refinements in progress</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
-                <h4>Baseline simulation verification pass</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
-                <h4>Agent substitution test run failed</h4>
-                <p><strong>Stage:</strong> incident</p>
-                <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
-                <h4>Dependency modeling defaults refreshed</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
-                <h4>Simulation service scaffolding underway</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
-              <h3>synthpop</h3>
-              <span>Agent: Codex</span>
-            </div>
-            <section data-repo="synthpop" data-agent="Codex">
-              <article data-status="complete" data-time="2025-12-29T00:38:10+11:00">
-                <h4>Iteration 136 verification completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Iteration checks passed and containers were torn down.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:28:53+11:00">
-                <h4>Iteration 136 verification started</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running iteration checks for update logging and dashboard workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T00:28:30+11:00">
-                <h4>Updated update log checks and workflow validation</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added workflow linting, iteration check alias, and aligned AGENTS casing.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T23:15:00+11:00">
-                <h4>Initialized update logging and dashboard publish workflow</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Set up update log format, workflow stub, and repository logging rules.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T22:40:00+11:00">
-                <h4>Refined research pipeline QA checks</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Expanded smoke checks and verified logging outputs for the research worker.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-28T21:55:00+11:00">
-                <h4>Model smoke call failed during verification</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> OpenAI/HF checks failed and required retry with updated settings.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T20:10:00+11:00">
-                <h4>Documented UI-per-iteration strategy</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added plan details for artifact-first UI panels and testing gates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-28T19:30:00+11:00">
-                <h4>Drafting experimentation pipeline milestones</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Outlined milestone acceptance checks and cross-module dependencies.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-27T18:05:00+11:00">
-                <h4>Baseline research artifacts captured</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Captured initial ledger and manuscript skeleton for tracking.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
               <h3>lma-agent-studio</h3>
               <span>Agent: Codex</span>
             </div>
             <section data-repo="lma-agent-studio" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T00:56:00+11:00">
+                <h4>Recorded planning decision for 3.8.3</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Updated history.md to capture decision to define UI/flow changes before implementing automation gating.</p>
+              </article>
               <article data-status="complete" data-time="2025-12-28T23:59:59+11:00">
                 <h4>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</h4>
                 <p><strong>Stage:</strong> docs</p>
@@ -1137,6 +1031,117 @@
                 <h4>Adjusted run defaults to reduce incomplete Responses output (medium reasoning, higher token budget)</h4>
                 <p><strong>Stage:</strong> docs</p>
                 <p><strong>Notes:</strong> Logged update from history.md.</p>
+              </article>
+            </section>
+          </div>
+          <div class="repo-block">
+            <div class="repo-header">
+              <h3>ai-risk-scenario-modelling</h3>
+              <span>Agent: Codex</span>
+            </div>
+            <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
+                <h4>Iteration checks rerunning</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
+                <h4>Iteration checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
+                <h4>Iteration checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
+                <h4>Initialized update log and publish workflow</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
+                <h4>Scenario builder refinements in progress</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
+                <h4>Baseline simulation verification pass</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
+                <h4>Agent substitution test run failed</h4>
+                <p><strong>Stage:</strong> incident</p>
+                <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
+                <h4>Dependency modeling defaults refreshed</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
+                <h4>Simulation service scaffolding underway</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
+              </article>
+            </section>
+          </div>
+          <div class="repo-block">
+            <div class="repo-header">
+              <h3>synthpop</h3>
+              <span>Agent: Codex</span>
+            </div>
+            <section data-repo="synthpop" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T00:38:10+11:00">
+                <h4>Iteration 136 verification completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks passed and containers were torn down.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:28:53+11:00">
+                <h4>Iteration 136 verification started</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks for update logging and dashboard workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T00:28:30+11:00">
+                <h4>Updated update log checks and workflow validation</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added workflow linting, iteration check alias, and aligned AGENTS casing.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T23:15:00+11:00">
+                <h4>Initialized update logging and dashboard publish workflow</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Set up update log format, workflow stub, and repository logging rules.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T22:40:00+11:00">
+                <h4>Refined research pipeline QA checks</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Expanded smoke checks and verified logging outputs for the research worker.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-28T21:55:00+11:00">
+                <h4>Model smoke call failed during verification</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> OpenAI/HF checks failed and required retry with updated settings.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T20:10:00+11:00">
+                <h4>Documented UI-per-iteration strategy</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added plan details for artifact-first UI panels and testing gates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-28T19:30:00+11:00">
+                <h4>Drafting experimentation pipeline milestones</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Outlined milestone acceptance checks and cross-module dependencies.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-27T18:05:00+11:00">
+                <h4>Baseline research artifacts captured</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Captured initial ledger and manuscript skeleton for tracking.</p>
               </article>
             </section>
           </div>
