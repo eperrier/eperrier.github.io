@@ -431,10 +431,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
-              <td data-label="Last Update">2025-12-29 10:27 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2025-12-29 10:28 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 029 checks failed (rerun)</td>
+              <td data-label="Summary">Iteration 029 checks rerunning (rule fix)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
@@ -921,6 +921,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2025-12-29T10:28:00+11:00">
+                <h4>Iteration 029 checks rerunning (rule fix)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after loosening the AGENTS.md AUTO mode rule match. This attempt should reach docker compose build/up, API checks, and Playwright if rule validation passes. A new check log will be written under tests/logs/check_<timestamp>.log.</p>
+              </article>
               <article data-status="error" data-time="2025-12-29T10:27:30+11:00">
                 <h4>Iteration 029 checks failed (rerun)</h4>
                 <p><strong>Stage:</strong> test</p>
