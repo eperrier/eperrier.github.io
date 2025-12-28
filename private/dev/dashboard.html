@@ -431,10 +431,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
               <td data-label="Last Update">2025-12-29 10:27 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 029 checks rerunning</td>
+              <td data-label="Summary">Iteration 029 checks failed (rerun)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
@@ -921,6 +921,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2025-12-29T10:27:30+11:00">
+                <h4>Iteration 029 checks failed (rerun)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed again during the AGENTS.md AUTO mode rule check (log tests/logs/check_20251229_102917.log). The rerun did not proceed to docker compose or Playwright. Updated the rule check to match "AUTO mode" and will retry.</p>
+              </article>
               <article data-status="running" data-time="2025-12-29T10:27:00+11:00">
                 <h4>Iteration 029 checks rerunning</h4>
                 <p><strong>Stage:</strong> test</p>
