@@ -395,8 +395,8 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration checks failed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Re-running iteration checks</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Re-running iteration checks</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 01:14 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -429,13 +436,6 @@
           <li class="activity-item">
             <div>
               <strong>Re-running iteration checks</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 01:08 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 01:08 +1100</div>
@@ -501,7 +501,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>119</strong>
+            <strong>120</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -540,6 +540,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="lma-agent-studio" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T01:14:17+11:00">
+            <h4>Re-running iteration checks</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Retrying tests/run_iteration_checks.ps1 after reducing chart toggle test to single-direction assertion.</p>
+          </article>
           <article data-status="error" data-time="2025-12-29T01:14:01+11:00">
             <h4>Iteration checks failed</h4>
             <p><strong>Stage:</strong> test</p>
