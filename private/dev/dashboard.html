@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-29 10:57 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2025-12-29 10:58 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 030 checks running</td>
+              <td data-label="Summary">Iteration 030 checks failed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -548,6 +548,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2025-12-29T10:58:50+11:00">
+                <h4>Iteration 030 checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed when Playwright hit a strict-mode ambiguity for "Selected Node" in the workflow summary (log tests/logs/check_20251229_105735.log). The run completed docker compose build/up and API checks, but UI tests stopped on the duplicate text selector. Updating the test to scope the selector to the Workflow Summary panel, then re-running checks.</p>
+              </article>
               <article data-status="running" data-time="2025-12-29T10:57:10+11:00">
                 <h4>Iteration 030 checks running</h4>
                 <p><strong>Stage:</strong> test</p>
