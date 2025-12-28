@@ -425,9 +425,9 @@
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
               <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-29 10:23 +1100</td>
+              <td data-label="Last Update">2025-12-29 10:26 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 029 starting — AUTO mode rules</td>
+              <td data-label="Summary">Iteration 029 checks running</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -518,6 +518,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2025-12-29T10:26:00+11:00">
+                <h4>Iteration 029 checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to validate AUTO mode rules and update-log detail requirements. This run will rebuild docker images, run API checks, run the agent/baseline checks, and execute Playwright UI tests. Results will be logged to tests/logs/check_<timestamp>.log.</p>
+              </article>
               <article data-status="running" data-time="2025-12-29T10:23:45+11:00">
                 <h4>Iteration 029 starting — AUTO mode rules</h4>
                 <p><strong>Stage:</strong> edit</p>
