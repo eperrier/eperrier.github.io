@@ -393,12 +393,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Enforced newest-first update log ordering</div>
+            <div class="note">Iteration 3.8.3A - Goal-driven workflow generation + graph editing</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-28 23:35 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-28 23:59 +1100</strong>
+            <div class="note">Stage: docs</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -418,24 +418,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Enforced newest-first update log ordering</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</strong>
+              <div class="item-meta">Stage: docs</div>
             </div>
-            <div class="item-meta">2025-12-28 23:35 +1100</div>
+            <div class="item-meta">2025-12-28 23:59 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Stabilized org-builder tests and update log automation</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration 3.8.1 - Proposal pipeline (schema + policy gate)</strong>
+              <div class="item-meta">Stage: docs</div>
             </div>
-            <div class="item-meta">2025-12-28 23:10 +1100</div>
+            <div class="item-meta">2025-12-28 23:59 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks passed</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Iteration 3.8.1 (UI wiring) - Proposal pipeline acceptance</strong>
+              <div class="item-meta">Stage: docs</div>
             </div>
-            <div class="item-meta">2025-12-28 23:10 +1100</div>
+            <div class="item-meta">2025-12-28 23:59 +1100</div>
           </li>
         </ul>
       </section>
@@ -477,7 +477,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>108</strong>
+            <strong>109</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -487,7 +487,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-28 23:35 +1100</strong>
+            <strong>2025-12-28 23:59 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -516,6 +516,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="lma-agent-studio" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-28T23:59:59+11:00">
+            <h4>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add bulk goal entry; enrich generated plans with org/division/agent assignments; allow graph view edits (add steps/edges/time steps) with connect tooling; update workflow UI formatting for actor/interaction details. Runtime change: workflow planning supports bulk goals, generated assignments, and interactive graph edits for steps/edges.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:58+11:00">
+            <h4>Iteration 3.8.1 - Proposal pipeline (schema + policy gate)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-D: add workflow proposal schema + validation endpoint; gate acceptance behind explicit accept; store provenance metadata for LLM proposals and manual defaults. Runtime change: workflows can be proposed and explicitly accepted before saving, with provenance recorded.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:57+11:00">
+            <h4>Iteration 3.8.1 (UI wiring) - Proposal pipeline acceptance</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts: wire proposal validate/accept flow into workflow generation UI; require accepted_by and surface validation errors. Runtime change: workflow plan generation can be validated and accepted into saved workflows with explicit acceptance metadata.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:59:56+11:00">
+            <h4>Iteration 3.8.2 - Agent capsule schema (memory/tools/cognition)</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: add structured capsule fields, validate updates, and expose UI editing; add API + UI coverage for capsule persistence. Runtime change: agents now store and surface structured capsule metadata for memory, tools, and cognition.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T23:36:34+11:00">
+            <h4>Fixed update log sort parsing</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Switched to DateTimeOffset.Parse for data-time sorting so newest-first order can be enforced.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-28T23:35:35+11:00">
             <h4>Enforced newest-first update log ordering</h4>
             <p><strong>Stage:</strong> edit</p>
@@ -591,25 +616,30 @@
             <p><strong>Stage:</strong> docs</p>
             <p><strong>Notes:</strong> Prepended history.md entries into the update log.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-28T23:59:59+11:00">
-            <h4>Iteration 3.8.3A - Goal-driven workflow generation + graph editing</h4>
+          <article data-status="complete" data-time="2025-12-28T19:43:02+11:00">
+            <h4>Prepared update logging and workflow publishing</h4>
             <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Contracts A-D: add bulk goal entry; enrich generated plans with org/division/agent assignments; allow graph view edits (add steps/edges/time steps) with connect tooling; update workflow UI formatting for actor/interaction details. Runtime change: workflow planning supports bulk goals, generated assignments, and interactive graph edits for steps/edges.</p>
+            <p><strong>Notes:</strong> Added update log rules and publishing workflow scaffolding.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-28T23:59:58+11:00">
-            <h4>Iteration 3.8.1 - Proposal pipeline (schema + policy gate)</h4>
+          <article data-status="complete" data-time="2025-12-28T19:19:45+11:00">
+            <h4>Added update logging scaffolding</h4>
             <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Contracts A-D: add workflow proposal schema + validation endpoint; gate acceptance behind explicit accept; store provenance metadata for LLM proposals and manual defaults. Runtime change: workflows can be proposed and explicitly accepted before saving, with provenance recorded.</p>
+            <p><strong>Notes:</strong> Created update log structure and added dashboard publishing workflow.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-28T23:59:57+11:00">
-            <h4>Iteration 3.8.1 (UI wiring) - Proposal pipeline acceptance</h4>
+          <article data-status="complete" data-time="2025-12-28T18:30:00+11:00">
+            <h4>Initialized update log</h4>
             <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Contracts: wire proposal validate/accept flow into workflow generation UI; require accepted_by and surface validation errors. Runtime change: workflow plan generation can be validated and accepted into saved workflows with explicit acceptance metadata.</p>
+            <p><strong>Notes:</strong> Added starter entries for status tracking.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-28T23:59:56+11:00">
-            <h4>Iteration 3.8.2 - Agent capsule schema (memory/tools/cognition)</h4>
+          <article data-status="complete" data-time="2025-12-28T17:45:00+11:00">
+            <h4>Baseline status entry</h4>
             <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Contracts A-C: add structured capsule fields, validate updates, and expose UI editing; add API + UI coverage for capsule persistence. Runtime change: agents now store and surface structured capsule metadata for memory, tools, and cognition.</p>
+            <p><strong>Notes:</strong> Recorded initial documentation update.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-28T17:00:00+11:00">
+            <h4>Project log setup</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Prepared log format for future updates.</p>
           </article>
           <article data-status="complete" data-time="2025-12-27T23:59:59+11:00">
             <h4>Iteration 3.7.10 - Loop handling + max-iteration guard</h4>
@@ -720,11 +750,6 @@
             <h4>Iteration 3.7.4A - Org scope selector + load org context</h4>
             <p><strong>Stage:</strong> docs</p>
             <p><strong>Notes:</strong> Contracts A-D: replace workflow scope ID inputs with registry-backed org/division/agent selectors (optional systems); add &quot;Select entire organisation&quot; + &quot;Load org to workflow&quot;; update workflow editor copy for org-first planning; scope actor options to org context. Runtime change: workflow drafts can be scoped from the org registry without manual IDs; workflow tab now ensures org registry loads when opening the module.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-24T23:59:59+11:00">
-            <h4>Iteration 3.6.13 - Org reset, delete actions, topology inspector</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Contracts A-C: clear org editor state when active org is missing or reset; add agent delete control + safer division delete cleanup; surface division/agent topology relations in editors. Runtime change: new org creation no longer inherits stale divisions/agents; org builder lets you delete agents and shows per-entity topology with relation deletes.</p>
           </article>
           <article data-status="complete" data-time="2025-12-25T23:59:59+11:00">
             <h4>Iteration 3.7.9 - Workflow Milestone 2A plan</h4>
@@ -850,6 +875,11 @@
             <h4>Iteration 3.6.4 - Org registry sync, interactive chart tools, workspace panel toggle</h4>
             <p><strong>Stage:</strong> docs</p>
             <p><strong>Notes:</strong> Contracts A-C: organisation registry selection now hydrates saved divisions/agent assignments without overwriting; org chart adds in-canvas tools (add division, add connector, auto layout) plus structure auto-generation; workspace panel fully hides once a workspace is loaded. Runtime change: registry shows stored counts; org charts can be edited from the canvas and auto-generate baseline structure; left workspace panel can collapse for focus.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-24T23:59:59+11:00">
+            <h4>Iteration 3.6.13 - Org reset, delete actions, topology inspector</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Contracts A-C: clear org editor state when active org is missing or reset; add agent delete control + safer division delete cleanup; surface division/agent topology relations in editors. Runtime change: new org creation no longer inherits stale divisions/agents; org builder lets you delete agents and shows per-entity topology with relation deletes.</p>
           </article>
           <article data-status="complete" data-time="2025-12-23T23:59:59+11:00">
             <h4>Added iteration workflow scaffolding: `tests/run_iteration_checks.ps1`, `tests/iteration_check.ps1`, and `ITERATION_PROMPT_TEMPLATE.md`</h4>
@@ -1035,31 +1065,6 @@
             <h4>Adjusted run defaults to reduce incomplete Responses output (medium reasoning, higher token budget)</h4>
             <p><strong>Stage:</strong> docs</p>
             <p><strong>Notes:</strong> Logged update from history.md.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-28T19:43:02+11:00">
-            <h4>Prepared update logging and workflow publishing</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Added update log rules and publishing workflow scaffolding.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-28T19:19:45+11:00">
-            <h4>Added update logging scaffolding</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Created update log structure and added dashboard publishing workflow.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-28T18:30:00+11:00">
-            <h4>Initialized update log</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Added starter entries for status tracking.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-28T17:45:00+11:00">
-            <h4>Baseline status entry</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Recorded initial documentation update.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-28T17:00:00+11:00">
-            <h4>Project log setup</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Prepared log format for future updates.</p>
           </article>
         </section>
       </section>
