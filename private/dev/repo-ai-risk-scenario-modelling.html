@@ -395,8 +395,8 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 029 checks running</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 029 checks failed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration checks failed</strong>
-            <div class="note">Update log validation introduced a PowerShell parsing error.</div>
+            <strong>Iteration 029 checks failed</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed during rule validation with "AGENTS.md missing AUTO mode rules" (log tests/logs/check_20251229_102531.log). This run did not reach docker compose build/up or Playwright, so a rerun is required after confirming AGENTS.md content. Will re-run iteration checks after verifying the AUTO mode rule text.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 029 checks failed</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 10:26 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 029 checks running</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2025-12-29 10:23 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Update log detail rules recorded</strong>
-              <div class="item-meta">Stage: docs</div>
-            </div>
-            <div class="item-meta">2025-12-29 10:00 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 029 checks failed</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed during rule validation with "AGENTS.md missing AUTO mode rules" (log tests/logs/check_20251229_102531.log). This run did not reach docker compose build/up or Playwright, so a rerun is required after confirming AGENTS.md content. Will re-run iteration checks after verifying the AUTO mode rule text.</div>
+            </div>
+            <div class="item-meta">2025-12-29 10:26 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration checks failed</strong>
@@ -468,17 +475,17 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>75%</strong>
+            <strong>67%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>15</strong>
+            <strong>16</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>2</strong>
+            <strong>3</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
@@ -512,6 +519,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2025-12-29T10:26:30+11:00">
+            <h4>Iteration 029 checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed during rule validation with "AGENTS.md missing AUTO mode rules" (log tests/logs/check_20251229_102531.log). This run did not reach docker compose build/up or Playwright, so a rerun is required after confirming AGENTS.md content. Will re-run iteration checks after verifying the AUTO mode rule text.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T10:26:00+11:00">
             <h4>Iteration 029 checks running</h4>
             <p><strong>Stage:</strong> test</p>
