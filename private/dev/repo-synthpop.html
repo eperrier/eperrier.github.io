@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 150 verification completed</div>
+            <div class="note">Iteration 151 verification completed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 09:35 +1100</strong>
+            <strong>2025-12-29 09:48 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Model smoke call failed during verification</strong>
-            <div class="note">OpenAI/HF checks failed and required retry with updated settings.</div>
+            <strong>Iteration 151 verification failed</strong>
+            <div class="note">update-synthpop.html missing latest history entry row; regenerating log.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 150 verification completed</strong>
+              <strong>Iteration 151 verification completed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 09:35 +1100</div>
+            <div class="item-meta">2025-12-29 09:48 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 150 verification started</strong>
+              <strong>Iteration 151 verification restarted</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 09:27 +1100</div>
+            <div class="item-meta">2025-12-29 09:40 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Added local scheduler log output</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration 151 verification failed</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 09:26 +1100</div>
+            <div class="item-meta">2025-12-29 09:39 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 151 verification failed</strong>
+              <div class="item-meta">update-synthpop.html missing latest history entry row; regenerating log.</div>
+            </div>
+            <div class="item-meta">2025-12-29 09:39 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Model smoke call failed during verification</strong>
@@ -461,22 +468,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>97%</strong>
+            <strong>95%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>55</strong>
+            <strong>60</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>1</strong>
+            <strong>2</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 09:35 +1100</strong>
+            <strong>2025-12-29 09:48 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +512,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T09:48:08+11:00">
+            <h4>Iteration 151 verification completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_094049.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T09:40:32+11:00">
+            <h4>Iteration 151 verification restarted</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-29T09:39:53+11:00">
+            <h4>Iteration 151 verification failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> update-synthpop.html missing latest history entry row; regenerating log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T09:39:21+11:00">
+            <h4>Iteration 151 verification started</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks for autonomous continuation rule.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T09:39:04+11:00">
+            <h4>Autopilot continuation clarified</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Autonomous mode now continues with unrelated changes by staging iteration-only files.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T09:35:39+11:00">
             <h4>Iteration 150 verification completed</h4>
             <p><strong>Stage:</strong> test</p>
