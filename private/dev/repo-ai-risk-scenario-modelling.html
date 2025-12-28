@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>synthpop Updates (Local Prototype)</title>
+  <title>ai-risk-scenario-modelling Updates (Local Prototype)</title>
   <style>
     :root {
       --bg: #1e1f22;
@@ -362,8 +362,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
-      <a class="server-dot active" href="repo-synthpop.html" title="synthpop">SY</a>
+      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -385,7 +385,7 @@
 
     <main class="main-panel">
       <header class="main-header">
-        <h1>synthpop</h1>
+        <h1>ai-risk-scenario-modelling</h1>
         <p>Agent: Codex - Local prototype with module sections.</p>
       </header>
 
@@ -395,11 +395,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 136 verification completed</div>
+            <div class="note">Iteration checks completed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 00:38 +1100</strong>
+            <strong>2025-12-29 00:42 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -409,8 +409,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Model smoke call failed during verification</strong>
-            <div class="note">OpenAI/HF checks failed and required retry with updated settings.</div>
+            <strong>Iteration checks failed</strong>
+            <div class="note">Update log validation introduced a PowerShell parsing error.</div>
           </div>
         </div>
       </section>
@@ -420,24 +420,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 136 verification completed</strong>
+              <strong>Iteration checks completed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 00:38 +1100</div>
+            <div class="item-meta">2025-12-29 00:42 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 136 verification started</strong>
+              <strong>Iteration checks rerunning</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 00:28 +1100</div>
+            <div class="item-meta">2025-12-29 00:41 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Updated update log checks and workflow validation</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration checks failed</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 00:28 +1100</div>
+            <div class="item-meta">2025-12-29 00:41 +1100</div>
           </li>
         </ul>
       </section>
@@ -447,10 +447,17 @@
         <ul class="incident-list">
           <li class="incident-item">
             <div>
-              <strong>Model smoke call failed during verification</strong>
-              <div class="item-meta">OpenAI/HF checks failed and required retry with updated settings.</div>
+              <strong>Iteration checks failed</strong>
+              <div class="item-meta">Update log validation introduced a PowerShell parsing error.</div>
             </div>
-            <div class="item-meta">2025-12-28 21:55 +1100</div>
+            <div class="item-meta">2025-12-29 00:41 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Agent substitution test run failed</strong>
+              <div class="item-meta">Agent harness run reported missing logs and was queued for retry.</div>
+            </div>
+            <div class="item-meta">2025-12-24 09:45 -0500</div>
           </li>
         </ul>
       </section>
@@ -460,22 +467,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>86%</strong>
+            <strong>67%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>9</strong>
+            <strong>10</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>1</strong>
+            <strong>2</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 00:38 +1100</strong>
+            <strong>2025-12-29 00:42 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -503,51 +510,56 @@
 
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
-        <section data-repo="synthpop" data-agent="Codex">
-          <article data-status="complete" data-time="2025-12-29T00:38:10+11:00">
-            <h4>Iteration 136 verification completed</h4>
+        <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
+            <h4>Iteration checks completed</h4>
             <p><strong>Stage:</strong> test</p>
-            <p><strong>Notes:</strong> Iteration checks passed and containers were torn down.</p>
+            <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
           </article>
-          <article data-status="running" data-time="2025-12-29T00:28:53+11:00">
-            <h4>Iteration 136 verification started</h4>
+          <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
+            <h4>Iteration checks rerunning</h4>
             <p><strong>Stage:</strong> test</p>
-            <p><strong>Notes:</strong> Running iteration checks for update logging and dashboard workflow.</p>
+            <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-29T00:28:30+11:00">
-            <h4>Updated update log checks and workflow validation</h4>
+          <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
+            <h4>Iteration checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
+            <h4>Initialized update log and publish workflow</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
+            <h4>Scenario builder refinements in progress</h4>
             <p><strong>Stage:</strong> edit</p>
-            <p><strong>Notes:</strong> Added workflow linting, iteration check alias, and aligned AGENTS casing.</p>
+            <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-28T23:15:00+11:00">
-            <h4>Initialized update logging and dashboard publish workflow</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Set up update log format, workflow stub, and repository logging rules.</p>
-          </article>
-          <article data-status="complete" data-time="2025-12-28T22:40:00+11:00">
-            <h4>Refined research pipeline QA checks</h4>
+          <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
+            <h4>Baseline simulation verification pass</h4>
             <p><strong>Stage:</strong> test</p>
-            <p><strong>Notes:</strong> Expanded smoke checks and verified logging outputs for the research worker.</p>
+            <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
           </article>
-          <article data-status="error" data-time="2025-12-28T21:55:00+11:00">
-            <h4>Model smoke call failed during verification</h4>
-            <p><strong>Stage:</strong> test</p>
-            <p><strong>Notes:</strong> OpenAI/HF checks failed and required retry with updated settings.</p>
+          <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
+            <h4>Agent substitution test run failed</h4>
+            <p><strong>Stage:</strong> incident</p>
+            <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-28T20:10:00+11:00">
-            <h4>Documented UI-per-iteration strategy</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Added plan details for artifact-first UI panels and testing gates.</p>
-          </article>
-          <article data-status="running" data-time="2025-12-28T19:30:00+11:00">
-            <h4>Drafting experimentation pipeline milestones</h4>
+          <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
+            <h4>Dependency modeling defaults refreshed</h4>
             <p><strong>Stage:</strong> review</p>
-            <p><strong>Notes:</strong> Outlined milestone acceptance checks and cross-module dependencies.</p>
+            <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
           </article>
-          <article data-status="complete" data-time="2025-12-27T18:05:00+11:00">
-            <h4>Baseline research artifacts captured</h4>
-            <p><strong>Stage:</strong> docs</p>
-            <p><strong>Notes:</strong> Captured initial ledger and manuscript skeleton for tracking.</p>
+          <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
+            <h4>Simulation service scaffolding underway</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
           </article>
         </section>
       </section>
