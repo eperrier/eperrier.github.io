@@ -425,9 +425,9 @@
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-29 09:48 +1100</td>
+              <td data-label="Last Update">2025-12-29 10:17 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 151 verification completed</td>
+              <td data-label="Summary">Iteration 152 — Verification completed (AGI Iteration 11 — Cloud Adapter Stub)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
@@ -518,6 +518,91 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="synthpop" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T10:17:08+11:00">
+                <h4>Iteration 152 — Verification completed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_100946.log. AGI update-log rules and start-of-iteration marker validation are now enforced.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:09:28+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after fixing the sentence counting regex to match literal periods. This confirms the multi-sentence requirement is enforced correctly.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:09:09+11:00">
+                <h4>Iteration 152 — Verification failed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Sentence counting still used an escaped dot pattern that never matched. Switched to a literal dot regex to correctly count sentence-ending periods.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:08:31+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after fixing sentence counting for AGI log detail validation. This ensures the notes requirement properly recognizes multi-sentence entries.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:08:13+11:00">
+                <h4>Iteration 152 — Verification failed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Sentence counting treated the period split as a literal backslash sequence, so two-sentence notes were miscounted. Replaced the split with regex dot matching for accurate sentence counts.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:07:27+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks with corrected regex quoting for the update log detail rule. This confirms the latest AGI update-log entry is parsed and validated.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:07:09+11:00">
+                <h4>Iteration 152 — Verification failed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> AGI log detail check still failed due to regex escaping in the notes matcher. Switched the h4/notes patterns to single-quoted regex strings for reliable whitespace matching.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:05:53+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after simplifying the AGI log detail parser. This run confirms the new h4/notes extraction logic matches the latest entry.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:05:35+11:00">
+                <h4>Iteration 152 — Verification failed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> AGI log detail check could not parse the latest update entry using the article-scoped regex. Switched to a top-level h4/notes match to make the parser robust.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:03:59+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after hardening the updates-synthpop.html parser in tests/run_iteration_checks.ps1. This retry validates the AGI log detail check against the latest entry structure.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:02:20+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html from history.md. This retry validates the update log row for Iteration 152.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:01:39+11:00">
+                <h4>Iteration 152 — Verification failed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> update-synthpop.html was not regenerated after adding the new history.md entry. Regenerating the update log and re-running iteration checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:01:13+11:00">
+                <h4>Iteration 152 — Verification restarted (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after correcting the AGI start-entry regex in tests/run_iteration_checks.ps1. This ensures the update-log validation rules execute without parser errors.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:00:56+11:00">
+                <h4>Iteration 152 — Verification failed (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> PowerShell parser error in the AGI start-entry regex blocked the test run. Fixed the regex to use a single-quoted pattern and will re-run iteration checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T09:59:55+11:00">
+                <h4>Iteration 152 — Verification started (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks to validate AGI update-log rules and the start-of-iteration marker requirement. This run verifies updates-synthpop.html formatting and rule text alignment across AGENTS.md/CODEX.md/CODEX-metaprompt.md.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T09:59:31+11:00">
+                <h4>Iteration 152 — Update log detail rules (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Expanded AGI update-log rules to require iteration labeling and richer notes in AGENTS.md/CODEX.md, plus a start-of-iteration push rule. Added automated checks in tests/run_iteration_checks.ps1 and acceptance coverage in tests/acceptance_matrix.md.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T09:59:05+11:00">
+                <h4>Iteration 152 — Starting AGI Iteration 11 — Cloud Adapter Stub (AGI Iteration 11 — Cloud Adapter Stub)</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Preparing to begin AGI Iteration 11 as defined in dev-iteration-v4-agi.md. This start marker is logged before rule edits and testing begin.</p>
+              </article>
               <article data-status="complete" data-time="2025-12-29T09:48:08+11:00">
                 <h4>Iteration 151 verification completed</h4>
                 <p><strong>Stage:</strong> test</p>
