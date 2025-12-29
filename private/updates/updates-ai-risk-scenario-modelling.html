@@ -1,4 +1,9 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+  <article data-status="error" data-time="2025-12-29T11:08:00+11:00">
+    <h4>Iteration 030 checks failed (QA load nodes)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright after loading the saved QA Scenario; the test looked for the Intake node button but remained on the Workflow tab where nodes are rendered as plain text (log tests/logs/check_20251229_110800.log). Docker compose build/up and API checks completed before UI tests ran. Updating the test to switch to the Node Editor tab after loading the saved scenario, then re-running iteration checks.</p>
+  </article>
   <article data-status="running" data-time="2025-12-29T11:07:08+11:00">
     <h4>Iteration 030 checks rerunning (graph tab fix)</h4>
     <p><strong>Stage:</strong> test</p>
