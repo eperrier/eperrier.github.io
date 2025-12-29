@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot active" href="repo-synthpop.html" title="synthpop">SY</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 157 — Adaptive Loop Metrics (AGI Iteration 14 — Adaptive Loop Metrics)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 157 — Verification completed (AGI Iteration 14 — Adaptive Loop Metrics)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 11:48 +1100</strong>
-            <div class="note">Stage: review</div>
+            <strong>2025-12-29 11:55 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 157 — Adaptive Loop Metrics (AGI Iteration 14 — Adaptive Loop Metrics)</strong>
-              <div class="item-meta">Stage: review</div>
+              <strong>Iteration 157 — Verification completed (AGI Iteration 14 — Adaptive Loop Metrics)</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 11:48 +1100</div>
+            <div class="item-meta">2025-12-29 11:55 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 156 — Verification completed (AGI Iteration 13 — Adaptive Controller (Policy v1))</strong>
+              <strong>Iteration 157 — Verification started (AGI Iteration 14 — Adaptive Loop Metrics)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 11:46 +1100</div>
+            <div class="item-meta">2025-12-29 11:51 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 156 — Verification restarted (AGI Iteration 13 — Adaptive Controller (Policy v1))</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Iteration 157 — Controller metrics artifact (AGI Iteration 14 — Adaptive Loop Metrics)</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-29 11:41 +1100</div>
+            <div class="item-meta">2025-12-29 11:50 +1100</div>
           </li>
         </ul>
       </section>
@@ -550,7 +550,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>104</strong>
+            <strong>107</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -560,7 +560,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 11:48 +1100</strong>
+            <strong>2025-12-29 11:55 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -589,6 +589,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T11:55:06+11:00">
+            <h4>Iteration 157 — Verification completed (AGI Iteration 14 — Adaptive Loop Metrics)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_115147.log. Controller metrics lint and discovery checks now pass with the updated controller_metrics.json artifact.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T11:51:27+11:00">
+            <h4>Iteration 157 — Verification started (AGI Iteration 14 — Adaptive Loop Metrics)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate controller_metrics.json mode/trigger fields. This run also verifies the latest update-synthpop.html row and update log entries.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T11:50:43+11:00">
+            <h4>Iteration 157 — Controller metrics artifact (AGI Iteration 14 — Adaptive Loop Metrics)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added controller_metrics.json output in generate_handoff.py with mode and trigger fields. Updated acceptance checks to validate the new controller metrics artifact.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T11:48:48+11:00">
             <h4>Iteration 157 — Adaptive Loop Metrics (AGI Iteration 14 — Adaptive Loop Metrics)</h4>
             <p><strong>Stage:</strong> review</p>
