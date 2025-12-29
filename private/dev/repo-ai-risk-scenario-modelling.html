@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 035 checks running</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 035 checks completed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 12:16 +1100</strong>
+            <strong>2025-12-29 12:17 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 035 checks completed</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 12:17 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 035 checks running</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: edit</div>
             </div>
             <div class="item-meta">2025-12-29 12:12 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 034 checks completed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 12:04 +1100</div>
           </li>
         </ul>
       </section>
@@ -510,12 +510,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>60%</strong>
+            <strong>62%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>45</strong>
+            <strong>46</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -525,7 +525,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 12:16 +1100</strong>
+            <strong>2025-12-29 12:17 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -554,6 +554,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T12:17:51+11:00">
+            <h4>Iteration 035 checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after wiring OpenAI key presence reporting (without exposure) and adding agent error simulation with safe UI messaging. Docker compose build/up and API checks completed before the Playwright suite validated the Simulate Agent Error flow and confirmed no API key text is rendered in the client. Log: tests/logs/check_20251229_121707.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T12:16:14+11:00">
             <h4>Iteration 035 checks running</h4>
             <p><strong>Stage:</strong> test</p>
