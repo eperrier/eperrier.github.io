@@ -431,10 +431,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-29 11:56 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-29 12:03 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 158 — Formal Verification Gate (AGI Iteration 15 — Formal Verification Gate)</td>
+              <td data-label="Summary">Iteration 158 — Verification completed (AGI Iteration 15 — Formal Verification Gate)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
@@ -811,6 +811,21 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="synthpop" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T12:03:15+11:00">
+                <h4>Iteration 158 — Verification completed (AGI Iteration 15 — Formal Verification Gate)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_115939.log. Proof coverage lint now gates theory promotion on proof_attempts.json status fields.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T11:59:16+11:00">
+                <h4>Iteration 158 — Verification started (AGI Iteration 15 — Formal Verification Gate)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks to validate proof coverage lint against proof_attempts.json. This run also verifies the updated history-based update-synthpop.html row.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T11:58:37+11:00">
+                <h4>Iteration 158 — Proof coverage lint (AGI Iteration 15 — Formal Verification Gate)</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added proof coverage lint to require statuses in proof_attempts.json during iteration checks. Updated acceptance criteria to gate theory promotion on proof status availability.</p>
+              </article>
               <article data-status="running" data-time="2025-12-29T11:56:38+11:00">
                 <h4>Iteration 158 — Formal Verification Gate (AGI Iteration 15 — Formal Verification Gate)</h4>
                 <p><strong>Stage:</strong> review</p>
