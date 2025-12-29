@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 030 checks failed (QA load nodes)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 030 checks rerunning (QA load tab fix)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 11:08 +1100</strong>
+            <strong>2025-12-29 11:09 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 030 checks rerunning (QA load tab fix)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 11:09 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 030 checks failed (QA load nodes)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 11:07 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 030 checks failed (graph node missing)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 11:00 +1100</div>
           </li>
         </ul>
       </section>
@@ -508,7 +508,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>27</strong>
+            <strong>28</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -518,7 +518,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 11:08 +1100</strong>
+            <strong>2025-12-29 11:09 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -547,6 +547,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T11:09:58+11:00">
+            <h4>Iteration 030 checks rerunning (QA load tab fix)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after adjusting the Playwright flow to switch to the Node Editor tab after loading the saved QA Scenario, so node buttons are visible before assertions. This rerun will rebuild docker images, execute API checks, and run the UI suite again. Results will be captured in tests/logs/check_<timestamp>.log.</p>
+          </article>
           <article data-status="error" data-time="2025-12-29T11:08:00+11:00">
             <h4>Iteration 030 checks failed (QA load nodes)</h4>
             <p><strong>Stage:</strong> test</p>
