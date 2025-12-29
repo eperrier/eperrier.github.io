@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">GPU fallback automation applied</div>
+            <div class="note">Remote pipeline trigger committed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 02:07 -0500</strong>
+            <strong>2025-12-29 02:22 -0500</strong>
             <div class="note">Stage: deploy</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>GPU fallback automation applied</strong>
+              <strong>Remote pipeline trigger committed</strong>
               <div class="item-meta">Stage: deploy</div>
             </div>
-            <div class="item-meta">2025-12-29 02:07 -0500</div>
+            <div class="item-meta">2025-12-29 02:22 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for fallback changes</strong>
+              <strong>Iteration checks completed for remote trigger</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 02:06 -0500</div>
+            <div class="item-meta">2025-12-29 02:21 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started for GPU fallback</strong>
+              <strong>Iteration checks started for remote trigger</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 02:05 -0500</div>
+            <div class="item-meta">2025-12-29 02:20 -0500</div>
           </li>
         </ul>
       </section>
@@ -461,12 +461,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>89%</strong>
+            <strong>91%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>14</strong>
+            <strong>17</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 02:07 -0500</strong>
+            <strong>2025-12-29 02:22 -0500</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T02:22:00-05:00">
+            <h4>Remote pipeline trigger committed</h4>
+            <p><strong>Stage:</strong> deploy</p>
+            <p><strong>Notes:</strong> Pushed changes to trigger Docker build, Runpod launch, and results PR workflow.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T02:21:00-05:00">
+            <h4>Iteration checks completed for remote trigger</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Verified checks before kicking off the automated pipeline.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T02:20:00-05:00">
+            <h4>Iteration checks started for remote trigger</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running checks before triggering the automated Runpod pipeline.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T02:07:00-05:00">
             <h4>GPU fallback automation applied</h4>
             <p><strong>Stage:</strong> deploy</p>
