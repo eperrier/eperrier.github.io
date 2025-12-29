@@ -376,8 +376,8 @@
     <aside class="server-rail">
       <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -423,18 +423,18 @@
               <td data-label="Summary">GPU fallback automation applied</td>
             </tr>
             <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-29 11:04 +1100</td>
+              <td data-label="Agent">Codex</td>
+              <td data-label="Summary">Iteration 154 — Verification completed (AGI Iteration 12 — Multi-Agent Decomposition Rules)</td>
+            </tr>
+            <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
               <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
               <td data-label="Last Update">2025-12-29 11:00 +1100</td>
               <td data-label="Agent">Codex</td>
               <td data-label="Summary">Iteration 030 checks failed (graph node missing)</td>
-            </tr>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-29 10:52 +1100</td>
-              <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 154 — Multi-agent decomposition rules (AGI Iteration 12 — Multi-Agent Decomposition Rules)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
@@ -544,143 +544,25 @@
           </div>
           <div class="repo-block">
             <div class="repo-header">
-              <h3>ai-risk-scenario-modelling</h3>
-              <span>Agent: Codex</span>
-            </div>
-            <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
-              <article data-status="error" data-time="2025-12-29T11:00:03+11:00">
-                <h4>Iteration 030 checks failed (graph node missing)</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright while waiting for the Intake graph node to appear in the workflow graph (log tests/logs/check_20251229_110003.log). Docker compose build/up and API checks completed, but the UI test timed out because it was still on the Node Editor tab. Updating the test to switch back to the Workflow tab before asserting the graph node, then re-running iteration checks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:59:10+11:00">
-                <h4>Iteration 030 checks rerunning</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after scoping the Playwright selector to the Workflow Summary panel. This run will again rebuild containers, hit API checks, and execute UI tests. A new log will be emitted under tests/logs/check_<timestamp>.log.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-29T10:58:50+11:00">
-                <h4>Iteration 030 checks failed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed when Playwright hit a strict-mode ambiguity for "Selected Node" in the workflow summary (log tests/logs/check_20251229_105735.log). The run completed docker compose build/up and API checks, but UI tests stopped on the duplicate text selector. Updating the test to scope the selector to the Workflow Summary panel, then re-running checks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:57:10+11:00">
-                <h4>Iteration 030 checks running</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to validate Milestone 1 builder workflow tab behavior, graph double-click handling, and updated Playwright coverage. This run will rebuild docker images, exercise API smoke checks, and execute the updated UI tests. Results will be captured in tests/logs/check_<timestamp>.log for iteration 030.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:46:20+11:00">
-                <h4>Iteration 030 starting — v3 Milestone 1 builder overhaul</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Starting Milestone 1 to add an internal Workflow tab, keep Scenario Store collapsed by default, and wire single/double-click behavior in the workflow graph. Planned edits include Scenario Builder layout changes, new workflow summaries, and Playwright coverage for default workflow tab and double-click to Node Editor. Will also run the required experiment and full iteration checks after code changes.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T10:33:30+11:00">
-                <h4>Iteration 029 checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Updated AGENTS.md and CODEX.md with AUTO mode rules and expanded update-log detail requirements, plus revised tests/run_iteration_checks.ps1 and added tests/iteration_029_check.ps1. Created exp_20251229_auto_iteration_mode and ran docker compose run --rm api python -c "print('auto iteration mode experiment')" (log experiments/exp_20251229_auto_iteration_mode/logs/exp_exp_20251229_auto_iteration_mode_20251229_102252.log). Iteration checks failed twice on the AUTO rule match (logs tests/logs/check_20251229_102531.log and tests/logs/check_20251229_102917.log), then passed after loosening the AGENTS check (log tests/logs/check_20251229_103218.log). Pushed update-log entries to GitHub before/after test runs and recorded results in history/experiments indexes.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:28:00+11:00">
-                <h4>Iteration 029 checks rerunning (rule fix)</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after loosening the AGENTS.md AUTO mode rule match. This attempt should reach docker compose build/up, API checks, and Playwright if rule validation passes. A new check log will be written under tests/logs/check_<timestamp>.log.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-29T10:27:30+11:00">
-                <h4>Iteration 029 checks failed (rerun)</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed again during the AGENTS.md AUTO mode rule check (log tests/logs/check_20251229_102917.log). The rerun did not proceed to docker compose or Playwright. Updated the rule check to match "AUTO mode" and will retry.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:27:00+11:00">
-                <h4>Iteration 029 checks rerunning</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after confirming AGENTS.md includes AUTO mode rules. This rerun will validate CODEX/AGENTS updates, verify experiment indexes, and execute docker compose build/up plus Playwright. Results will be captured in a new tests/logs/check_<timestamp>.log.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-29T10:26:30+11:00">
-                <h4>Iteration 029 checks failed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed during rule validation with "AGENTS.md missing AUTO mode rules" (log tests/logs/check_20251229_102531.log). This run did not reach docker compose build/up or Playwright, so a rerun is required after confirming AGENTS.md content. Will re-run iteration checks after verifying the AUTO mode rule text.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:26:00+11:00">
-                <h4>Iteration 029 checks running</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Starting powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to validate AUTO mode rules and update-log detail requirements. This run will rebuild docker images, run API checks, run the agent/baseline checks, and execute Playwright UI tests. Results will be logged to tests/logs/check_<timestamp>.log.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T10:23:45+11:00">
-                <h4>Iteration 029 starting — AUTO mode rules</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Starting iteration 029 to add AUTO: multi-iteration rules and expanded update-log detail requirements. Planned edits in AGENTS.md and CODEX.md plus tests/run_iteration_checks.ps1 updates, followed by an experiment run and full iteration checks. This entry records the iteration subject before work begins.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T10:00:30+11:00">
-                <h4>Update log detail rules recorded</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Updated AGENTS.md to require detailed update-log Notes (files/areas, commands/tests, outcomes) and added a matching guard in tests/run_iteration_checks.ps1. Recorded exp_20251229_update_log_detail plus iteration_028 check script and history/experiment index updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T10:00:09+11:00">
-                <h4>Iteration checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Ran powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to execute docker compose build/up, API checks, and Playwright UI tests. Passed with log tests/logs/check_20251229_095925.log.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T09:59:16+11:00">
-                <h4>Iteration checks running</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Starting tests/run_iteration_checks.ps1 to validate update-log rule changes and the new exp_20251229_update_log_detail entry. Expect docker compose build/up, API checks, and Playwright UI run.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
-                <h4>Iteration checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
-                <h4>Iteration checks rerunning</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
-                <h4>Iteration checks failed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
-                <h4>Iteration checks running</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
-                <h4>Initialized update log and publish workflow</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
-                <h4>Scenario builder refinements in progress</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
-                <h4>Baseline simulation verification pass</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
-                <h4>Agent substitution test run failed</h4>
-                <p><strong>Stage:</strong> incident</p>
-                <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
-                <h4>Dependency modeling defaults refreshed</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
-                <h4>Simulation service scaffolding underway</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
               <h3>synthpop</h3>
               <span>Agent: Codex</span>
             </div>
             <section data-repo="synthpop" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T11:04:08+11:00">
+                <h4>Iteration 154 — Verification completed (AGI Iteration 12 — Multi-Agent Decomposition Rules)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_105705.log. Agent plan schema validation and update-log checks now gate this iteration.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:56:12+11:00">
+                <h4>Iteration 154 — Verification started (AGI Iteration 12 — Multi-Agent Decomposition Rules)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks to validate agent_plan.json schema requirements and update-log compliance. This run verifies the new agent plan artifact is emitted during handoff.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T10:55:53+11:00">
+                <h4>Iteration 154 — Agent plan artifact (AGI Iteration 12 — Multi-Agent Decomposition Rules)</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added agent_plan.json output in generate_handoff.py and populated it with roles, tasks, termination criteria, and artifact targets. Updated acceptance checks to validate the agent plan schema and ensure the new artifact is enforced.</p>
+              </article>
               <article data-status="running" data-time="2025-12-29T10:52:56+11:00">
                 <h4>Iteration 154 — Multi-agent decomposition rules (AGI Iteration 12 — Multi-Agent Decomposition Rules)</h4>
                 <p><strong>Stage:</strong> review</p>
@@ -1090,6 +972,139 @@
                 <h4>Baseline research artifacts captured</h4>
                 <p><strong>Stage:</strong> docs</p>
                 <p><strong>Notes:</strong> Captured initial ledger and manuscript skeleton for tracking.</p>
+              </article>
+            </section>
+          </div>
+          <div class="repo-block">
+            <div class="repo-header">
+              <h3>ai-risk-scenario-modelling</h3>
+              <span>Agent: Codex</span>
+            </div>
+            <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2025-12-29T11:00:03+11:00">
+                <h4>Iteration 030 checks failed (graph node missing)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright while waiting for the Intake graph node to appear in the workflow graph (log tests/logs/check_20251229_110003.log). Docker compose build/up and API checks completed, but the UI test timed out because it was still on the Node Editor tab. Updating the test to switch back to the Workflow tab before asserting the graph node, then re-running iteration checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:59:10+11:00">
+                <h4>Iteration 030 checks rerunning</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after scoping the Playwright selector to the Workflow Summary panel. This run will again rebuild containers, hit API checks, and execute UI tests. A new log will be emitted under tests/logs/check_<timestamp>.log.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:58:50+11:00">
+                <h4>Iteration 030 checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed when Playwright hit a strict-mode ambiguity for "Selected Node" in the workflow summary (log tests/logs/check_20251229_105735.log). The run completed docker compose build/up and API checks, but UI tests stopped on the duplicate text selector. Updating the test to scope the selector to the Workflow Summary panel, then re-running checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:57:10+11:00">
+                <h4>Iteration 030 checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to validate Milestone 1 builder workflow tab behavior, graph double-click handling, and updated Playwright coverage. This run will rebuild docker images, exercise API smoke checks, and execute the updated UI tests. Results will be captured in tests/logs/check_<timestamp>.log for iteration 030.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:46:20+11:00">
+                <h4>Iteration 030 starting — v3 Milestone 1 builder overhaul</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Starting Milestone 1 to add an internal Workflow tab, keep Scenario Store collapsed by default, and wire single/double-click behavior in the workflow graph. Planned edits include Scenario Builder layout changes, new workflow summaries, and Playwright coverage for default workflow tab and double-click to Node Editor. Will also run the required experiment and full iteration checks after code changes.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T10:33:30+11:00">
+                <h4>Iteration 029 checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Updated AGENTS.md and CODEX.md with AUTO mode rules and expanded update-log detail requirements, plus revised tests/run_iteration_checks.ps1 and added tests/iteration_029_check.ps1. Created exp_20251229_auto_iteration_mode and ran docker compose run --rm api python -c "print('auto iteration mode experiment')" (log experiments/exp_20251229_auto_iteration_mode/logs/exp_exp_20251229_auto_iteration_mode_20251229_102252.log). Iteration checks failed twice on the AUTO rule match (logs tests/logs/check_20251229_102531.log and tests/logs/check_20251229_102917.log), then passed after loosening the AGENTS check (log tests/logs/check_20251229_103218.log). Pushed update-log entries to GitHub before/after test runs and recorded results in history/experiments indexes.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:28:00+11:00">
+                <h4>Iteration 029 checks rerunning (rule fix)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after loosening the AGENTS.md AUTO mode rule match. This attempt should reach docker compose build/up, API checks, and Playwright if rule validation passes. A new check log will be written under tests/logs/check_<timestamp>.log.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:27:30+11:00">
+                <h4>Iteration 029 checks failed (rerun)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed again during the AGENTS.md AUTO mode rule check (log tests/logs/check_20251229_102917.log). The rerun did not proceed to docker compose or Playwright. Updated the rule check to match "AUTO mode" and will retry.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:27:00+11:00">
+                <h4>Iteration 029 checks rerunning</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after confirming AGENTS.md includes AUTO mode rules. This rerun will validate CODEX/AGENTS updates, verify experiment indexes, and execute docker compose build/up plus Playwright. Results will be captured in a new tests/logs/check_<timestamp>.log.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T10:26:30+11:00">
+                <h4>Iteration 029 checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed during rule validation with "AGENTS.md missing AUTO mode rules" (log tests/logs/check_20251229_102531.log). This run did not reach docker compose build/up or Playwright, so a rerun is required after confirming AGENTS.md content. Will re-run iteration checks after verifying the AUTO mode rule text.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:26:00+11:00">
+                <h4>Iteration 029 checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to validate AUTO mode rules and update-log detail requirements. This run will rebuild docker images, run API checks, run the agent/baseline checks, and execute Playwright UI tests. Results will be logged to tests/logs/check_<timestamp>.log.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T10:23:45+11:00">
+                <h4>Iteration 029 starting — AUTO mode rules</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Starting iteration 029 to add AUTO: multi-iteration rules and expanded update-log detail requirements. Planned edits in AGENTS.md and CODEX.md plus tests/run_iteration_checks.ps1 updates, followed by an experiment run and full iteration checks. This entry records the iteration subject before work begins.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T10:00:30+11:00">
+                <h4>Update log detail rules recorded</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Updated AGENTS.md to require detailed update-log Notes (files/areas, commands/tests, outcomes) and added a matching guard in tests/run_iteration_checks.ps1. Recorded exp_20251229_update_log_detail plus iteration_028 check script and history/experiment index updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T10:00:09+11:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Ran powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to execute docker compose build/up, API checks, and Playwright UI tests. Passed with log tests/logs/check_20251229_095925.log.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T09:59:16+11:00">
+                <h4>Iteration checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting tests/run_iteration_checks.ps1 to validate update-log rule changes and the new exp_20251229_update_log_detail entry. Expect docker compose build/up, API checks, and Playwright UI run.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T00:42:34+11:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Automated iteration checks passed after update log and workflow setup.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:41:41+11:00">
+                <h4>Iteration checks rerunning</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Retrying automated iteration checks after fixing log validation.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T00:41:19+11:00">
+                <h4>Iteration checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Update log validation introduced a PowerShell parsing error.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:40:28+11:00">
+                <h4>Iteration checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Started automated iteration checks for update log publishing changes.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T00:35:28+11:00">
+                <h4>Initialized update log and publish workflow</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added the repository update log scaffold and dashboard publish action.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-27T18:20:00-05:00">
+                <h4>Scenario builder refinements in progress</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Iterating on workflow preview and node editor behavior.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-26T14:05:00-05:00">
+                <h4>Baseline simulation verification pass</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Deterministic baseline checks completed for Monte Carlo runs.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-24T09:45:00-05:00">
+                <h4>Agent substitution test run failed</h4>
+                <p><strong>Stage:</strong> incident</p>
+                <p><strong>Notes:</strong> Agent harness run reported missing logs and was queued for retry.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-22T16:30:00-05:00">
+                <h4>Dependency modeling defaults refreshed</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Copula defaults reviewed with updated dependency metadata.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-20T11:10:00-05:00">
+                <h4>Simulation service scaffolding underway</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
               </article>
             </section>
           </div>
