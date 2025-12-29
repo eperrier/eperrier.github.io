@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 035 checks completed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 036 starting — library-driven panels + builder layout refresh</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 12:17 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-29 16:30 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 036 starting — library-driven panels + builder layout refresh</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-29 16:30 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 035 checks completed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 12:16 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 035 starting — v3 Milestone 6 secrets + error handling</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-29 12:12 +1100</div>
           </li>
         </ul>
       </section>
@@ -515,7 +515,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>46</strong>
+            <strong>47</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -525,7 +525,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 12:17 +1100</strong>
+            <strong>2025-12-29 16:30 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -554,6 +554,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T16:30:42+11:00">
+            <h4>Iteration 036 starting — library-driven panels + builder layout refresh</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Starting UI adjustments to move the workspace scenario library and builder scenario store under a new top-bar Library menu (Summaries tab), remove the Home project snapshot panel, expand the Scenario Generator intake view, and restructure the Scenario Builder so the Workflow Preview is larger with mouse scrunch-drag panning. Planned edits include top-bar library state, conditional left/right panel rendering, moving the workflow summary into a minimize-able builder side panel, and updating Playwright coverage for the library menu + summary behavior. Will run the required experiment and full iteration checks after implementation.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T12:17:51+11:00">
             <h4>Iteration 035 checks completed</h4>
             <p><strong>Stage:</strong> test</p>
