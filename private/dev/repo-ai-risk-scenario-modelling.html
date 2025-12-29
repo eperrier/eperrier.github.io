@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 034 checks completed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 035 starting — v3 Milestone 6 secrets + error handling</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 12:04 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-29 12:12 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 035 starting — v3 Milestone 6 secrets + error handling</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-29 12:12 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 034 checks completed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 12:03 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 034 starting — v3 Milestone 5 AI substitution pipeline</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-29 11:58 +1100</div>
           </li>
         </ul>
       </section>
@@ -515,7 +515,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>43</strong>
+            <strong>44</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -525,7 +525,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 12:04 +1100</strong>
+            <strong>2025-12-29 12:12 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -554,6 +554,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T12:12:04+11:00">
+            <h4>Iteration 035 starting — v3 Milestone 6 secrets + error handling</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Starting Milestone 6 to wire OpenAI API key handling on the server, ensure the client never exposes secrets, and add safe agent error handling. Planned edits include server-side key presence checks, agent error simulation controls, and Playwright coverage to verify safe error messaging. Will run the required experiment and full iteration checks after implementation.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T12:04:37+11:00">
             <h4>Iteration 034 checks completed</h4>
             <p><strong>Stage:</strong> test</p>
