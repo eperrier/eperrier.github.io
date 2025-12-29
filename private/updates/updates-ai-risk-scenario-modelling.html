@@ -1,4 +1,9 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+  <article data-status="error" data-time="2025-12-29T11:42:07+11:00">
+    <h4>Iteration 032 checks failed (Clear button ambiguity)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright with a strict-mode ambiguity because two "Clear" buttons exist (node form vs scenario update panel) and the test clicked the ambiguous selector (log tests/logs/check_20251229_114207.log). Docker compose build/up and API checks completed before the UI run. Updating the test to scope the Clear button to the Node Editor panel, then re-running checks.</p>
+  </article>
   <article data-status="running" data-time="2025-12-29T11:41:02+11:00">
     <h4>Iteration 032 checks running</h4>
     <p><strong>Stage:</strong> test</p>
