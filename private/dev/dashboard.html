@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-29 12:36 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-29 12:50 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 162 - Starting (AGI Iteration 19 - End-to-End Demonstration (Local))</td>
+              <td data-label="Summary">Iteration 162 - Verification complete (AGI Iteration 19 - End-to-End Demonstration (Local))</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
@@ -593,6 +593,31 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="synthpop" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T12:50:46+11:00">
+                <h4>Iteration 162 - Verification complete (AGI Iteration 19 - End-to-End Demonstration (Local))</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks passed; log at tests/logs/check_20251229_124657.log. Docker compose down emitted a non-fatal warning while removing the network.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T12:46:40+11:00">
+                <h4>Iteration 162 - Verification restarted (AGI Iteration 19 - End-to-End Demonstration (Local))</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-29T12:46:22+11:00">
+                <h4>Iteration 162 - Verification failed (AGI Iteration 19 - End-to-End Demonstration (Local))</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks failed because update-synthpop.html did not include the latest history row. Regenerating the update log before re-running tests.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T12:44:58+11:00">
+                <h4>Iteration 162 - Verification started (AGI Iteration 19 - End-to-End Demonstration (Local))</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks to validate end-to-end demo artifacts and update logs.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T12:44:40+11:00">
+                <h4>Iteration 162 - End-to-end demo check added (AGI Iteration 19 - End-to-End Demonstration (Local))</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added acceptance coverage and an end-to-end demo check to validate theory_spec, formal_defs, proof_attempts, and results artifacts for a single run.</p>
+              </article>
               <article data-status="running" data-time="2025-12-29T12:36:18+11:00">
                 <h4>Iteration 162 - Starting (AGI Iteration 19 - End-to-End Demonstration (Local))</h4>
                 <p><strong>Stage:</strong> edit</p>
