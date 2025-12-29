@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill running">Running</span>
-            <div class="note">Iteration 031 starting — v3 Milestone 2 workflow decomposition</div>
+            <div class="note">Iteration 031 checks running</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 11:16 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-29 11:20 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 031 checks running</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 11:20 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 031 starting — v3 Milestone 2 workflow decomposition</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 11:10 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 030 checks rerunning (QA load tab fix)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 11:09 +1100</div>
           </li>
         </ul>
       </section>
@@ -508,7 +508,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>30</strong>
+            <strong>31</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -518,7 +518,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 11:16 +1100</strong>
+            <strong>2025-12-29 11:20 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -547,6 +547,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T11:20:39+11:00">
+            <h4>Iteration 031 checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to validate Milestone 2 workflow auto-population, baseline default parameters per node, and dependency defaults after scenario generation. This run will rebuild docker images, execute API checks, and run the expanded Playwright coverage. Results will be captured under tests/logs/check_<timestamp>.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T11:16:14+11:00">
             <h4>Iteration 031 starting — v3 Milestone 2 workflow decomposition</h4>
             <p><strong>Stage:</strong> edit</p>
