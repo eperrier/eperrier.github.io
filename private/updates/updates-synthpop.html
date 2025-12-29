@@ -1,4 +1,59 @@
 <section data-repo="synthpop" data-agent="Codex">
+  <article data-status="complete" data-time="2025-12-29T11:46:29+11:00">
+    <h4>Iteration 156 — Verification completed (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_114159.log. Controller policy lint and discovery checks now pass with synthetic-only metadata and updated thresholds validation.</p>
+  </article>
+  <article data-status="running" data-time="2025-12-29T11:41:41+11:00">
+    <h4>Iteration 156 — Verification restarted (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Re-running iteration checks after switching discovery-only tests to synthetic metadata. This confirms the controller policy lint and discovery checks without external network calls.</p>
+  </article>
+  <article data-status="error" data-time="2025-12-29T11:41:23+11:00">
+    <h4>Iteration 156 — Verification failed (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks were interrupted after the discovery-only pipeline run stalled without output. Updated the discovery test to use synthetic-only metadata so it avoids network calls.</p>
+  </article>
+  <article data-status="running" data-time="2025-12-29T11:35:08+11:00">
+    <h4>Iteration 156 — Verification restarted (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Re-running iteration checks after relaxing controller policy numeric validation. This run validates the policy thresholds alongside the updated update-synthpop.html row.</p>
+  </article>
+  <article data-status="error" data-time="2025-12-29T11:34:49+11:00">
+    <h4>Iteration 156 — Verification failed (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks failed because the controller policy threshold type check was too strict for JSON numeric types. Updated the lint to accept any numeric value via invariant-culture parsing before re-running tests.</p>
+  </article>
+  <article data-status="running" data-time="2025-12-29T11:28:32+11:00">
+    <h4>Iteration 156 — Verification restarted (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html with the correct REPO_NAME. This run validates the controller policy artifact and the updated history-based log row.</p>
+  </article>
+  <article data-status="error" data-time="2025-12-29T11:28:15+11:00">
+    <h4>Iteration 156 — Verification failed (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks still failed because update-synthpop.html was generated as update-workspace.html when REPO_NAME was unset. Regenerated update-synthpop.html with REPO_NAME=synthpop to correct the history row.</p>
+  </article>
+  <article data-status="running" data-time="2025-12-29T11:26:09+11:00">
+    <h4>Iteration 156 — Verification restarted (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html. This validates the new controller policy artifact and the updated history-based log row.</p>
+  </article>
+  <article data-status="error" data-time="2025-12-29T11:25:34+11:00">
+    <h4>Iteration 156 — Verification failed (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks failed because update-synthpop.html did not include the latest Iteration 156 row. Regenerating update-synthpop.html from history.md before re-running tests.</p>
+  </article>
+  <article data-status="running" data-time="2025-12-29T11:24:15+11:00">
+    <h4>Iteration 156 — Verification started (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Running iteration checks to validate controller_policy.json thresholds and fallback rules. This run also verifies the latest update log entries and history-based update-synthpop.html row.</p>
+  </article>
+  <article data-status="complete" data-time="2025-12-29T11:23:36+11:00">
+    <h4>Iteration 156 — Controller policy artifact (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
+    <p><strong>Stage:</strong> edit</p>
+    <p><strong>Notes:</strong> Added controller_policy.json with numeric thresholds and fallback rules in generate_handoff.py. Updated acceptance checks to validate the controller policy artifact during iteration tests.</p>
+  </article>
   <article data-status="running" data-time="2025-12-29T11:19:59+11:00">
     <h4>Iteration 156 — Adaptive Controller (Policy v1) (AGI Iteration 13 — Adaptive Controller (Policy v1))</h4>
     <p><strong>Stage:</strong> review</p>
