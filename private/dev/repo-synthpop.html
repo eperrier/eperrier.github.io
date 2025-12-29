@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 161 — Safety & Limits (AGI Iteration 18 — Safety & Limits)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 161 - Verification complete (AGI Iteration 18 - Safety & Limits)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 12:22 +1100</strong>
-            <div class="note">Stage: review</div>
+            <strong>2025-12-29 12:33 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 156 — Verification failed (AGI Iteration 13 — Adaptive Controller (Policy v1))</strong>
-            <div class="note">Iteration checks were interrupted after the discovery-only pipeline run stalled without output. Updated the discovery test to use synthetic-only metadata so it avoids network calls.</div>
+            <strong>Iteration 161 — Verification failed (AGI Iteration 18 — Safety & Limits)</strong>
+            <div class="note">Update log check failed because the HTML row escaped the ampersand in the title. Updated the update-synthpop.html matcher to compare against HTML-encoded titles.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 161 — Safety & Limits (AGI Iteration 18 — Safety & Limits)</strong>
-              <div class="item-meta">Stage: review</div>
+              <strong>Iteration 161 - Verification complete (AGI Iteration 18 - Safety & Limits)</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 12:22 +1100</div>
+            <div class="item-meta">2025-12-29 12:33 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 160 — Verification completed (AGI Iteration 17 — Deterministic Replay)</strong>
+              <strong>Iteration 161 — Verification restarted (AGI Iteration 18 — Safety & Limits)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 12:21 +1100</div>
+            <div class="item-meta">2025-12-29 12:28 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 160 — Verification started (AGI Iteration 17 — Deterministic Replay)</strong>
+              <strong>Iteration 161 — Verification failed (AGI Iteration 18 — Safety & Limits)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 12:17 +1100</div>
+            <div class="item-meta">2025-12-29 12:28 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,20 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 161 — Verification failed (AGI Iteration 18 — Safety & Limits)</strong>
+              <div class="item-meta">Update log check failed because the HTML row escaped the ampersand in the title. Updated the update-synthpop.html matcher to compare against HTML-encoded titles.</div>
+            </div>
+            <div class="item-meta">2025-12-29 12:28 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 161 — Verification failed (AGI Iteration 18 — Safety & Limits)</strong>
+              <div class="item-meta">Iteration checks failed because update-synthpop.html was missing the latest history row. Regenerating update-synthpop.html from history.md before re-running tests.</div>
+            </div>
+            <div class="item-meta">2025-12-29 12:26 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 156 — Verification failed (AGI Iteration 13 — Adaptive Controller (Policy v1))</strong>
@@ -545,22 +559,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>81%</strong>
+            <strong>79%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>120</strong>
+            <strong>127</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>13</strong>
+            <strong>15</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 12:22 +1100</strong>
+            <strong>2025-12-29 12:33 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -589,6 +603,41 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T12:33:07+11:00">
+            <h4>Iteration 161 - Verification complete (AGI Iteration 18 - Safety & Limits)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed; log at tests/logs/check_20251229_122902.log. Docker compose down emitted a non-fatal warning while removing the network.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T12:28:39+11:00">
+            <h4>Iteration 161 — Verification restarted (AGI Iteration 18 — Safety & Limits)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running iteration checks after adjusting the update-synthpop.html matcher for HTML-encoded titles. This run validates the budget policy artifact and update log.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-29T12:28:16+11:00">
+            <h4>Iteration 161 — Verification failed (AGI Iteration 18 — Safety & Limits)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Update log check failed because the HTML row escaped the ampersand in the title. Updated the update-synthpop.html matcher to compare against HTML-encoded titles.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T12:27:11+11:00">
+            <h4>Iteration 161 — Verification restarted (AGI Iteration 18 — Safety & Limits)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html. This validates the budget policy artifact and the updated history row.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-29T12:26:23+11:00">
+            <h4>Iteration 161 — Verification failed (AGI Iteration 18 — Safety & Limits)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks failed because update-synthpop.html was missing the latest history row. Regenerating update-synthpop.html from history.md before re-running tests.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T12:25:43+11:00">
+            <h4>Iteration 161 — Verification started (AGI Iteration 18 — Safety & Limits)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate budget_policy.json limits. This run also verifies the latest update-synthpop.html row.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T12:24:58+11:00">
+            <h4>Iteration 161 — Budget policy artifact (AGI Iteration 18 — Safety & Limits)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added budget_policy.json output with search depth and compute limits. Updated acceptance checks to validate numeric policy limits.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T12:22:54+11:00">
             <h4>Iteration 161 — Safety & Limits (AGI Iteration 18 — Safety & Limits)</h4>
             <p><strong>Stage:</strong> review</p>
