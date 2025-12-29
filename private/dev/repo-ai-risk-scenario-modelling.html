@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 030 checks rerunning (graph tab fix)</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 030 checks failed (QA load nodes)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 11:07 +1100</strong>
+            <strong>2025-12-29 11:08 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 030 checks failed (graph node missing)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed in Playwright while waiting for the Intake graph node to appear in the workflow graph (log tests/logs/check_20251229_110003.log). Docker compose build/up and API checks completed, but the UI test timed out because it was still on the Node Editor tab. Updating the test to switch back to the Workflow tab before asserting the graph node, then re-running iteration checks.</div>
+            <strong>Iteration 030 checks failed (QA load nodes)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed in Playwright after loading the saved QA Scenario; the test looked for the Intake node button but remained on the Workflow tab where nodes are rendered as plain text (log tests/logs/check_20251229_110800.log). Docker compose build/up and API checks completed before UI tests ran. Updating the test to switch to the Node Editor tab after loading the saved scenario, then re-running iteration checks.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 030 checks failed (QA load nodes)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 11:08 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 030 checks rerunning (graph tab fix)</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2025-12-29 11:00 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 030 checks rerunning</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 10:59 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 030 checks failed (QA load nodes)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed in Playwright after loading the saved QA Scenario; the test looked for the Intake node button but remained on the Workflow tab where nodes are rendered as plain text (log tests/logs/check_20251229_110800.log). Docker compose build/up and API checks completed before UI tests ran. Updating the test to switch to the Node Editor tab after loading the saved scenario, then re-running iteration checks.</div>
+            </div>
+            <div class="item-meta">2025-12-29 11:08 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 030 checks failed (graph node missing)</strong>
@@ -496,22 +503,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>54%</strong>
+            <strong>50%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>26</strong>
+            <strong>27</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>6</strong>
+            <strong>7</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 11:07 +1100</strong>
+            <strong>2025-12-29 11:08 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -540,6 +547,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2025-12-29T11:08:00+11:00">
+            <h4>Iteration 030 checks failed (QA load nodes)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright after loading the saved QA Scenario; the test looked for the Intake node button but remained on the Workflow tab where nodes are rendered as plain text (log tests/logs/check_20251229_110800.log). Docker compose build/up and API checks completed before UI tests ran. Updating the test to switch to the Node Editor tab after loading the saved scenario, then re-running iteration checks.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T11:07:08+11:00">
             <h4>Iteration 030 checks rerunning (graph tab fix)</h4>
             <p><strong>Stage:</strong> test</p>
