@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 030 checks rerunning (QA load tab fix)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 030 checks completed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 11:09 +1100</strong>
+            <strong>2025-12-29 11:10 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 030 checks completed</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 11:10 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 030 checks rerunning (QA load tab fix)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 11:08 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 030 checks rerunning (graph tab fix)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 11:07 +1100</div>
           </li>
         </ul>
       </section>
@@ -503,12 +503,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>50%</strong>
+            <strong>53%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>28</strong>
+            <strong>29</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -518,7 +518,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 11:09 +1100</strong>
+            <strong>2025-12-29 11:10 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -547,6 +547,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T11:10:46+11:00">
+            <h4>Iteration 030 checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after updating the Playwright workflow to switch between Workflow and Node Editor tabs when checking graph nodes and reloading saved scenarios. Verified builder tab defaults, workflow graph interactions, and QA scenario reload behavior alongside docker compose build/up and API checks. Log: tests/logs/check_20251229_111046.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T11:09:58+11:00">
             <h4>Iteration 030 checks rerunning (QA load tab fix)</h4>
             <p><strong>Stage:</strong> test</p>
