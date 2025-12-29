@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot active" href="repo-synthpop.html" title="synthpop">SY</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 160 — Deterministic Replay (AGI Iteration 17 — Deterministic Replay)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 160 — Verification completed (AGI Iteration 17 — Deterministic Replay)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 12:13 +1100</strong>
-            <div class="note">Stage: review</div>
+            <strong>2025-12-29 12:21 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 160 — Deterministic Replay (AGI Iteration 17 — Deterministic Replay)</strong>
-              <div class="item-meta">Stage: review</div>
+              <strong>Iteration 160 — Verification completed (AGI Iteration 17 — Deterministic Replay)</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 12:13 +1100</div>
+            <div class="item-meta">2025-12-29 12:21 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 159 — Verification completed (AGI Iteration 16 — RAG + Formalization Bridge)</strong>
+              <strong>Iteration 160 — Verification started (AGI Iteration 17 — Deterministic Replay)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-29 12:11 +1100</div>
+            <div class="item-meta">2025-12-29 12:17 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 159 — Verification started (AGI Iteration 16 — RAG + Formalization Bridge)</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Iteration 160 — Replay manifest artifact (AGI Iteration 17 — Deterministic Replay)</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-29 12:07 +1100</div>
+            <div class="item-meta">2025-12-29 12:16 +1100</div>
           </li>
         </ul>
       </section>
@@ -550,7 +550,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>116</strong>
+            <strong>119</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -560,7 +560,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 12:13 +1100</strong>
+            <strong>2025-12-29 12:21 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -589,6 +589,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-29T12:21:06+11:00">
+            <h4>Iteration 160 — Verification completed (AGI Iteration 17 — Deterministic Replay)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed; log saved to tests/logs/check_20251229_121749.log. Replay manifest lint now verifies proof_attempts.json hashes for determinism.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-29T12:17:28+11:00">
+            <h4>Iteration 160 — Verification started (AGI Iteration 17 — Deterministic Replay)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate replay_manifest.json and hash stability. This run also verifies the update-synthpop.html row derived from history.md.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-29T12:16:43+11:00">
+            <h4>Iteration 160 — Replay manifest artifact (AGI Iteration 17 — Deterministic Replay)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added replay_manifest.json output with deterministic hash for proof_attempts.json. Updated acceptance checks to validate replay manifest fields and hash stability.</p>
+          </article>
           <article data-status="running" data-time="2025-12-29T12:13:27+11:00">
             <h4>Iteration 160 — Deterministic Replay (AGI Iteration 17 — Deterministic Replay)</h4>
             <p><strong>Stage:</strong> review</p>
