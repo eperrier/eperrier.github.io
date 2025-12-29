@@ -1,4 +1,9 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+  <article data-status="error" data-time="2025-12-29T11:00:03+11:00">
+    <h4>Iteration 030 checks failed (graph node missing)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright while waiting for the Intake graph node to appear in the workflow graph (log tests/logs/check_20251229_110003.log). Docker compose build/up and API checks completed, but the UI test timed out because it was still on the Node Editor tab. Updating the test to switch back to the Workflow tab before asserting the graph node, then re-running iteration checks.</p>
+  </article>
   <article data-status="running" data-time="2025-12-29T10:59:10+11:00">
     <h4>Iteration 030 checks rerunning</h4>
     <p><strong>Stage:</strong> test</p>
