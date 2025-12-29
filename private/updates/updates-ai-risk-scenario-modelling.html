@@ -1,4 +1,9 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+  <article data-status="running" data-time="2025-12-29T11:07:08+11:00">
+    <h4>Iteration 030 checks rerunning (graph tab fix)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after updating the Playwright flow to switch to the Workflow tab before asserting the Intake graph node, then returning to the Node Editor for subsequent interactions. This run will rebuild docker images, execute API checks, and re-run the UI suite. Results will be captured under tests/logs/check_<timestamp>.log.</p>
+  </article>
   <article data-status="error" data-time="2025-12-29T11:00:03+11:00">
     <h4>Iteration 030 checks failed (graph node missing)</h4>
     <p><strong>Stage:</strong> test</p>
