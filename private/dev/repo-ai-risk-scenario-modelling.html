@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 032 checks failed (Clear button ambiguity)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 032 checks rerunning (Clear selector fix)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 11:42 +1100</strong>
+            <strong>2025-12-29 11:44 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 032 checks rerunning (Clear selector fix)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-29 11:44 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 032 checks failed (Clear button ambiguity)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-29 11:41 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 032 starting — v3 Milestone 3 scenario update panel</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-29 11:28 +1100</div>
           </li>
         </ul>
       </section>
@@ -515,7 +515,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>35</strong>
+            <strong>36</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -525,7 +525,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 11:42 +1100</strong>
+            <strong>2025-12-29 11:44 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -554,6 +554,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-29T11:44:12+11:00">
+            <h4>Iteration 032 checks rerunning (Clear selector fix)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after scoping the Playwright Clear button click to the Node Editor panel to avoid the new Scenario Update Clear button. This rerun will rebuild docker images, execute API checks, and run the UI suite again. Results will be captured under tests/logs/check_<timestamp>.log.</p>
+          </article>
           <article data-status="error" data-time="2025-12-29T11:42:07+11:00">
             <h4>Iteration 032 checks failed (Clear button ambiguity)</h4>
             <p><strong>Stage:</strong> test</p>
