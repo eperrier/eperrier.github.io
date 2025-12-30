@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
+            <span class="status-pill complete">Complete</span>
             <div class="note">Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 00:34 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 00:43 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -422,23 +422,23 @@
           <li class="activity-item">
             <div>
               <strong>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:43 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:37 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-31 00:34 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:32 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:27 +1100</div>
+            <div class="item-meta">2025-12-31 00:37 +1100</div>
           </li>
         </ul>
       </section>
@@ -608,12 +608,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>83%</strong>
+            <strong>84%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>232</strong>
+            <strong>235</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -623,7 +623,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 00:34 +1100</strong>
+            <strong>2025-12-31 00:43 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -652,6 +652,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T00:43:09+11:00">
+            <h4>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251231_003843.log. Docker compose down reported a network removal warning but cleanup completed.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T00:37:58+11:00">
+            <h4>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate environment_policy.json and run_manifest linkage. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T00:37:35+11:00">
+            <h4>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added environment_policy.json creation with cost/latency thresholds and data-mode rules. Wired the policy into run_manifest and added validation checks for policy presence.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T00:34:23+11:00">
             <h4>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</h4>
             <p><strong>Stage:</strong> edit</p>
