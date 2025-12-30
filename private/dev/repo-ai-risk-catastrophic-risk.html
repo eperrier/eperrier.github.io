@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed for status polling gate</div>
+            <div class="note">Iteration checks completed for log summary</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-30 12:46 -0500</strong>
+            <strong>2025-12-30 18:30 -0500</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for status polling gate</strong>
+              <strong>Iteration checks completed for log summary</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 12:46 -0500</div>
+            <div class="item-meta">2025-12-30 18:30 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started for status polling gate</strong>
+              <strong>Iteration checks started for log summary</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 12:45 -0500</div>
+            <div class="item-meta">2025-12-30 18:29 -0500</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Runpod status polling gated when idle</strong>
-              <div class="item-meta">Stage: deploy</div>
+              <strong>Runpod logs linked with summary</strong>
+              <div class="item-meta">Stage: review</div>
             </div>
-            <div class="item-meta">2025-12-30 12:52 -0500</div>
+            <div class="item-meta">2025-12-30 13:10 -0500</div>
           </li>
         </ul>
       </section>
@@ -461,12 +461,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>96%</strong>
+            <strong>97%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>42</strong>
+            <strong>47</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-30 12:46 -0500</strong>
+            <strong>2025-12-30 18:30 -0500</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-30T18:30:00-05:00">
+            <h4>Iteration checks completed for log summary</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-verified log link and summary entries after final updates.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T18:29:00-05:00">
+            <h4>Iteration checks started for log summary</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T13:10:00-05:00">
+            <h4>Runpod logs linked with summary</h4>
+            <p><strong>Stage:</strong> review</p>
+            <p><strong>Notes:</strong> Log: <a href="https://github.com/eperrier/ai-risk-catastrophic-risk/blob/master/runpod/logs/logs.txt">runpod/logs/logs.txt</a>. Summary: adaptive runs show R2 escalations; grokking achieved in MLP/transformer attempts; tail-test seeds (200–207) report t_val in ~3000–3600 range.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T13:09:00-05:00">
+            <h4>Iteration checks completed for log summary</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Verified updates for log link and summary entry.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T13:08:00-05:00">
+            <h4>Iteration checks started for log summary</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding log summary.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-30T12:46:00-05:00">
             <h4>Iteration checks completed for status polling gate</h4>
             <p><strong>Stage:</strong> test</p>
