@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 042 in progress - v4 Milestone 3 OpenAI agents</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 042 completed - v4 Milestone 3 OpenAI agents</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 10:06 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 10:16 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 032 checks failed (Clear button ambiguity)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed in Playwright with a strict-mode ambiguity because two "Clear" buttons exist (node form vs scenario update panel) and the test clicked the ambiguous selector (log tests/logs/check_20251229_114207.log). Docker compose build/up and API checks completed before the UI run. Updating the test to scope the Clear button to the Node Editor panel, then re-running checks.</div>
+            <strong>Iteration checks failed</strong>
+            <div class="note">run_iteration_checks.ps1 failed: agent response missing task summaries (log tests/logs/check_20251231_101430.log).</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 042 in progress - v4 Milestone 3 OpenAI agents</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration 042 completed - v4 Milestone 3 OpenAI agents</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 10:06 +1100</div>
+            <div class="item-meta">2025-12-31 10:16 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 041 completed - v4 Milestone 2 diagnostics</strong>
+              <strong>Iteration checks rerunning</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 10:05 +1100</div>
+            <div class="item-meta">2025-12-31 10:15 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks running</strong>
+              <strong>Iteration checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 10:04 +1100</div>
+            <div class="item-meta">2025-12-31 10:15 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration checks failed</strong>
+              <div class="item-meta">run_iteration_checks.ps1 failed: agent response missing task summaries (log tests/logs/check_20251231_101430.log).</div>
+            </div>
+            <div class="item-meta">2025-12-31 10:15 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 032 checks failed (Clear button ambiguity)</strong>
@@ -510,22 +517,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>77%</strong>
+            <strong>76%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>75</strong>
+            <strong>80</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>8</strong>
+            <strong>9</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 10:06 +1100</strong>
+            <strong>2025-12-31 10:16 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -554,6 +561,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T10:16:24+11:00">
+            <h4>Iteration 042 completed - v4 Milestone 3 OpenAI agents</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Replaced agent harness with OpenAI-backed (or mock) calls, added workflow propagation outputs, and updated agent payloads to include nodes/edges. Updated run_iteration_checks for OpenAI agent coverage and reran after fixing task summary expectation. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_101329.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_101529.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:15:19+11:00">
+            <h4>Iteration checks rerunning</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Rerunning iteration checks after fixing agent summary expectation.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T10:15:06+11:00">
+            <h4>Iteration checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 failed: agent response missing task summaries (log tests/logs/check_20251231_101430.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:14:19+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks for v4 Milestone 3 OpenAI agent integration.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:14:06+11:00">
+            <h4>Workflow graph experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully for OpenAI agent work.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T10:06:25+11:00">
             <h4>Iteration 042 in progress - v4 Milestone 3 OpenAI agents</h4>
             <p><strong>Stage:</strong> edit</p>

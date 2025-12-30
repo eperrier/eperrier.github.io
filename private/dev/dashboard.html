@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 10:06 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-31 10:16 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 042 in progress - v4 Milestone 3 OpenAI agents</td>
+              <td data-label="Summary">Iteration 042 completed - v4 Milestone 3 OpenAI agents</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -873,6 +873,31 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-31T10:16:24+11:00">
+                <h4>Iteration 042 completed - v4 Milestone 3 OpenAI agents</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Replaced agent harness with OpenAI-backed (or mock) calls, added workflow propagation outputs, and updated agent payloads to include nodes/edges. Updated run_iteration_checks for OpenAI agent coverage and reran after fixing task summary expectation. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_101329.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_101529.log).</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T10:15:19+11:00">
+                <h4>Iteration checks rerunning</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Rerunning iteration checks after fixing agent summary expectation.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-31T10:15:06+11:00">
+                <h4>Iteration checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 failed: agent response missing task summaries (log tests/logs/check_20251231_101430.log).</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T10:14:19+11:00">
+                <h4>Iteration checks running</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks for v4 Milestone 3 OpenAI agent integration.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T10:14:06+11:00">
+                <h4>Workflow graph experiment completed</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully for OpenAI agent work.</p>
+              </article>
               <article data-status="running" data-time="2025-12-31T10:06:25+11:00">
                 <h4>Iteration 042 in progress - v4 Milestone 3 OpenAI agents</h4>
                 <p><strong>Stage:</strong> edit</p>
