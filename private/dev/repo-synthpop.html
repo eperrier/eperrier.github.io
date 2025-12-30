@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
+            <span class="status-pill complete">Complete</span>
             <div class="note">Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 00:46 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 00:55 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -422,23 +422,23 @@
           <li class="activity-item">
             <div>
               <strong>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:55 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:50 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-31 00:46 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:43 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 184 — Autobuild v3 Environment Policy (AGI Iteration 9 — Parallel Execution Plan)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:37 +1100</div>
+            <div class="item-meta">2025-12-31 00:50 +1100</div>
           </li>
         </ul>
       </section>
@@ -613,7 +613,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>236</strong>
+            <strong>239</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -623,7 +623,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 00:46 +1100</strong>
+            <strong>2025-12-31 00:55 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -652,6 +652,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T00:55:17+11:00">
+            <h4>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251231_005143.log. Docker compose down reported a network removal warning but cleanup completed.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T00:50:57+11:00">
+            <h4>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate plan_experiment_map.json mappings and update logs. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T00:50:34+11:00">
+            <h4>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added plan_experiment_map.json generation to link plan tasks with experiment specs. Updated run_manifest and validation checks to enforce plan-experiment mapping coverage.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T00:46:10+11:00">
             <h4>Iteration 185 — Autobuild v3 Plan-Experiment Bridge (AGI Iteration 9 — Parallel Execution Plan)</h4>
             <p><strong>Stage:</strong> edit</p>
