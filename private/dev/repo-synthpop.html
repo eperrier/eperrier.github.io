@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 175 - Verification complete (Autobuild v2 Lineage Links + UI Panels)</div>
+            <div class="note">Iteration 176 - Verification complete (Autobuild v2 Consolidated Validation)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-30 22:26 +1100</strong>
+            <strong>2025-12-30 22:34 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,7 +410,7 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 175 - Verification error (Autobuild v2 Lineage Links + UI Panels)</strong>
+            <strong>Iteration 176 - Verification error (Autobuild v2 Consolidated Validation)</strong>
             <div class="note">Iteration checks failed because update-synthpop.html was not regenerated after the new history entry. Regenerating the update log and retrying the checks.</div>
           </div>
         </div>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 175 - Verification complete (Autobuild v2 Lineage Links + UI Panels)</strong>
+              <strong>Iteration 176 - Verification complete (Autobuild v2 Consolidated Validation)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 22:26 +1100</div>
+            <div class="item-meta">2025-12-30 22:34 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 175 - Verification retry (Autobuild v2 Lineage Links + UI Panels)</strong>
+              <strong>Iteration 176 - Verification retry (Autobuild v2 Consolidated Validation)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 22:22 +1100</div>
+            <div class="item-meta">2025-12-30 22:30 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 175 - Verification error (Autobuild v2 Lineage Links + UI Panels)</strong>
+              <strong>Iteration 176 - Verification error (Autobuild v2 Consolidated Validation)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 22:22 +1100</div>
+            <div class="item-meta">2025-12-30 22:30 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 176 - Verification error (Autobuild v2 Consolidated Validation)</strong>
+              <div class="item-meta">Iteration checks failed because update-synthpop.html was not regenerated after the new history entry. Regenerating the update log and retrying the checks.</div>
+            </div>
+            <div class="item-meta">2025-12-30 22:30 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 175 - Verification error (Autobuild v2 Lineage Links + UI Panels)</strong>
@@ -599,17 +606,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>200</strong>
+            <strong>205</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>20</strong>
+            <strong>21</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-30 22:26 +1100</strong>
+            <strong>2025-12-30 22:34 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -638,6 +645,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-30T22:34:00+11:00">
+            <h4>Iteration 176 - Verification complete (Autobuild v2 Consolidated Validation)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251230_223918.log. Docker compose down reported a network removal warning but completed cleanup.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T22:30:30+11:00">
+            <h4>Iteration 176 - Verification retry (Autobuild v2 Consolidated Validation)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running iteration checks after regenerating update-synthpop.html from history.md. Validating consolidated v2 artifacts and UI fixture smoke coverage.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-30T22:30:00+11:00">
+            <h4>Iteration 176 - Verification error (Autobuild v2 Consolidated Validation)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks failed because update-synthpop.html was not regenerated after the new history entry. Regenerating the update log and retrying the checks.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T22:29:30+11:00">
+            <h4>Iteration 176 - Verification started (Autobuild v2 Consolidated Validation)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks for consolidated autobuild v2 validation and UI fixture smoke coverage. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T22:29:00+11:00">
+            <h4>Iteration 176 - Autobuild v2 consolidated validation updates</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added a consolidated validation check for autobuild v2 artifacts and lineage links, plus a UI fixture smoke test. Introduced a trace console fixture file and updated the lineage panel to reference it.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-30T22:26:00+11:00">
             <h4>Iteration 175 - Verification complete (Autobuild v2 Lineage Links + UI Panels)</h4>
             <p><strong>Stage:</strong> test</p>
