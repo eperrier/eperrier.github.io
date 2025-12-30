@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 178 - Verification complete (Autobuild v3 Plan Graph Artifact)</div>
+            <div class="note">Iteration 179 - Verification complete (Autobuild v3 Real-Data Enforcement)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-30 23:35 +1100</strong>
+            <strong>2025-12-30 23:44 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 178 - Verification complete (Autobuild v3 Plan Graph Artifact)</strong>
+              <strong>Iteration 179 - Verification complete (Autobuild v3 Real-Data Enforcement)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 23:35 +1100</div>
+            <div class="item-meta">2025-12-30 23:44 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 178 - Verification started (Autobuild v3 Plan Graph Artifact)</strong>
+              <strong>Iteration 179 - Verification started (Autobuild v3 Real-Data Enforcement)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 23:18 +1100</div>
+            <div class="item-meta">2025-12-30 23:42 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 178 - Plan graph generation added</strong>
+              <strong>Iteration 179 - Real-data enforcement added</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-30 23:17 +1100</div>
+            <div class="item-meta">2025-12-30 23:41 +1100</div>
           </li>
         </ul>
       </section>
@@ -606,7 +606,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>211</strong>
+            <strong>214</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -616,7 +616,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-30 23:35 +1100</strong>
+            <strong>2025-12-30 23:44 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -645,6 +645,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-30T23:44:30+11:00">
+            <h4>Iteration 179 - Verification complete (Autobuild v3 Real-Data Enforcement)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251230_234243.log. Docker compose down reported a network removal warning but completed cleanup.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T23:42:00+11:00">
+            <h4>Iteration 179 - Verification started (Autobuild v3 Real-Data Enforcement)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate real-data enforcement and audit logging. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T23:41:30+11:00">
+            <h4>Iteration 179 - Real-data enforcement added</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Defaulted data-mode to auto (real when keys exist) and added real_data_audit logging. Updated validation checks and acceptance coverage for real-data enforcement.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-30T23:35:00+11:00">
             <h4>Iteration 178 - Verification complete (Autobuild v3 Plan Graph Artifact)</h4>
             <p><strong>Stage:</strong> test</p>
