@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
+            <span class="status-pill complete">Complete</span>
             <div class="note">Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 00:23 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 00:32 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -422,23 +422,23 @@
           <li class="activity-item">
             <div>
               <strong>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:32 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:27 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-31 00:23 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:22 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:17 +1100</div>
+            <div class="item-meta">2025-12-31 00:26 +1100</div>
           </li>
         </ul>
       </section>
@@ -613,7 +613,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>228</strong>
+            <strong>231</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -623,7 +623,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 00:23 +1100</strong>
+            <strong>2025-12-31 00:32 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -652,6 +652,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T00:32:30+11:00">
+            <h4>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251231_002759.log. Docker compose down reported a network removal warning but cleanup completed.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T00:27:17+11:00">
+            <h4>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate objective update entries linked to plan revisions. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T00:26:58+11:00">
+            <h4>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added objective update entries with plan_revision_id and hypothesis_id when plan revisions occur. Updated validation checks and acceptance coverage for objective update evidence.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T00:23:58+11:00">
             <h4>Iteration 183 — Autobuild v3 Hypothesis Update from Plan Feedback (AGI Iteration 8 — Research Integration)</h4>
             <p><strong>Stage:</strong> edit</p>
