@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 177 - Verification complete (Autobuild v3 Spec (Adaptive Orchestration))</div>
+            <div class="note">Iteration 178 - Verification complete (Autobuild v3 Plan Graph Artifact)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-30 22:43 +1100</strong>
+            <strong>2025-12-30 23:35 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 177 - Verification complete (Autobuild v3 Spec (Adaptive Orchestration))</strong>
+              <strong>Iteration 178 - Verification complete (Autobuild v3 Plan Graph Artifact)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 22:43 +1100</div>
+            <div class="item-meta">2025-12-30 23:35 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 177 - Verification started (Autobuild v3 Spec (Adaptive Orchestration))</strong>
+              <strong>Iteration 178 - Verification started (Autobuild v3 Plan Graph Artifact)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-30 22:40 +1100</div>
+            <div class="item-meta">2025-12-30 23:18 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 177 - Autobuild v3 spec drafted</strong>
-              <div class="item-meta">Stage: docs</div>
+              <strong>Iteration 178 - Plan graph generation added</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-30 22:39 +1100</div>
+            <div class="item-meta">2025-12-30 23:17 +1100</div>
           </li>
         </ul>
       </section>
@@ -601,12 +601,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>82%</strong>
+            <strong>83%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>208</strong>
+            <strong>211</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -616,7 +616,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-30 22:43 +1100</strong>
+            <strong>2025-12-30 23:35 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -645,6 +645,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-30T23:35:00+11:00">
+            <h4>Iteration 178 - Verification complete (Autobuild v3 Plan Graph Artifact)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251230_233304.log. Docker compose down reported a network removal warning but completed cleanup.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T23:18:00+11:00">
+            <h4>Iteration 178 - Verification started (Autobuild v3 Plan Graph Artifact)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate plan_graph.json generation and update logs. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T23:17:30+11:00">
+            <h4>Iteration 178 - Plan graph generation added</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added plan graph generation in the research pipeline and wired it into run manifests. Updated validation checks and acceptance coverage for the new artifact.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-30T22:43:00+11:00">
             <h4>Iteration 177 - Verification complete (Autobuild v3 Spec (Adaptive Orchestration))</h4>
             <p><strong>Stage:</strong> test</p>
