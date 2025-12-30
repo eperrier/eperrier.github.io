@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
+            <span class="status-pill complete">Complete</span>
             <div class="note">Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 00:12 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 00:22 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -422,23 +422,23 @@
           <li class="activity-item">
             <div>
               <strong>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:22 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 00:17 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-31 00:12 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 181 — Autobuild v3 Cloud Stub Execution (AGI Iteration 9 — Parallel Execution Plan)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:11 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 181 — Autobuild v3 Cloud Stub Execution (AGI Iteration 9 — Parallel Execution Plan)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 00:06 +1100</div>
+            <div class="item-meta">2025-12-31 00:17 +1100</div>
           </li>
         </ul>
       </section>
@@ -613,7 +613,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>224</strong>
+            <strong>227</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -623,7 +623,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 00:12 +1100</strong>
+            <strong>2025-12-31 00:22 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -652,6 +652,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T00:22:21+11:00">
+            <h4>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251231_001802.log. Docker compose down reported a network removal warning but cleanup completed.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T00:17:24+11:00">
+            <h4>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks to validate plan_revision_log creation and plan graph revisions. Capturing results in tests/logs/check_<timestamp>.log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T00:17:03+11:00">
+            <h4>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added plan revision logging and plan_graph updates when a simulated task failure is detected. Updated run manifests and validation checks to enforce plan_revision_log coverage.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T00:12:58+11:00">
             <h4>Iteration 182 — Autobuild v3 Plan Revision Feedback (AGI Iteration 7 — Formalization Feedback Loop)</h4>
             <p><strong>Stage:</strong> edit</p>
