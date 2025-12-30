@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 041 in progress - v4 Milestone 2 diagnostics</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 041 completed - v4 Milestone 2 diagnostics</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 10:01 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 10:05 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 041 in progress - v4 Milestone 2 diagnostics</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 10:01 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 040 completed - v4 Milestone 1 edge-aware execution</strong>
+              <strong>Iteration 041 completed - v4 Milestone 2 diagnostics</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 09:55 +1100</div>
+            <div class="item-meta">2025-12-31 10:05 +1100</div>
           </li>
           <li class="activity-item">
             <div>
               <strong>Iteration checks running</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 09:53 +1100</div>
+            <div class="item-meta">2025-12-31 10:04 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Workflow graph experiment completed</strong>
+              <div class="item-meta">Stage: build</div>
+            </div>
+            <div class="item-meta">2025-12-31 10:03 +1100</div>
           </li>
         </ul>
       </section>
@@ -510,12 +510,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>76%</strong>
+            <strong>77%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>71</strong>
+            <strong>74</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -525,7 +525,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 10:01 +1100</strong>
+            <strong>2025-12-31 10:05 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -554,6 +554,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T10:05:16+11:00">
+            <h4>Iteration 041 completed - v4 Milestone 2 diagnostics</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Added node-level diagnostics in visualization and graph overlays (web/src/ui/App.jsx, web/src/styles.css), updated Playwright coverage for node diagnostics, and added baseline nodeOutputs checks in tests/run_iteration_checks.ps1. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_100308.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_100421.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:04:12+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running iteration checks for v4 Milestone 2 diagnostics.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:03:57+11:00">
+            <h4>Workflow graph experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully for milestone 2 work.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T10:01:56+11:00">
             <h4>Iteration 041 in progress - v4 Milestone 2 diagnostics</h4>
             <p><strong>Stage:</strong> edit</p>
