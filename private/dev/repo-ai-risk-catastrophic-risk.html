@@ -362,8 +362,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">GPU-enabled image configuration applied</div>
+            <div class="note">Iteration checks completed for Runpod status cron</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-29 04:32 -0500</strong>
-            <div class="note">Stage: deploy</div>
+            <strong>2025-12-30 12:28 -0500</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>GPU-enabled image configuration applied</strong>
+              <strong>Iteration checks completed for Runpod status cron</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-30 12:28 -0500</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration checks started for Runpod status cron</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-30 12:27 -0500</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Runpod status polling workflow added</strong>
               <div class="item-meta">Stage: deploy</div>
             </div>
-            <div class="item-meta">2025-12-29 04:32 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks completed for GPU enablement</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 04:31 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks started for GPU enablement</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-29 04:30 -0500</div>
+            <div class="item-meta">2025-12-30 12:26 -0500</div>
           </li>
         </ul>
       </section>
@@ -461,12 +461,12 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>95%</strong>
+            <strong>96%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>32</strong>
+            <strong>37</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-29 04:32 -0500</strong>
+            <strong>2025-12-30 12:28 -0500</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-30T12:28:00-05:00">
+            <h4>Iteration checks completed for Runpod status cron</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-verified status workflow wiring after history/log updates.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T12:27:00-05:00">
+            <h4>Iteration checks started for Runpod status cron</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updates to history and status log.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T12:26:00-05:00">
+            <h4>Runpod status polling workflow added</h4>
+            <p><strong>Stage:</strong> deploy</p>
+            <p><strong>Notes:</strong> Added a 10-minute cron to append active pod status to the updates log and documented it.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-30T12:25:00-05:00">
+            <h4>Iteration checks completed for Runpod status cron</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Verified status workflow wiring and documentation updates.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-30T12:24:00-05:00">
+            <h4>Iteration checks started for Runpod status cron</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding the cron-based status update.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-29T04:32:00-05:00">
             <h4>GPU-enabled image configuration applied</h4>
             <p><strong>Stage:</strong> deploy</p>
