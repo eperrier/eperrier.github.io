@@ -375,8 +375,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
+      <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
       <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
@@ -416,18 +416,18 @@
           </thead>
           <tbody>
             <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-30 11:56 +1100</td>
+              <td data-label="Agent">Codex</td>
+              <td data-label="Summary">Iteration 168 - Verification complete (Repo Split Plan)</td>
+            </tr>
+            <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
               <td data-label="Last Update">2025-12-29 04:32 -0500</td>
               <td data-label="Agent">Codex</td>
               <td data-label="Summary">GPU-enabled image configuration applied</td>
-            </tr>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-29 19:04 +1100</td>
-              <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 167 - Status log synced (Auto-build Review Expansion v2)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
@@ -466,178 +466,30 @@
         <div class="history-grid">
           <div class="repo-block">
             <div class="repo-header">
-              <h3>ai-risk-catastrophic-risk</h3>
-              <span>Agent: Codex</span>
-            </div>
-            <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
-              <article data-status="complete" data-time="2025-12-29T04:32:00-05:00">
-                <h4>GPU-enabled image configuration applied</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Updated base image and torch build for CUDA support in Runpod.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:31:00-05:00">
-                <h4>Iteration checks completed for GPU enablement</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified CUDA base image and requirements updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T04:30:00-05:00">
-                <h4>Iteration checks started for GPU enablement</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks after switching to CUDA-enabled base image.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:07:00-05:00">
-                <h4>Registry auth parsing fix applied</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Added safe handling for auth list responses and required token checks.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:06:00-05:00">
-                <h4>Iteration checks completed for registry auth parsing</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow changes and tests.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T04:05:00-05:00">
-                <h4>Iteration checks started for registry auth parsing fix</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Validating updates to handle registry auth API responses safely.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T03:07:00-05:00">
-                <h4>Registry auth auto-create enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Launch workflow now creates or reuses Docker Hub registry auth automatically.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T03:06:00-05:00">
-                <h4>Iteration checks completed for registry auth automation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified registry auth auto-create and docs update.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T03:05:00-05:00">
-                <h4>Iteration checks started for registry auth automation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks after adding auto-create for Runpod registry auth.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:52:00-05:00">
-                <h4>Pod pull failure detection enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Launch workflow now polls pod status and flags image pull failures.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:51:00-05:00">
-                <h4>Iteration checks completed for pod pull detection</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow polling logic and docs updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:50:00-05:00">
-                <h4>Iteration checks started for pod pull failure detection</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks after adding pod status polling for unauthorized image pulls.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:37:00-05:00">
-                <h4>Launch failure notification enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Runpod launch failures now open a GitHub issue to alert you.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:36:00-05:00">
-                <h4>Iteration checks completed for launch notice</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow permissions and notification step.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:35:00-05:00">
-                <h4>Iteration checks started for launch notification</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Validating notification updates for Runpod launch failures.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:22:00-05:00">
-                <h4>Remote pipeline trigger committed</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Pushed changes to trigger Docker build, Runpod launch, and results PR workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:21:00-05:00">
-                <h4>Iteration checks completed for remote trigger</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified checks before kicking off the automated pipeline.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:20:00-05:00">
-                <h4>Iteration checks started for remote trigger</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks before triggering the automated Runpod pipeline.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:07:00-05:00">
-                <h4>GPU fallback automation applied</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Added retry workflow and timeout-driven GPU escalation for Runpod runs.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:06:00-05:00">
-                <h4>Iteration checks completed for fallback changes</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified updated workflows, entrypoint status file, and docs.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:05:00-05:00">
-                <h4>Iteration checks started for GPU fallback</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running automated checks for Runpod fallback and retry workflow updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:33:00-05:00">
-                <h4>Docker Hub cleanup rule applied</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Build workflow now keeps only the two most recent image tags.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:32:00-05:00">
-                <h4>Iteration checks completed for cleanup change</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow updates and retention note checks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T01:30:00-05:00">
-                <h4>Iteration checks started for Docker Hub cleanup</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Validating workflow updates for Docker Hub tag retention.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:21:00-05:00">
-                <h4>Iteration checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified update logging workflow and dashboard publish action wiring.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T01:20:00-05:00">
-                <h4>Iteration checks started</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running required iteration checks for update logging workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:10:00-05:00">
-                <h4>Initialized update log + dashboard publisher</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added update log and publish workflow scaffolding for dashboard sync.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:45:00-05:00">
-                <h4>Adaptive run queued for review</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Monitoring registry updates while results are still processing.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T23:50:00-05:00">
-                <h4>Registry reports refreshed after local run</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Consolidated results and regenerated summary reports for grokking attempts.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-28T22:20:00-05:00">
-                <h4>Docker build failed on missing dependency</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Build stopped due to requirements file path mismatch.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T21:10:00-05:00">
-                <h4>Tail-test plots added for pilot run</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Generated CCDF/fit plots for tail-test outputs.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-28T19:40:00-05:00">
-                <h4>Preparing adaptive experiment batch</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Configs staged for a multi-run adaptive suite.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
               <h3>synthpop</h3>
               <span>Agent: Codex</span>
             </div>
             <section data-repo="synthpop" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-30T11:56:24+11:00">
+                <h4>Iteration 168 - Verification complete (Repo Split Plan)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration checks passed; log at tests/logs/check_20251230_115058.log. Docker compose down emitted a non-fatal warning while removing the network.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T11:50:41+11:00">
+                <h4>Iteration 168 - Verification started (Repo Split Plan)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running iteration checks for the repo split plan and update logs.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T11:50:25+11:00">
+                <h4>Iteration 168 - Repo split plan drafted (Repo Split Plan)</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added dev/repo-split.md with scope, phases, and decision points for splitting research-platform from world-models.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T11:49:01+11:00">
+                <h4>Iteration 168 - Starting (Repo Split Plan)</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Drafting a repo-split plan for separating the research platform from synthpop while preserving future world-model integration.</p>
+              </article>
               <article data-status="complete" data-time="2025-12-29T19:04:28+11:00">
                 <h4>Iteration 167 - Status log synced (Auto-build Review Expansion v2)</h4>
                 <p><strong>Stage:</strong> docs</p>
@@ -1402,6 +1254,174 @@
                 <h4>Baseline research artifacts captured</h4>
                 <p><strong>Stage:</strong> docs</p>
                 <p><strong>Notes:</strong> Captured initial ledger and manuscript skeleton for tracking.</p>
+              </article>
+            </section>
+          </div>
+          <div class="repo-block">
+            <div class="repo-header">
+              <h3>ai-risk-catastrophic-risk</h3>
+              <span>Agent: Codex</span>
+            </div>
+            <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-29T04:32:00-05:00">
+                <h4>GPU-enabled image configuration applied</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Updated base image and torch build for CUDA support in Runpod.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:31:00-05:00">
+                <h4>Iteration checks completed for GPU enablement</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified CUDA base image and requirements updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T04:30:00-05:00">
+                <h4>Iteration checks started for GPU enablement</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks after switching to CUDA-enabled base image.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:07:00-05:00">
+                <h4>Registry auth parsing fix applied</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Added safe handling for auth list responses and required token checks.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:06:00-05:00">
+                <h4>Iteration checks completed for registry auth parsing</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow changes and tests.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T04:05:00-05:00">
+                <h4>Iteration checks started for registry auth parsing fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Validating updates to handle registry auth API responses safely.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T03:07:00-05:00">
+                <h4>Registry auth auto-create enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Launch workflow now creates or reuses Docker Hub registry auth automatically.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T03:06:00-05:00">
+                <h4>Iteration checks completed for registry auth automation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified registry auth auto-create and docs update.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T03:05:00-05:00">
+                <h4>Iteration checks started for registry auth automation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks after adding auto-create for Runpod registry auth.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:52:00-05:00">
+                <h4>Pod pull failure detection enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Launch workflow now polls pod status and flags image pull failures.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:51:00-05:00">
+                <h4>Iteration checks completed for pod pull detection</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow polling logic and docs updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:50:00-05:00">
+                <h4>Iteration checks started for pod pull failure detection</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks after adding pod status polling for unauthorized image pulls.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:37:00-05:00">
+                <h4>Launch failure notification enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Runpod launch failures now open a GitHub issue to alert you.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:36:00-05:00">
+                <h4>Iteration checks completed for launch notice</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow permissions and notification step.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:35:00-05:00">
+                <h4>Iteration checks started for launch notification</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Validating notification updates for Runpod launch failures.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:22:00-05:00">
+                <h4>Remote pipeline trigger committed</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Pushed changes to trigger Docker build, Runpod launch, and results PR workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:21:00-05:00">
+                <h4>Iteration checks completed for remote trigger</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified checks before kicking off the automated pipeline.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:20:00-05:00">
+                <h4>Iteration checks started for remote trigger</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks before triggering the automated Runpod pipeline.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:07:00-05:00">
+                <h4>GPU fallback automation applied</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Added retry workflow and timeout-driven GPU escalation for Runpod runs.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:06:00-05:00">
+                <h4>Iteration checks completed for fallback changes</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified updated workflows, entrypoint status file, and docs.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:05:00-05:00">
+                <h4>Iteration checks started for GPU fallback</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running automated checks for Runpod fallback and retry workflow updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:33:00-05:00">
+                <h4>Docker Hub cleanup rule applied</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Build workflow now keeps only the two most recent image tags.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:32:00-05:00">
+                <h4>Iteration checks completed for cleanup change</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow updates and retention note checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T01:30:00-05:00">
+                <h4>Iteration checks started for Docker Hub cleanup</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Validating workflow updates for Docker Hub tag retention.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:21:00-05:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified update logging workflow and dashboard publish action wiring.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T01:20:00-05:00">
+                <h4>Iteration checks started</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running required iteration checks for update logging workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:10:00-05:00">
+                <h4>Initialized update log + dashboard publisher</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added update log and publish workflow scaffolding for dashboard sync.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:45:00-05:00">
+                <h4>Adaptive run queued for review</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Monitoring registry updates while results are still processing.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T23:50:00-05:00">
+                <h4>Registry reports refreshed after local run</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Consolidated results and regenerated summary reports for grokking attempts.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-28T22:20:00-05:00">
+                <h4>Docker build failed on missing dependency</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Build stopped due to requirements file path mismatch.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T21:10:00-05:00">
+                <h4>Tail-test plots added for pilot run</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Generated CCDF/fit plots for tail-test outputs.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-28T19:40:00-05:00">
+                <h4>Preparing adaptive experiment batch</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Configs staged for a multi-run adaptive suite.</p>
               </article>
             </section>
           </div>
