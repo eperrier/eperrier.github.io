@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-01 08:54 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2026-01-01 08:55 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Adjust UI test to assert arrow mode preview</td>
+              <td data-label="Summary">Iteration 056 checks failed (edge count assertion)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2026-01-01T08:55:43+11:00">
+                <h4>Iteration 056 checks failed (edge count assertion)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Playwright edge-count polling timed out again; log is tests/logs/check_20260101_085220.log. Switching the assertion to validate arrow preview visibility before rerunning.</p>
+              </article>
               <article data-status="complete" data-time="2026-01-01T08:54:27+11:00">
                 <h4>Adjust UI test to assert arrow mode preview</h4>
                 <p><strong>Stage:</strong> test</p>
