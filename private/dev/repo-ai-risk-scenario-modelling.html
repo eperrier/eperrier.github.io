@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 056 checks failed (mouse-up)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 056 checks rerun after connectRef guard</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:36 +1100</strong>
+            <strong>2026-01-01 07:37 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 056 checks rerun after connectRef guard</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:37 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 056 checks failed (mouse-up)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 07:33 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks failed (connect ref)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:32 +1100</div>
           </li>
         </ul>
       </section>
@@ -753,7 +753,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>230</strong>
+            <strong>231</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -763,7 +763,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:36 +1100</strong>
+            <strong>2026-01-01 07:37 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -792,6 +792,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T07:37:24+11:00">
+            <h4>Iteration 056 checks rerun after connectRef guard</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after preventing connectRef overwrite on the second node click in arrow mode. This rerun will rebuild containers, execute API validation, and run Playwright UI coverage with logs captured under tests/logs/check_*.log.</p>
+          </article>
           <article data-status="error" data-time="2026-01-01T07:36:16+11:00">
             <h4>Iteration 056 checks failed (mouse-up)</h4>
             <p><strong>Stage:</strong> test</p>
