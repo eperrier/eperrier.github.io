@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2026-01-01 07:17 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2026-01-01 07:20 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 056 checks rerun</td>
+              <td data-label="Summary">Iteration 056 checks failed (rerun)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2026-01-01T07:20:47+11:00">
+                <h4>Iteration 056 checks failed (rerun)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Playwright still reported no edge-count increase after arrow tool clicks, causing the rerun to time out while waiting for the predicate. The failing run log is saved at tests/logs/check_20260101_071808.log, and the arrow tool click handler is being adjusted before another rerun.</p>
+              </article>
               <article data-status="running" data-time="2026-01-01T07:17:04+11:00">
                 <h4>Iteration 056 checks rerun</h4>
                 <p><strong>Stage:</strong> test</p>

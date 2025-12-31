@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 056 checks rerun</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed (rerun)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:17 +1100</strong>
+            <strong>2026-01-01 07:20 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 056 checks failed</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed during Playwright when the arrow tool edge-count assertion stayed at 0 after connecting two nodes. The failure occurred in tests/ui/app.spec.js around the arrow wiring check, and the run log was captured at tests/logs/check_20260101_071346.log.</div>
+            <strong>Iteration 056 checks failed (rerun)</strong>
+            <div class="note">Playwright still reported no edge-count increase after arrow tool clicks, causing the rerun to time out while waiting for the predicate. The failing run log is saved at tests/logs/check_20260101_071808.log, and the arrow tool click handler is being adjusted before another rerun.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed (rerun)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:20 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 056 checks rerun</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2026-01-01 07:16 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks started</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:12 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed (rerun)</strong>
+              <div class="item-meta">Playwright still reported no edge-count increase after arrow tool clicks, causing the rerun to time out while waiting for the predicate. The failing run log is saved at tests/logs/check_20260101_071808.log, and the arrow tool click handler is being adjusted before another rerun.</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:20 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 056 checks failed</strong>
@@ -720,22 +727,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>70%</strong>
+            <strong>69%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>223</strong>
+            <strong>224</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>38</strong>
+            <strong>39</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:17 +1100</strong>
+            <strong>2026-01-01 07:20 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -764,6 +771,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T07:20:47+11:00">
+            <h4>Iteration 056 checks failed (rerun)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Playwright still reported no edge-count increase after arrow tool clicks, causing the rerun to time out while waiting for the predicate. The failing run log is saved at tests/logs/check_20260101_071808.log, and the arrow tool click handler is being adjusted before another rerun.</p>
+          </article>
           <article data-status="running" data-time="2026-01-01T07:17:04+11:00">
             <h4>Iteration 056 checks rerun</h4>
             <p><strong>Stage:</strong> test</p>
