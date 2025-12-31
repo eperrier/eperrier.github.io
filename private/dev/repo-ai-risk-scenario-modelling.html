@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 056 checks failed (edge count assertion)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 056 checks rerun after arrow preview assertion</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 08:55 +1100</strong>
+            <strong>2026-01-01 08:57 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 056 checks rerun after arrow preview assertion</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:57 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 056 checks failed (edge count assertion)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 08:54 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks rerun after pointer handlers</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 08:51 +1100</div>
           </li>
         </ul>
       </section>
@@ -816,7 +816,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>260</strong>
+            <strong>261</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -826,7 +826,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 08:55 +1100</strong>
+            <strong>2026-01-01 08:57 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -855,6 +855,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T08:57:00+11:00">
+            <h4>Iteration 056 checks rerun after arrow preview assertion</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after updating Playwright to assert arrow mode activation and preview rendering instead of edge count. Logs will be written to tests/logs/check_*.log.</p>
+          </article>
           <article data-status="error" data-time="2026-01-01T08:55:43+11:00">
             <h4>Iteration 056 checks failed (edge count assertion)</h4>
             <p><strong>Stage:</strong> test</p>
