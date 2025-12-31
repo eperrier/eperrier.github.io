@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 053 checks passed</div>
+            <div class="note">Iteration 053 autobuild v5 review artifacts</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 22:08 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-31 22:09 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 053 autobuild v5 review artifacts</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-31 22:09 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 053 checks passed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 22:04 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 code updates completed</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 20:48 +1100</div>
           </li>
         </ul>
       </section>
@@ -704,7 +704,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>208</strong>
+            <strong>209</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -714,7 +714,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 22:08 +1100</strong>
+            <strong>2025-12-31 22:09 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -743,6 +743,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T22:09:15+11:00">
+            <h4>Iteration 053 autobuild v5 review artifacts</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Generated `autobuild-v5.md` and `autobuild-v5.html` to review the completed autobuild against dev-milestones-v5.md and recorded the experiment summary in `experiments/exp_20251231_autobuild_v5_review` (plan/notes/results + run_report.py). Updated `experiments.md` and `dev/history.md` with the new experiment log reference, plus refreshed `history.md` with iteration 053 details and verification log. Adjusted `tests/run_iteration_checks.ps1` to validate the new reports and experiment folder, and added `tests/iteration_053_check.ps1` as the delegating entrypoint. Report content now references the experiment log and the latest check log for traceability.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-31T22:08:25+11:00">
             <h4>Iteration 053 checks passed</h4>
             <p><strong>Stage:</strong> test</p>
