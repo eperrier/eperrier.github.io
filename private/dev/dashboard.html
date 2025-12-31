@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 22:04 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-31 22:08 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 053 checks started</td>
+              <td data-label="Summary">Iteration 053 checks passed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -1023,6 +1023,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-31T22:08:25+11:00">
+                <h4>Iteration 053 checks passed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Ran `powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1` to validate the new autobuild v5 report and experiment records. Docker compose build/up and Playwright UI checks completed successfully. The suite confirmed the new report files and experiment index updates. Log captured at tests/logs/check_20251231_220534.log.</p>
+              </article>
               <article data-status="running" data-time="2025-12-31T22:04:42+11:00">
                 <h4>Iteration 053 checks started</h4>
                 <p><strong>Stage:</strong> test</p>
