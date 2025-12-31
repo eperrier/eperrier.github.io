@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Stabilize connect mode with an armed ref</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed (mouse-down connect)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 08:34 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 08:35 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
-            <div class="note">The latest Playwright run still observed no edge-count change after arrow clicks; see tests/logs/check_20260101_082153.log. Adjusting to connect on second node mouse-down before retrying.</div>
+            <strong>Iteration 056 checks failed (mouse-down connect)</strong>
+            <div class="note">Playwright still saw no edge-count increment after arrow tool clicks; log is tests/logs/check_20260101_083044.log. Adding a connect-armed ref to ensure the arrow tool state is honored before retrying.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed (mouse-down connect)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:35 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Stabilize connect mode with an armed ref</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2026-01-01 08:29 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 08:28 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed (mouse-down connect)</strong>
+              <div class="item-meta">Playwright still saw no edge-count increment after arrow tool clicks; log is tests/logs/check_20260101_083044.log. Adding a connect-armed ref to ensure the arrow tool state is honored before retrying.</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:35 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
@@ -788,17 +795,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>250</strong>
+            <strong>251</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>47</strong>
+            <strong>48</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 08:34 +1100</strong>
+            <strong>2026-01-01 08:35 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -827,6 +834,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T08:35:34+11:00">
+            <h4>Iteration 056 checks failed (mouse-down connect)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Playwright still saw no edge-count increment after arrow tool clicks; log is tests/logs/check_20260101_083044.log. Adding a connect-armed ref to ensure the arrow tool state is honored before retrying.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T08:34:19+11:00">
             <h4>Stabilize connect mode with an armed ref</h4>
             <p><strong>Stage:</strong> edit</p>
