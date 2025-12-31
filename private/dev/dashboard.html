@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
-              <td data-label="Last Update">2026-01-01 07:25 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2026-01-01 07:27 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 056 checks failed (arrow tool)</td>
+              <td data-label="Summary">Iteration 056 checks rerun with connect state ref</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2026-01-01T07:27:34+11:00">
+                <h4>Iteration 056 checks rerun with connect state ref</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after adding a connect ref to ensure arrow tool edges register even if React state updates lag. The rerun will rebuild containers, execute API validation, and run Playwright UI coverage with logs captured under tests/logs/check_*.log.</p>
+              </article>
               <article data-status="error" data-time="2026-01-01T07:25:18+11:00">
                 <h4>Iteration 056 checks failed (arrow tool)</h4>
                 <p><strong>Stage:</strong> test</p>
