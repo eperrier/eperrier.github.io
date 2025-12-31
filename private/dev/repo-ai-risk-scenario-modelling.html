@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill running">Running</span>
-            <div class="note">Iteration 043 in progress - v4 Milestone 4 LLM updates</div>
+            <div class="note">Iteration 051 checks running</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 10:17 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 17:34 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration checks failed</strong>
-            <div class="note">run_iteration_checks.ps1 failed: agent response missing task summaries (log tests/logs/check_20251231_101430.log).</div>
+            <strong>Iteration 050 checks failed (schema validation)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed on missing baseline.name fields in simulation payload. Log: tests/logs/check_20251231_171549.log.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 043 in progress - v4 Milestone 4 LLM updates</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration 051 checks running</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 10:17 +1100</div>
+            <div class="item-meta">2025-12-31 17:34 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 042 completed - v4 Milestone 3 OpenAI agents</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Iteration 051 experiment completed</strong>
+              <div class="item-meta">Stage: build</div>
             </div>
-            <div class="item-meta">2025-12-31 10:16 +1100</div>
+            <div class="item-meta">2025-12-31 17:32 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks rerunning</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Iteration 051 experiment started</strong>
+              <div class="item-meta">Stage: build</div>
             </div>
-            <div class="item-meta">2025-12-31 10:15 +1100</div>
+            <div class="item-meta">2025-12-31 17:24 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,34 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 050 checks failed (schema validation)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed on missing baseline.name fields in simulation payload. Log: tests/logs/check_20251231_171549.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 17:16 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 049 checks failed (build error)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed during web build with duplicate prop bindings. Log: tests/logs/check_20251231_163142.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 16:32 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 049 checks failed (summary visibility)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed on Update Summary visibility again. Log: tests/logs/check_20251231_162414.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 16:25 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration checks failed</strong>
+              <div class="item-meta">Playwright failed: scenario generation produced only one node (log tests/logs/check_20251231_112238.log).</div>
+            </div>
+            <div class="item-meta">2025-12-31 11:23 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration checks failed</strong>
@@ -517,22 +545,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>76%</strong>
+            <strong>80%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>81</strong>
+            <strong>132</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>9</strong>
+            <strong>13</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 10:17 +1100</strong>
+            <strong>2025-12-31 17:34 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -561,6 +589,373 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-31T17:34:00+11:00">
+            <h4>Iteration 051 checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for Milestone 4 validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T17:32:20+11:00">
+            <h4>Iteration 051 experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> experiments/exp_20251228_workflow_graph_builder/run.ps1 passed; log saved at experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_173203.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T17:24:10+11:00">
+            <h4>Iteration 051 experiment started</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running experiments/exp_20251228_workflow_graph_builder/run.ps1 for Milestone 4 validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T17:22:30+11:00">
+            <h4>Iteration 051 Monte Carlo convergence edits</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added convergence criteria handling in simulation, UI inputs for min runs/tolerance, and run history metadata.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T17:18:10+11:00">
+            <h4>Iteration 050 checks passed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed. Log: tests/logs/check_20251231_171752.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T17:17:30+11:00">
+            <h4>Iteration 050 checks rerun (distribution alias)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after fixing DistributionSpec alias handling for dist/name.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T17:17:00+11:00">
+            <h4>Iteration 050 fix for distribution alias handling</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Updated DistributionSpec to accept dist/name with Pydantic v2 populate_by_name.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T17:16:10+11:00">
+            <h4>Iteration 050 checks failed (schema validation)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed on missing baseline.name fields in simulation payload. Log: tests/logs/check_20251231_171549.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T17:15:05+11:00">
+            <h4>Iteration 050 checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for Milestone 3 validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T17:14:10+11:00">
+            <h4>Iteration 050 experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> experiments/exp_20251228_workflow_graph_builder/run.ps1 passed; log saved at experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_171354.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T16:52:10+11:00">
+            <h4>Iteration 050 experiment started</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running experiments/exp_20251228_workflow_graph_builder/run.ps1 for Milestone 3 validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T16:50:10+11:00">
+            <h4>Iteration 050 process node wiring edits</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added process type/params + error distribution support in API, schema, and Scenario Builder UI, plus diagnostics hooks for simulation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T16:34:15+11:00">
+            <h4>Iteration 049 checks passed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed. Log: tests/logs/check_20251231_163238.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T16:33:40+11:00">
+            <h4>Iteration 049 checks rerun (dedupe props)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after fixing duplicate scenario update props in Scenario Builder.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T16:33:05+11:00">
+            <h4>Iteration 049 fix for duplicate props</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Removed duplicate scenarioUpdateRationale/confidence bindings in ScenarioBuilder props.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T16:32:10+11:00">
+            <h4>Iteration 049 checks failed (build error)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed during web build with duplicate prop bindings. Log: tests/logs/check_20251231_163142.log.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T16:27:10+11:00">
+            <h4>Iteration 049 checks rerun (prop wiring)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after wiring scenario update rationale/confidence props.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T16:26:05+11:00">
+            <h4>Iteration 049 fix for scenario update props</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Passed update rationale/confidence props into Scenario Builder to prevent render errors after applying updates.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T16:25:20+11:00">
+            <h4>Iteration 049 checks failed (summary visibility)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed on Update Summary visibility again. Log: tests/logs/check_20251231_162414.log.</p>
+          </article>
+                                                                  <article data-status=\"running\" data-time=\"2025-12-31T16:23:13+11:00\">
+            <h4>Iteration 049 checks rerun (summary placeholder)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after showing Update Summary placeholders during update runs.</p>
+          </article><article data-status=\"error\" data-time=\"2025-12-31T16:22:10+11:00\">
+            <h4>Iteration 049 checks failed (optimistic update)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed again on Update Summary visibility. Log: tests/logs/check_20251231_161932.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T16:18:37+11:00\">
+            <h4>Iteration 049 checks rerun (optimistic update)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after optimistic update fallback.</p>
+          </article><article data-status=\"error\" data-time=\"2025-12-31T16:17:42+11:00\">
+            <h4>Iteration 049 checks failed (rerun)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed again on Update Summary visibility. Log: tests/logs/check_20251231_161502.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T16:14:12+11:00\">
+            <h4>Iteration 049 checks rerun</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after adding UI fallback for scenario updates.</p>
+          </article><article data-status=\"error\" data-time=\"2025-12-31T16:13:16+11:00\">
+            <h4>Iteration 049 checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed because Update Summary did not render after applying updates in Playwright test. Log: tests/logs/check_20251231_161030.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T16:09:39+11:00\">
+            <h4>Iteration 049 checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for Milestone 2 validation.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T16:08:48+11:00\">
+            <h4>Iteration 049 experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> experiments/exp_20251228_workflow_graph_builder/run.ps1 passed; log saved at experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_160815.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T16:07:26+11:00\">
+            <h4>Iteration 049 experiment started</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running experiments/exp_20251228_workflow_graph_builder/run.ps1.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T16:06:29+11:00\">
+            <h4>Iteration 049 edits complete</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added update rationale/confidence + constraints in api/server.py, extended scenario update payloads in web/src/ui/App.jsx, updated dev-milestones-v5.md status, and refreshed iteration checks for milestone 2.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T15:58:47+11:00\">
+            <h4>Iteration 049 started - Milestone 2 iterative updates</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Implementing iterative scenario updates with rationale, diff, and context retention.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T15:57:01+11:00\">
+            <h4>Iteration 048 checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed. Log: tests/logs/check_20251231_155609.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T15:55:18+11:00\">
+            <h4>Iteration 048 checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for Milestone 1 verification.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T15:54:27+11:00\">
+            <h4>Iteration 048 experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> experiments/exp_20251228_workflow_graph_builder/run.ps1 passed; log saved at experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_155403.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T15:53:15+11:00\">
+            <h4>Iteration 048 experiment started</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running experiments/exp_20251228_workflow_graph_builder/run.ps1.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T15:52:25+11:00\">
+            <h4>Iteration 048 edits complete</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Marked Milestone 1 complete in dev-milestones-v5.md and bumped iteration scripts for 048.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T15:50:54+11:00\">
+            <h4>Iteration 048 started - Milestone 1 verification</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Verifying Milestone 1 completion, updating status, and running required experiment/tests.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T13:01:12+11:00\">
+            <h4>Iteration 047 checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after Playwright selector updates. Log: tests/logs/check_20251231_130020.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T12:59:32+11:00\">
+            <h4>Iteration 047 checks rerun (assumption fix)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after updating assumption selector in Playwright tests.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T12:58:42+11:00\">
+            <h4>Iteration 047 Playwright assumption selector fix</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Updated tests/ui/app.spec.js to use a locator for Assumption entries to avoid strict-mode collisions when multiple assumptions render.</p>
+          </article><article data-status=\"error\" data-time=\"2025-12-31T12:57:43+11:00\">
+            <h4>Iteration 047 checks failed (rerun)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed again due to Playwright strict-mode match on multiple Assumption entries. Log: tests/logs/check_20251231_125648.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T12:56:02+11:00\">
+            <h4>Iteration 047 checks rerun</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after Playwright selector fix.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T12:55:13+11:00\">
+            <h4>Iteration 047 test selector fix</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Adjusted tests/ui/app.spec.js to use exact text matching for the Workflow Steps title to avoid strict-mode collisions with assumption text.</p>
+          </article><article data-status=\"error\" data-time=\"2025-12-31T12:54:04+11:00\">
+            <h4>Iteration 047 checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed due to Playwright strict-mode selector collision in tests/ui/app.spec.js (Workflow Steps text matched assumption line). Log: tests/logs/check_20251231_125308.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T12:52:20+11:00\">
+            <h4>Iteration 047 checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for milestone 1 generation upgrades.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T12:51:31+11:00\">
+            <h4>Experiment run completed - exp_20251228_workflow_graph_builder</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Finished experiments/exp_20251228_workflow_graph_builder/run.ps1; docker compose build/up health check passed. Log saved at experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_125100.log.</p>
+          </article><article data-status=\"running\" data-time=\"2025-12-31T12:50:14+11:00\">
+            <h4>Experiment run started - exp_20251228_workflow_graph_builder</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Starting experiments/exp_20251228_workflow_graph_builder/run.ps1 to rebuild containers and confirm API health before milestone 1 verification.</p>
+          </article><article data-status=\"complete\" data-time=\"2025-12-31T12:49:10+11:00\">
+            <h4>Iteration 047 code updates completed</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Implemented high-reasoning scenario generation with schema validation in api/server.py, added processType/candidates metadata, and expanded scenario schema fields in schema/scenario.schema.json. Updated web/src/ui/App.jsx to send scenario context, show generation phases, and preview dependency model + reasoning summary. Updated tests/run_iteration_checks.ps1, tests/ui/app.spec.js, and added tests/iteration_047_check.ps1 to cover new requirements.</p>
+          </article><article data-status="running" data-time="2025-12-31T12:22:37+11:00">
+            <h4>Iteration 047 in progress - v5 Milestone 1</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Implementing high-reasoning LLM scenario generation and schema validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T12:16:31+11:00">
+            <h4>Iteration 046 completed - v5 milestone details</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Expanded dev-milestones-v5.md with full scope/API/UI/data details, updated iteration checks and history. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_121119.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_121420.log).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T12:15:20+11:00">
+            <h4>Iteration checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed (log tests/logs/check_20251231_121420.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T12:13:32+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for v5 milestone detail update.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T12:12:11+11:00">
+            <h4>Workflow graph experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_121119.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T12:10:26+11:00">
+            <h4>Workflow graph experiment running</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running exp_20251228_workflow_graph_builder for v5 milestone detail update.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T12:08:24+11:00">
+            <h4>Iteration 046 in progress - expand v5 milestones</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Expanding dev-milestones-v5.md with detailed scope, APIs, and test criteria.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T12:05:18+11:00">
+            <h4>Iteration 045 completed - v5 milestone plan</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Added dev-milestones-v5.md and validation in run_iteration_checks, created tests/iteration_045_check.ps1, and updated history. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_120051.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_120321.log).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T12:04:13+11:00">
+            <h4>Iteration checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed (log tests/logs/check_20251231_120321.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T12:02:33+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for v5 milestone plan validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T12:01:37+11:00">
+            <h4>Workflow graph experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_120051.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:59:59+11:00">
+            <h4>Workflow graph experiment running</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running exp_20251228_workflow_graph_builder for v5 milestone planning iteration.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:57:51+11:00">
+            <h4>Iteration 045 in progress - v5 milestones plan</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Drafting dev-milestones-v5.md for advanced LLM scenario generation, simulation, and AI substitution.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T11:31:01+11:00">
+            <h4>Iteration 044 completed - LLM scenario generation</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Added LLM-backed scenario generation endpoint, updated UI to call it with fallback, and wired llm_scenario_generation checks. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_112844.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_112541.log).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T11:29:44+11:00">
+            <h4>Workflow graph experiment rerun completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_112844.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:27:49+11:00">
+            <h4>Workflow graph experiment rerunning</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Rerunning exp_20251228_workflow_graph_builder after LLM generation fix.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T11:26:55+11:00">
+            <h4>Iteration checks rerun completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after LLM generation fix (log tests/logs/check_20251231_112541.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:24:47+11:00">
+            <h4>Iteration checks rerunning</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Rerunning tests after ensuring mock LLM generation yields multiple nodes.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T11:23:40+11:00">
+            <h4>Iteration checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Playwright failed: scenario generation produced only one node (log tests/logs/check_20251231_112238.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:21:54+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for LLM scenario generation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T11:21:04+11:00">
+            <h4>Workflow graph experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_112015.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:19:33+11:00">
+            <h4>Workflow graph experiment running</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running exp_20251228_workflow_graph_builder for LLM scenario generation work.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T11:13:51+11:00">
+            <h4>Iteration 044 in progress - LLM scenario generation</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Wiring LLM-backed scenario generation and investigating simulation behavior.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:52:04+11:00">
+            <h4>Iteration 043 artifacts updated</h4>
+            <p><strong>Stage:</strong> docs</p>
+            <p><strong>Notes:</strong> Updated history and experiment notes/results to reflect latest log paths after rerun.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:46:32+11:00">
+            <h4>Iteration checks rerun completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed after update meta validation (log tests/logs/check_20251231_104532.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:44:46+11:00">
+            <h4>Iteration checks rerunning</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Rerunning tests after wiring scenario update meta validation.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:42:59+11:00">
+            <h4>Iteration 043 completed - v4 Milestone 4 LLM updates</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Added LLM-driven scenario update patching with diff summaries, updated UI diff display and Playwright checks, and wired llm_update_patch/update_diff_summary in run_iteration_checks. Ran exp_20251228_workflow_graph_builder (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_103821.log) and tests/run_iteration_checks.ps1 (log tests/logs/check_20251231_104051.log).</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:41:42+11:00">
+            <h4>Iteration checks completed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed (log tests/logs/check_20251231_104051.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:40:09+11:00">
+            <h4>Iteration checks running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for v4 Milestone 4 LLM update patching.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T10:39:21+11:00">
+            <h4>Workflow graph experiment completed</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> exp_20251228_workflow_graph_builder finished successfully (log experiments/exp_20251228_workflow_graph_builder/logs/exp_exp_20251228_workflow_graph_builder_20251231_103821.log).</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:37:38+11:00">
+            <h4>Workflow graph experiment running</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Running exp_20251228_workflow_graph_builder for LLM scenario update work.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T10:35:29+11:00">
+            <h4>Iteration 043 update - LLM scenario patch edits</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Implementing LLM-driven scenario update patching, diff summaries, and verification wiring.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T10:17:35+11:00">
             <h4>Iteration 043 in progress - v4 Milestone 4 LLM updates</h4>
             <p><strong>Stage:</strong> edit</p>
