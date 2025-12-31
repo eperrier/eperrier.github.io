@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 054 detailed autobuild review edits</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 054 checks started</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 22:31 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 22:32 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 054 checks started</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 22:32 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 054 detailed autobuild review edits</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: edit</div>
             </div>
             <div class="item-meta">2025-12-31 22:09 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 053 checks passed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:08 +1100</div>
           </li>
         </ul>
       </section>
@@ -704,7 +704,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>210</strong>
+            <strong>211</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -714,7 +714,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 22:31 +1100</strong>
+            <strong>2025-12-31 22:32 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -743,6 +743,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-31T22:32:42+11:00">
+            <h4>Iteration 054 checks started</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Launching `tests/run_iteration_checks.ps1` to validate the updated autobuild review artifacts and new experiment record. The run will confirm both root and `/reviews` report files plus the added experiment folder entry in the check suite. Docker compose build/up and Playwright UI checks will execute as part of the standard pipeline. The resulting log will be captured under `tests/logs/check_*.log`.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-31T22:31:42+11:00">
             <h4>Iteration 054 detailed autobuild review edits</h4>
             <p><strong>Stage:</strong> edit</p>
