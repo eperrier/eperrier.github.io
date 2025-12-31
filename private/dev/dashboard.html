@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2026-01-01 07:37 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2026-01-01 07:40 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 056 checks rerun after connectRef guard</td>
+              <td data-label="Summary">Iteration 056 checks failed (connection closed)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2026-01-01T07:40:29+11:00">
+                <h4>Iteration 056 checks failed (connection closed)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 aborted with an Invoke-WebRequest connection-closed error while bringing the stack up, and Playwright exited with code 1 before completing. The log is tests/logs/check_20260101_073836.log; restarting the checks after the docker stack settles.</p>
+              </article>
               <article data-status="running" data-time="2026-01-01T07:37:24+11:00">
                 <h4>Iteration 056 checks rerun after connectRef guard</h4>
                 <p><strong>Stage:</strong> test</p>
