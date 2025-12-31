@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
-              <td data-label="Last Update">2026-01-01 07:20 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2026-01-01 07:21 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 056 checks failed (rerun)</td>
+              <td data-label="Summary">Iteration 056 checks rerun after arrow tool fix</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2026-01-01T07:21:57+11:00">
+                <h4>Iteration 056 checks rerun after arrow tool fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after moving arrow tool connect handling to click events to ensure edges register reliably. The rerun will validate API scenario generation, UI workflow editing, and Playwright interactions, logging to tests/logs/check_*.log.</p>
+              </article>
               <article data-status="error" data-time="2026-01-01T07:20:47+11:00">
                 <h4>Iteration 056 checks failed (rerun)</h4>
                 <p><strong>Stage:</strong> test</p>

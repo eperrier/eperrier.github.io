@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 056 checks failed (rerun)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 056 checks rerun after arrow tool fix</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:20 +1100</strong>
+            <strong>2026-01-01 07:21 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 056 checks rerun after arrow tool fix</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:21 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 056 checks failed (rerun)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 07:17 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks failed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:16 +1100</div>
           </li>
         </ul>
       </section>
@@ -732,7 +732,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>224</strong>
+            <strong>225</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -742,7 +742,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:20 +1100</strong>
+            <strong>2026-01-01 07:21 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -771,6 +771,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T07:21:57+11:00">
+            <h4>Iteration 056 checks rerun after arrow tool fix</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after moving arrow tool connect handling to click events to ensure edges register reliably. The rerun will validate API scenario generation, UI workflow editing, and Playwright interactions, logging to tests/logs/check_*.log.</p>
+          </article>
           <article data-status="error" data-time="2026-01-01T07:20:47+11:00">
             <h4>Iteration 056 checks failed (rerun)</h4>
             <p><strong>Stage:</strong> test</p>
