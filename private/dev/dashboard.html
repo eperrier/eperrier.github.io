@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2025-12-31 22:35 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2025-12-31 22:36 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 054 report heading fix</td>
+              <td data-label="Summary">Iteration 054 checks rerun</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -1038,6 +1038,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2025-12-31T22:36:02+11:00">
+                <h4>Iteration 054 checks rerun</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running `tests/run_iteration_checks.ps1` after restoring the \"Milestone Status Table\" heading in the HTML review report. This run re-validates both root and `/reviews` autobuild reports plus the new experiment folder reference. Docker compose build/up and Playwright UI checks will execute as part of the standard suite. The log will be captured under `tests/logs/check_*.log`.</p>
+              </article>
               <article data-status="complete" data-time="2025-12-31T22:35:11+11:00">
                 <h4>Iteration 054 report heading fix</h4>
                 <p><strong>Stage:</strong> edit</p>
