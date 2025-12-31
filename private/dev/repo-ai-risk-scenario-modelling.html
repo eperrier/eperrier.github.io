@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 052 checks rerun (agent run snapshot)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 052 agent task AI name fallback</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 19:26 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-31 19:40 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -411,7 +411,7 @@
           <div class="mini-card">
             <span class="label">Recent outcome</span>
             <strong>Iteration 052 checks failed (agent run message)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_190738.log.</div>
+            <div class="note">tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_192701.log.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 052 checks rerun (agent run snapshot)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 19:26 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 agent run snapshot fallback</strong>
+              <strong>Iteration 052 agent task AI name fallback</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2025-12-31 19:25 +1100</div>
+            <div class="item-meta">2025-12-31 19:40 +1100</div>
           </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 052 checks failed (agent run message)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2025-12-31 19:24 +1100</div>
+            <div class="item-meta">2025-12-31 19:39 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 052 checks rerun (agent run snapshot)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:26 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 052 checks failed (agent run message)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_192701.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:39 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 052 checks failed (agent run message)</strong>
@@ -608,22 +615,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>75%</strong>
+            <strong>74%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>164</strong>
+            <strong>166</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>22</strong>
+            <strong>23</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 19:26 +1100</strong>
+            <strong>2025-12-31 19:40 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -652,6 +659,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T19:40:42+11:00">
+            <h4>Iteration 052 agent task AI name fallback</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Included legacy AI name fields when selecting agent tasks and building agent payloads.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T19:39:55+11:00">
+            <h4>Iteration 052 checks failed (agent run message)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_192701.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T19:26:03+11:00">
             <h4>Iteration 052 checks rerun (agent run snapshot)</h4>
             <p><strong>Stage:</strong> test</p>
