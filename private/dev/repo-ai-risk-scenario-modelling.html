@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 056 checks rerun with mouse-up wiring</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed (mouse-up)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:33 +1100</strong>
+            <strong>2026-01-01 07:36 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 056 checks failed (connect ref)</strong>
-            <div class="note">The rerun with connect ref still reported zero edge-count changes after arrow tool clicks, so Playwright timed out waiting on the predicate. The failing log is tests/logs/check_20260101_072841.log; switching arrow tool completion to mouse-up handling for the next attempt.</div>
+            <strong>Iteration 056 checks failed (mouse-up)</strong>
+            <div class="note">Playwright still observed no edge-count increment after arrow tool clicks with mouse-up completion, timing out in the edge predicate. The failing log is tests/logs/check_20260101_073451.log; preventing connectRef from being overwritten on the second node down before retrying.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed (mouse-up)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:36 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 056 checks rerun with mouse-up wiring</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2026-01-01 07:32 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks rerun with connect state ref</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:27 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed (mouse-up)</strong>
+              <div class="item-meta">Playwright still observed no edge-count increment after arrow tool clicks with mouse-up completion, timing out in the edge predicate. The failing log is tests/logs/check_20260101_073451.log; preventing connectRef from being overwritten on the second node down before retrying.</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:36 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 056 checks failed (connect ref)</strong>
@@ -746,17 +753,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>229</strong>
+            <strong>230</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>41</strong>
+            <strong>42</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:33 +1100</strong>
+            <strong>2026-01-01 07:36 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -785,6 +792,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T07:36:16+11:00">
+            <h4>Iteration 056 checks failed (mouse-up)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Playwright still observed no edge-count increment after arrow tool clicks with mouse-up completion, timing out in the edge predicate. The failing log is tests/logs/check_20260101_073451.log; preventing connectRef from being overwritten on the second node down before retrying.</p>
+          </article>
           <article data-status="running" data-time="2026-01-01T07:33:48+11:00">
             <h4>Iteration 056 checks rerun with mouse-up wiring</h4>
             <p><strong>Stage:</strong> test</p>
