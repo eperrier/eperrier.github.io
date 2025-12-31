@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Wire arrow tool clicks to connect nodes</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 056 checks rerun after arrow tool click handling</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:52 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 07:54 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 056 checks rerun after arrow tool click handling</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:54 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Wire arrow tool clicks to connect nodes</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 07:45 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks failed (connect guard)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:44 +1100</div>
           </li>
         </ul>
       </section>
@@ -767,7 +767,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>236</strong>
+            <strong>237</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -777,7 +777,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:52 +1100</strong>
+            <strong>2026-01-01 07:54 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -806,6 +806,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T07:54:25+11:00">
+            <h4>Iteration 056 checks rerun after arrow tool click handling</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after wiring arrow tool connections to node clicks with a connect-mode ref to stabilize edge creation. This run will rebuild containers, execute API checks, and run Playwright UI coverage with logs under tests/logs/check_*.log.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T07:52:35+11:00">
             <h4>Wire arrow tool clicks to connect nodes</h4>
             <p><strong>Stage:</strong> edit</p>
