@@ -431,10 +431,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 22:36 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-31 22:38 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 054 checks rerun</td>
+              <td data-label="Summary">Iteration 054 checks passed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-lma-agent-studio.html">lma-agent-studio</a></td>
@@ -2817,6 +2817,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-31T22:38:49+11:00">
+                <h4>Iteration 054 checks passed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-ran `tests/run_iteration_checks.ps1` after restoring the required HTML heading. Docker compose build/up and Playwright UI checks completed successfully, validating both root and `/reviews` autobuild reports plus the new detailed experiment entry. The detailed report references were updated to point to the latest verification log. Log captured at tests/logs/check_20251231_223703.log.</p>
+              </article>
               <article data-status="running" data-time="2025-12-31T22:36:02+11:00">
                 <h4>Iteration 054 checks rerun</h4>
                 <p><strong>Stage:</strong> test</p>
