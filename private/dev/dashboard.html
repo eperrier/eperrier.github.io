@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 22:32 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2025-12-31 22:34 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 054 checks started</td>
+              <td data-label="Summary">Iteration 054 checks failed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -1038,6 +1038,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2025-12-31T22:34:03+11:00">
+                <h4>Iteration 054 checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> The iteration checks failed because `autobuild-v5.html` no longer contains the required "Milestone Status Table" heading. The failure occurred in `tests/run_iteration_checks.ps1` and halted before completing the full suite. Log captured at tests/logs/check_20251231_223339.log. Updating the HTML report to restore the required heading before re-running tests.</p>
+              </article>
               <article data-status="running" data-time="2025-12-31T22:32:42+11:00">
                 <h4>Iteration 054 checks started</h4>
                 <p><strong>Stage:</strong> test</p>
