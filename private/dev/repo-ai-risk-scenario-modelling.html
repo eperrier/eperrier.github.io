@@ -362,9 +362,9 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
-      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Builder prompt and graph wiring updates completed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 056 checks started</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 23:46 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 07:12 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 056 checks started</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:12 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Builder prompt and graph wiring updates completed</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 23:46 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 055 checks rerun</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 23:43 +1100</div>
           </li>
         </ul>
       </section>
@@ -718,7 +718,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>220</strong>
+            <strong>221</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -728,7 +728,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 23:46 +1100</strong>
+            <strong>2026-01-01 07:12 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -757,6 +757,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T07:12:27+11:00">
+            <h4>Iteration 056 checks started</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Starting tests/run_iteration_checks.ps1 to validate the scenario prompt workflow, short label generation, and arrow tool interactions alongside API smoke checks and Playwright UI coverage. Output will be captured under tests/logs/check_*.log and referenced in the experiment results after completion.</p>
+          </article>
   
   
   
