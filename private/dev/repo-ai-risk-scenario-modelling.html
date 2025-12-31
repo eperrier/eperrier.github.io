@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Create arrows on second node mouse-down</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed (arrow tool still zero edges)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 08:27 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 08:28 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 056 checks failed (arrow tool still idle)</strong>
-            <div class="note">Playwright again reported no edge-count increment after arrow clicks; log is tests/logs/check_20260101_081350.log. Retrying after connect-mode state adjustment.</div>
+            <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
+            <div class="note">The latest Playwright run still observed no edge-count change after arrow clicks; see tests/logs/check_20260101_082153.log. Adjusting to connect on second node mouse-down before retrying.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:28 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Create arrows on second node mouse-down</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2026-01-01 08:23 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks rerun after mouse-down connect start</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 08:20 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
+              <div class="item-meta">The latest Playwright run still observed no edge-count change after arrow clicks; see tests/logs/check_20260101_082153.log. Adjusting to connect on second node mouse-down before retrying.</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:28 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 056 checks failed (arrow tool still idle)</strong>
@@ -781,17 +788,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>247</strong>
+            <strong>248</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>46</strong>
+            <strong>47</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 08:27 +1100</strong>
+            <strong>2026-01-01 08:28 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -820,6 +827,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T08:28:20+11:00">
+            <h4>Iteration 056 checks failed (arrow tool still zero edges)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> The latest Playwright run still observed no edge-count change after arrow clicks; see tests/logs/check_20260101_082153.log. Adjusting to connect on second node mouse-down before retrying.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T08:27:07+11:00">
             <h4>Create arrows on second node mouse-down</h4>
             <p><strong>Stage:</strong> edit</p>

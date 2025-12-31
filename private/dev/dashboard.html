@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-01 08:27 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2026-01-01 08:28 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Create arrows on second node mouse-down</td>
+              <td data-label="Summary">Iteration 056 checks failed (arrow tool still zero edges)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2026-01-01T08:28:20+11:00">
+                <h4>Iteration 056 checks failed (arrow tool still zero edges)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> The latest Playwright run still observed no edge-count change after arrow clicks; see tests/logs/check_20260101_082153.log. Adjusting to connect on second node mouse-down before retrying.</p>
+              </article>
               <article data-status="complete" data-time="2026-01-01T08:27:07+11:00">
                 <h4>Create arrows on second node mouse-down</h4>
                 <p><strong>Stage:</strong> edit</p>
