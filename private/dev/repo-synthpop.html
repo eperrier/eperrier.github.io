@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 223 — Autobuild v5 Iteration 10 (UI Evidence Panel) (AGI Iteration 10 — Autobuild v5)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 232 — Autobuild Runner Log Detection Fix (Review refresh)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 06:24 +1100</strong>
+            <strong>2026-01-01 06:45 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 223 — Autobuild v5 Iteration 10 (UI Evidence Panel) (AGI Iteration 10 — Autobuild v5)</strong>
+              <strong>Iteration 232 — Autobuild Runner Log Detection Fix (Review refresh)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 06:24 +1100</div>
+            <div class="item-meta">2026-01-01 06:45 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Starting AGI Iteration 223 — Autobuild v5 Iteration 10 (UI Evidence Panel)</strong>
+              <strong>Starting Iteration 232 — Autobuild Runner Log Detection Fix (Review refresh)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 06:21 +1100</div>
+            <div class="item-meta">2026-01-01 06:39 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 222 — Autobuild v5 Iteration 9 (Consolidated v5 Validator) (AGI Iteration 9 — Autobuild v5)</strong>
+              <strong>Iteration 232 — Autobuild Runner Log Detection Fix (AGI Iteration 232 — Runner Log Detection)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 06:21 +1100</div>
+            <div class="item-meta">2026-01-01 06:30 +1100</div>
           </li>
         </ul>
       </section>
@@ -746,7 +746,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>395</strong>
+            <strong>398</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -756,7 +756,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 06:24 +1100</strong>
+            <strong>2026-01-01 06:45 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -785,6 +785,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-01T06:45:26+11:00">
+            <h4>Iteration 232 — Autobuild Runner Log Detection Fix (Review refresh)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed; refreshed Autobuild v5 review narrative and runner log detection. Log: tests/logs/check_20260101_064051.log.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-01T06:39:57+11:00">
+            <h4>Starting Iteration 232 — Autobuild Runner Log Detection Fix (Review refresh)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests after updating the Autobuild v5 review narrative and runner log detection handling to confirm acceptance checks.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T06:30:00+11:00">
+            <h4>Iteration 232 — Autobuild Runner Log Detection Fix (AGI Iteration 232 — Runner Log Detection)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration 232 checks passed; runner now resolves the latest log path via tests/logs and uses exit code for status. Log: tests/logs/check_20260101_062723.log.</p>
+          </article>
                     <article data-status="error" data-time="2026-01-01T06:24:11+11:00">
             <h4>Iteration 223 — Autobuild v5 Iteration 10 (UI Evidence Panel) (AGI Iteration 10 — Autobuild v5)</h4>
             <p><strong>Stage:</strong> test</p>
