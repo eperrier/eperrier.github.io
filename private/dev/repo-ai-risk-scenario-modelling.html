@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 052 checks failed (Simulation heading)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 052 checks rerun (forced click)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 18:36 +1100</strong>
+            <strong>2025-12-31 18:38 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 052 checks rerun (forced click)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 18:38 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 052 Playwright click hardening</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-31 18:37 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 052 checks failed (Simulation heading)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 18:36 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 checks rerun (side-rail navigation)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 18:26 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 Playwright navigation fix</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 18:25 +1100</div>
           </li>
         </ul>
       </section>
@@ -578,7 +578,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>147</strong>
+            <strong>149</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -588,7 +588,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 18:36 +1100</strong>
+            <strong>2025-12-31 18:38 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -617,6 +617,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-31T18:38:44+11:00">
+            <h4>Iteration 052 checks rerun (forced click)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after forcing the Simulation side-rail click.</p>
+          </article>
+          <article data-status="complete" data-time="2025-12-31T18:37:32+11:00">
+            <h4>Iteration 052 Playwright click hardening</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Forced the Simulation side-rail click and added a brief wait before asserting the Simulation heading.</p>
+          </article>
           <article data-status="error" data-time="2025-12-31T18:36:20+11:00">
             <h4>Iteration 052 checks failed (Simulation heading)</h4>
             <p><strong>Stage:</strong> test</p>
