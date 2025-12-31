@@ -1,5 +1,25 @@
 <section data-repo="synthpop" data-agent="Codex">
-  <article data-status="running" data-time="2025-12-31T11:11:12+11:00">
+  <article data-status="complete" data-time="2025-12-31T11:20:42+11:00">
+    <h4>Iteration 196 — Autobuild v4 Claim-to-Proof Mapping (AGI Iteration 9 — Parallel Execution Plan)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks passed with log tests/logs/check_20251231_111654.log. Docker compose down reported a network removal warning, but cleanup completed and containers were stopped.</p>
+  </article>  <article data-status="running" data-time="2025-12-31T11:16:08+11:00">
+    <h4>Iteration 196 — Autobuild v4 Claim-to-Proof Mapping (AGI Iteration 9 — Parallel Execution Plan)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Retrying iteration checks after fixing the proof_id loop variable name in the claim-proof map validation. This run revalidates claim_proof_map.json linkage and update log synchronization.</p>
+  </article>  <article data-status="error" data-time="2025-12-31T11:15:24+11:00">
+    <h4>Iteration 196 — Autobuild v4 Claim-to-Proof Mapping (AGI Iteration 9 — Parallel Execution Plan)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Iteration checks failed because the claim-proof map check used the reserved 10908 variable name. Updated tests/run_iteration_checks.ps1 to use  and will retry the tests.</p>
+  </article>  <article data-status="running" data-time="2025-12-31T11:14:10+11:00">
+    <h4>Iteration 196 — Autobuild v4 Claim-to-Proof Mapping (AGI Iteration 9 — Parallel Execution Plan)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Running iteration checks to validate claim_proof_map.json linkage to proof_runs.json. Capturing results in tests/logs/check_<timestamp>.log for Iteration 196 verification.</p>
+  </article>  <article data-status="complete" data-time="2025-12-31T11:13:45+11:00">
+    <h4>Iteration 196 — Autobuild v4 Claim-to-Proof Mapping (AGI Iteration 9 — Parallel Execution Plan)</h4>
+    <p><strong>Stage:</strong> edit</p>
+    <p><strong>Notes:</strong> Added generate_claim_proof_map.py to emit claim_proof_map.json linked to proof_runs.json proof_ids. Wired the autobuild_v4_claim_proof_map check and iteration 196 acceptance coverage mapping.</p>
+  </article>  <article data-status="running" data-time="2025-12-31T11:11:12+11:00">
     <h4>Iteration 196 — Autobuild v4 Claim-to-Proof Mapping (AGI Iteration 9 — Parallel Execution Plan)</h4>
     <p><strong>Stage:</strong> edit</p>
     <p><strong>Notes:</strong> Starting Iteration 196 to generate claim_proof_map.json and link claims to proof_ids from proof_runs.json. This kickoff precedes the mapping script and acceptance checks for proof linkage.</p>
@@ -1432,6 +1452,11 @@
     <p><strong>Notes:</strong> Captured initial ledger and manuscript skeleton for tracking.</p>
   </article>
 </section>
+
+
+
+
+
 
 
 
