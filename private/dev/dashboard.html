@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 23:43 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-31 23:46 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 055 checks rerun</td>
+              <td data-label="Summary">Builder prompt and graph wiring updates completed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -1061,7 +1061,17 @@
   
   
   
-              <article data-status="running" data-time="2025-12-31T23:43:14+11:00">
+  
+  
+              <article data-status="complete" data-time="2025-12-31T23:46:25+11:00">
+                <h4>Builder prompt and graph wiring updates completed</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Updated web/src/ui/App.jsx to move the LLM prompt into the Scenario Builder workflow tab, add target node count input, and wire graph arrow controls to a new connect handler. Adjusted web/src/styles.css for card buttons and the graph connect layout, and extended pi/server.py to honor nodeCount while preserving dependency edges when stages reach the task cap. Refreshed Playwright coverage in 	ests/ui/app.spec.js, iteration checks in 	ests/run_iteration_checks.ps1, and added 	ests/iteration_055_check.ps1 alongside the new history.md entry. Ran the experiment experiments/exp_20251231_builder_prompt_workflow with powershell -NoProfile -ExecutionPolicy Bypass -File experiments/exp_20251231_builder_prompt_workflow/run.ps1 and logged it at experiments/exp_20251231_builder_prompt_workflow/logs/exp_exp_20251231_builder_prompt_workflow_20251231_233426.log while updating experiments.md and dev/history.md. Update log commits were pushed with git push origin HEAD.</p>
+              </article><article data-status="complete" data-time="2025-12-31T23:46:02+11:00">
+                <h4>Iteration 055 checks passed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Completed 	ests/run_iteration_checks.ps1 after the dependency assembly fix, including docker compose build/up, API validation, and Playwright UI coverage. The suite validated scenario generation nodeCount enforcement, builder prompt flow, graph arrow wiring, and home tile persistence. Playwright finished with both UI tests passing, and the harness reported success across the API smoke checks. Log captured at tests/logs/check_20251231_234403.log.</p>
+              </article><article data-status="running" data-time="2025-12-31T23:43:14+11:00">
                 <h4>Iteration 055 checks rerun</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Re-running 	ests/run_iteration_checks.ps1 after fixing dependency assembly in pi/server.py so generated scenarios carry edges into the builder. This run will rebuild containers, hit the API and scenario generation checks (including nodeCount validation), and execute Playwright against the updated builder prompt flow. The transcript will be stored under 	ests/logs/check_*.log once the suite completes. Results will be propagated into the experiment results and history files.</p>
