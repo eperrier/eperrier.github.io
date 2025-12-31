@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 052 harden agent run rendering</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 052 checks rerun (agent run guards)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 19:58 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2025-12-31 19:59 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 052 checks rerun (agent run guards)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:59 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 052 harden agent run rendering</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 19:57 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 checks rerun (agent response wait)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 19:50 +1100</div>
           </li>
         </ul>
       </section>
@@ -641,7 +641,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>175</strong>
+            <strong>176</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -651,7 +651,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 19:58 +1100</strong>
+            <strong>2025-12-31 19:59 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -680,6 +680,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2025-12-31T19:59:31+11:00">
+            <h4>Iteration 052 checks rerun (agent run guards)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after guarding agent run selection/rendering.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-31T19:58:25+11:00">
             <h4>Iteration 052 harden agent run rendering</h4>
             <p><strong>Stage:</strong> edit</p>
