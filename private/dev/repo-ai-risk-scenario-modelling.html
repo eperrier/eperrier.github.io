@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 056 checks failed (connection closed)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 056 checks rerun after reconnect</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:40 +1100</strong>
+            <strong>2026-01-01 07:41 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 056 checks rerun after reconnect</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:41 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 056 checks failed (connection closed)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 07:37 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks failed (mouse-up)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:36 +1100</div>
           </li>
         </ul>
       </section>
@@ -760,7 +760,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>232</strong>
+            <strong>233</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -770,7 +770,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:40 +1100</strong>
+            <strong>2026-01-01 07:41 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -799,6 +799,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T07:41:33+11:00">
+            <h4>Iteration 056 checks rerun after reconnect</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after the connection-closed error to validate the updated arrow tool logic. This rerun will rebuild containers, execute API checks, and run Playwright UI coverage with logs stored under tests/logs/check_*.log.</p>
+          </article>
           <article data-status="error" data-time="2026-01-01T07:40:29+11:00">
             <h4>Iteration 056 checks failed (connection closed)</h4>
             <p><strong>Stage:</strong> test</p>
