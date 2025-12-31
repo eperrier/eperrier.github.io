@@ -362,8 +362,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Allow arrow tool clicks to propagate</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed (arrow tool still zero edges)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:57 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 07:59 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 056 checks failed (connect guard)</strong>
-            <div class="note">The rerun still timed out on the arrow tool edge-count predicate, indicating the connection was cleared on the initial node click. The failing log is tests/logs/check_20260101_074236.log; keeping the connect state after the first click before retrying.</div>
+            <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
+            <div class="note">Playwright timed out waiting for the edge count to increase after two arrow tool clicks; tests/logs/check_20260101_075542.log captured the failure. Adjusting click handling again before retrying.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:59 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Allow arrow tool clicks to propagate</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2026-01-01 07:54 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Wire arrow tool clicks to connect nodes</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2026-01-01 07:52 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
+              <div class="item-meta">Playwright timed out waiting for the edge count to increase after two arrow tool clicks; tests/logs/check_20260101_075542.log captured the failure. Adjusting click handling again before retrying.</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:59 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 056 checks failed (connect guard)</strong>
@@ -767,17 +774,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>238</strong>
+            <strong>239</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>44</strong>
+            <strong>45</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:57 +1100</strong>
+            <strong>2026-01-01 07:59 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -806,6 +813,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T07:59:20+11:00">
+            <h4>Iteration 056 checks failed (arrow tool still zero edges)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Playwright timed out waiting for the edge count to increase after two arrow tool clicks; tests/logs/check_20260101_075542.log captured the failure. Adjusting click handling again before retrying.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T07:57:56+11:00">
             <h4>Allow arrow tool clicks to propagate</h4>
             <p><strong>Stage:</strong> edit</p>
