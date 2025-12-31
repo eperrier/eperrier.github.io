@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 052 Playwright debug run (Simulation tab)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 052 fix agent tools state wiring</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 18:55 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-31 19:02 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 052 checks failed (Simulation heading)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed in Playwright waiting for the Simulation heading after navigation fallback. Log: tests/logs/check_20251231_184804.log.</div>
+            <strong>Iteration 052 Playwright debug run failed (Simulation heading)</strong>
+            <div class="note">Manual Playwright docker run failed waiting for the Simulation heading; traced to missing agent tools state wiring.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 052 fix agent tools state wiring</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:02 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 052 Playwright debug run failed (Simulation heading)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:01 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 052 Playwright debug run (Simulation tab)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 18:55 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 Playwright simulation navigation simplification</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 18:55 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 checks failed (Simulation heading)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 18:50 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 052 Playwright debug run failed (Simulation heading)</strong>
+              <div class="item-meta">Manual Playwright docker run failed waiting for the Simulation heading; traced to missing agent tools state wiring.</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:01 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 052 checks failed (Simulation heading)</strong>
@@ -587,22 +594,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>77%</strong>
+            <strong>76%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>155</strong>
+            <strong>157</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>19</strong>
+            <strong>20</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 18:55 +1100</strong>
+            <strong>2025-12-31 19:02 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -631,6 +638,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T19:02:40+11:00">
+            <h4>Iteration 052 fix agent tools state wiring</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Passed agent tools text state into SimulationMain to avoid runtime errors when opening the Simulation tab.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T19:01:30+11:00">
+            <h4>Iteration 052 Playwright debug run failed (Simulation heading)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Manual Playwright docker run failed waiting for the Simulation heading; traced to missing agent tools state wiring.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T18:55:34+11:00">
             <h4>Iteration 052 Playwright debug run (Simulation tab)</h4>
             <p><strong>Stage:</strong> test</p>
