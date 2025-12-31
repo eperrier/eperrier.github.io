@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 052 checks rerun (Simulation heading scope)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 052 agent run snapshot fallback</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 19:06 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-31 19:25 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 052 checks failed (Simulation heading strict mode)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed due to multiple Simulation headings in strict mode. Log: tests/logs/check_20251231_190435.log.</div>
+            <strong>Iteration 052 checks failed (agent run message)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_190738.log.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 052 agent run snapshot fallback</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:25 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 052 checks failed (agent run message)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:24 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 052 checks rerun (Simulation heading scope)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 19:06 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 Playwright heading scoping</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 19:05 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 checks failed (Simulation heading strict mode)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 19:05 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 052 checks failed (agent run message)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_190738.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:24 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 052 checks failed (Simulation heading strict mode)</strong>
@@ -606,17 +613,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>161</strong>
+            <strong>163</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>21</strong>
+            <strong>22</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 19:06 +1100</strong>
+            <strong>2025-12-31 19:25 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -645,6 +652,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T19:25:03+11:00">
+            <h4>Iteration 052 agent run snapshot fallback</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Cached the latest agent run response to render UI results immediately after completion.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T19:24:20+11:00">
+            <h4>Iteration 052 checks failed (agent run message)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed waiting for agent run success text. Log: tests/logs/check_20251231_190738.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T19:06:50+11:00">
             <h4>Iteration 052 checks rerun (Simulation heading scope)</h4>
             <p><strong>Stage:</strong> test</p>
