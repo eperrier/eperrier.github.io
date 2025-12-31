@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 052 checks rerun (side-rail navigation)</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 052 checks failed (Simulation heading)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 18:26 +1100</strong>
+            <strong>2025-12-31 18:36 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 052 checks failed (Simulation tab lookup)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed in Playwright waiting for the Simulation tab. Log: tests/logs/check_20251231_182142.log.</div>
+            <strong>Iteration 052 checks failed (Simulation heading)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed in Playwright waiting for the Simulation heading after side-rail navigation. Log: tests/logs/check_20251231_182804.log.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 052 checks failed (Simulation heading)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 18:36 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 052 checks rerun (side-rail navigation)</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2025-12-31 18:25 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 checks failed (Simulation tab lookup)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 18:24 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 052 checks failed (Simulation heading)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed in Playwright waiting for the Simulation heading after side-rail navigation. Log: tests/logs/check_20251231_182804.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 18:36 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 052 checks failed (Simulation tab lookup)</strong>
@@ -566,22 +573,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>79%</strong>
+            <strong>78%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>146</strong>
+            <strong>147</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>16</strong>
+            <strong>17</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 18:26 +1100</strong>
+            <strong>2025-12-31 18:36 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -610,6 +617,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2025-12-31T18:36:20+11:00">
+            <h4>Iteration 052 checks failed (Simulation heading)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed in Playwright waiting for the Simulation heading after side-rail navigation. Log: tests/logs/check_20251231_182804.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T18:26:55+11:00">
             <h4>Iteration 052 checks rerun (side-rail navigation)</h4>
             <p><strong>Stage:</strong> test</p>
