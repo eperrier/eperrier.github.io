@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 052 checks failed (visualization tab timeout)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 timed out clicking the Visualization tab. Log: tests/logs/check_20251231_202646.log.</div>
+            <strong>Iteration 052 checks failed (visualization rail missing)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 timed out waiting for the Visualization button in the side-rail. Log: tests/logs/check_20251231_203341.log.</div>
           </div>
         </div>
       </section>
@@ -428,17 +428,17 @@
           </li>
           <li class="activity-item">
             <div>
+              <strong>Iteration 052 checks failed (visualization rail missing)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 20:35 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 052 checks rerun (visualization navigation)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 20:32 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 update Visualization navigation check</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 20:31 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 052 checks failed (visualization rail missing)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 timed out waiting for the Visualization button in the side-rail. Log: tests/logs/check_20251231_203341.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 20:35 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 052 checks failed (visualization tab timeout)</strong>
@@ -685,17 +692,17 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>70%</strong>
+            <strong>69%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>198</strong>
+            <strong>199</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>33</strong>
+            <strong>34</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
@@ -733,6 +740,11 @@
             <h4>Iteration 052 reduce visualization assertions</h4>
             <p><strong>Stage:</strong> edit</p>
             <p><strong>Notes:</strong> Simplified Playwright visualization checks to confirm the tab strip lists Visualization.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T20:35:10+11:00">
+            <h4>Iteration 052 checks failed (visualization rail missing)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 timed out waiting for the Visualization button in the side-rail. Log: tests/logs/check_20251231_203341.log.</p>
           </article>
           <article data-status="running" data-time="2025-12-31T20:32:50+11:00">
             <h4>Iteration 052 checks rerun (visualization navigation)</h4>
