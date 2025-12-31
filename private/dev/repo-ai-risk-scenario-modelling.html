@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 056 checks started</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 07:12 +1100</strong>
+            <strong>2026-01-01 07:16 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 055 checks failed</strong>
-            <div class="note">ests/run_iteration_checks.ps1 failed during Playwright when the workflow builder test asserted a non-zero edge count after scenario generation. The failure was triggered in 	ests/ui/app.spec.js where the edges badge remained at 0, indicating generated dependencies were not propagated into the builder state. The run halted after Playwright, and the log was captured at tests/logs/check_20251231_233947.log. I am updating the scenario generation dependency assembly and will rerun the full checks.</div>
+            <strong>Iteration 056 checks failed</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed during Playwright when the arrow tool edge-count assertion stayed at 0 after connecting two nodes. The failure occurred in tests/ui/app.spec.js around the arrow wiring check, and the run log was captured at tests/logs/check_20260101_071346.log.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:16 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 056 checks started</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2025-12-31 23:46 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 055 checks passed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 23:46 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed during Playwright when the arrow tool edge-count assertion stayed at 0 after connecting two nodes. The failure occurred in tests/ui/app.spec.js around the arrow wiring check, and the run log was captured at tests/logs/check_20260101_071346.log.</div>
+            </div>
+            <div class="item-meta">2026-01-01 07:16 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 055 checks failed</strong>
@@ -718,17 +725,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>221</strong>
+            <strong>222</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>37</strong>
+            <strong>38</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 07:12 +1100</strong>
+            <strong>2026-01-01 07:16 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -757,6 +764,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T07:16:00+11:00">
+            <h4>Iteration 056 checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed during Playwright when the arrow tool edge-count assertion stayed at 0 after connecting two nodes. The failure occurred in tests/ui/app.spec.js around the arrow wiring check, and the run log was captured at tests/logs/check_20260101_071346.log.</p>
+          </article>
           <article data-status="running" data-time="2026-01-01T07:12:27+11:00">
             <h4>Iteration 056 checks started</h4>
             <p><strong>Stage:</strong> test</p>
