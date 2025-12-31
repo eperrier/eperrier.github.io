@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Overnight results chunking automated</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration checks started for overnight chunking</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 06:45 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 06:46 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration checks started for overnight chunking</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 06:46 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Overnight results chunking automated</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: deploy</div>
             </div>
             <div class="item-meta">2025-12-31 22:40 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks started for Runpod launch</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:39 -0500</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>117</strong>
+            <strong>118</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 06:45 +1100</strong>
+            <strong>2026-01-01 06:46 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-01T06:46:41+11:00">
+            <h4>Iteration checks started for overnight chunking</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding chunking automation.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T06:45:03+11:00">
             <h4>Overnight results chunking automated</h4>
             <p><strong>Stage:</strong> edit</p>
