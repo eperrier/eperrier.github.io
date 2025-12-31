@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 055 checks failed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 055 checks rerun</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 23:42 +1100</strong>
+            <strong>2025-12-31 23:43 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 055 checks rerun</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 23:43 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 055 checks failed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 23:38 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 054 checks passed</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:38 +1100</div>
           </li>
         </ul>
       </section>
@@ -718,7 +718,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>217</strong>
+            <strong>218</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -728,7 +728,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 23:42 +1100</strong>
+            <strong>2025-12-31 23:43 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -759,7 +759,12 @@
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
   
   
-          <article data-status="error" data-time="2025-12-31T23:42:15+11:00">
+  
+          <article data-status="running" data-time="2025-12-31T23:43:14+11:00">
+            <h4>Iteration 055 checks rerun</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running 	ests/run_iteration_checks.ps1 after fixing dependency assembly in pi/server.py so generated scenarios carry edges into the builder. This run will rebuild containers, hit the API and scenario generation checks (including nodeCount validation), and execute Playwright against the updated builder prompt flow. The transcript will be stored under 	ests/logs/check_*.log once the suite completes. Results will be propagated into the experiment results and history files.</p>
+          </article><article data-status="error" data-time="2025-12-31T23:42:15+11:00">
             <h4>Iteration 055 checks failed</h4>
             <p><strong>Stage:</strong> test</p>
             <p><strong>Notes:</strong> 	ests/run_iteration_checks.ps1 failed during Playwright when the workflow builder test asserted a non-zero edge count after scenario generation. The failure was triggered in 	ests/ui/app.spec.js where the edges badge remained at 0, indicating generated dependencies were not propagated into the builder state. The run halted after Playwright, and the log was captured at tests/logs/check_20251231_233947.log. I am updating the scenario generation dependency assembly and will rerun the full checks.</p>
