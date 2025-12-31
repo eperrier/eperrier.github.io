@@ -362,8 +362,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
+      <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Use connect mode state directly for arrow tool logic</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 056 checks failed (arrow tool still idle)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 08:15 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-01 08:17 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
-            <div class="note">Playwright timed out waiting for the edge count to increase after two arrow tool clicks; tests/logs/check_20260101_075542.log captured the failure. Adjusting click handling again before retrying.</div>
+            <strong>Iteration 056 checks failed (arrow tool still idle)</strong>
+            <div class="note">Playwright again reported no edge-count increment after arrow clicks; log is tests/logs/check_20260101_081350.log. Retrying after connect-mode state adjustment.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 056 checks failed (arrow tool still idle)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:17 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Use connect mode state directly for arrow tool logic</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2026-01-01 08:12 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Finalize arrow tool connections on surface mouse-up</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2026-01-01 08:11 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 056 checks failed (arrow tool still idle)</strong>
+              <div class="item-meta">Playwright again reported no edge-count increment after arrow clicks; log is tests/logs/check_20260101_081350.log. Retrying after connect-mode state adjustment.</div>
+            </div>
+            <div class="item-meta">2026-01-01 08:17 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 056 checks failed (arrow tool still zero edges)</strong>
@@ -774,17 +781,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>242</strong>
+            <strong>243</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>45</strong>
+            <strong>46</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 08:15 +1100</strong>
+            <strong>2026-01-01 08:17 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -813,6 +820,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="error" data-time="2026-01-01T08:17:04+11:00">
+            <h4>Iteration 056 checks failed (arrow tool still idle)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Playwright again reported no edge-count increment after arrow clicks; log is tests/logs/check_20260101_081350.log. Retrying after connect-mode state adjustment.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T08:15:53+11:00">
             <h4>Use connect mode state directly for arrow tool logic</h4>
             <p><strong>Stage:</strong> edit</p>
