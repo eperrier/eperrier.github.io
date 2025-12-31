@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 055 checks started</div>
+            <span class="status-pill error">Error</span>
+            <div class="note">Iteration 055 checks failed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 23:38 +1100</strong>
+            <strong>2025-12-31 23:42 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 054 checks failed</strong>
-            <div class="note">The iteration checks failed because `autobuild-v5.html` no longer contains the required "Milestone Status Table" heading. The failure occurred in `tests/run_iteration_checks.ps1` and halted before completing the full suite. Log captured at tests/logs/check_20251231_223339.log. Updating the HTML report to restore the required heading before re-running tests.</div>
+            <strong>Iteration 055 checks failed</strong>
+            <div class="note">ests/run_iteration_checks.ps1 failed during Playwright when the workflow builder test asserted a non-zero edge count after scenario generation. The failure was triggered in 	ests/ui/app.spec.js where the edges badge remained at 0, indicating generated dependencies were not propagated into the builder state. The run halted after Playwright, and the log was captured at tests/logs/check_20251231_233947.log. I am updating the scenario generation dependency assembly and will rerun the full checks.</div>
           </div>
         </div>
       </section>
@@ -419,6 +419,13 @@
       <section class="card" id="activity">
         <h2>Recent Activity</h2>
         <ul class="activity-list">
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 055 checks failed</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 23:42 +1100</div>
+          </li>
           <li class="activity-item">
             <div>
               <strong>Iteration 055 checks started</strong>
@@ -433,19 +440,19 @@
             </div>
             <div class="item-meta">2025-12-31 22:38 +1100</div>
           </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 054 checks rerun</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:36 +1100</div>
-          </li>
         </ul>
       </section>
 
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 055 checks failed</strong>
+              <div class="item-meta">ests/run_iteration_checks.ps1 failed during Playwright when the workflow builder test asserted a non-zero edge count after scenario generation. The failure was triggered in 	ests/ui/app.spec.js where the edges badge remained at 0, indicating generated dependencies were not propagated into the builder state. The run halted after Playwright, and the log was captured at tests/logs/check_20251231_233947.log. I am updating the scenario generation dependency assembly and will rerun the full checks.</div>
+            </div>
+            <div class="item-meta">2025-12-31 23:42 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 054 checks failed</strong>
@@ -711,17 +718,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>216</strong>
+            <strong>217</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>36</strong>
+            <strong>37</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 23:38 +1100</strong>
+            <strong>2025-12-31 23:42 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -751,7 +758,12 @@
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
   
-          <article data-status="running" data-time="2025-12-31T23:38:47+11:00">
+  
+          <article data-status="error" data-time="2025-12-31T23:42:15+11:00">
+            <h4>Iteration 055 checks failed</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> 	ests/run_iteration_checks.ps1 failed during Playwright when the workflow builder test asserted a non-zero edge count after scenario generation. The failure was triggered in 	ests/ui/app.spec.js where the edges badge remained at 0, indicating generated dependencies were not propagated into the builder state. The run halted after Playwright, and the log was captured at tests/logs/check_20251231_233947.log. I am updating the scenario generation dependency assembly and will rerun the full checks.</p>
+          </article><article data-status="running" data-time="2025-12-31T23:38:47+11:00">
             <h4>Iteration 055 checks started</h4>
             <p><strong>Stage:</strong> test</p>
             <p><strong>Notes:</strong> Started 	ests/run_iteration_checks.ps1 via powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to validate the builder prompt move, graph arrow wiring, and nodeCount scenario generation updates. The harness will run docker compose build/up, API smoke checks, and Playwright UI coverage in 	ests/ui/app.spec.js as part of the standard suite. Output will be captured in 	ests/logs/check_*.log by the transcript logger. Results will be folded back into the experiment results and history entries once the run completes.</p>

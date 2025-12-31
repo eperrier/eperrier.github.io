@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 23:38 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2025-12-31 23:42 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 055 checks started</td>
+              <td data-label="Summary">Iteration 055 checks failed</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -1059,7 +1059,12 @@
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
   
-              <article data-status="running" data-time="2025-12-31T23:38:47+11:00">
+  
+              <article data-status="error" data-time="2025-12-31T23:42:15+11:00">
+                <h4>Iteration 055 checks failed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> 	ests/run_iteration_checks.ps1 failed during Playwright when the workflow builder test asserted a non-zero edge count after scenario generation. The failure was triggered in 	ests/ui/app.spec.js where the edges badge remained at 0, indicating generated dependencies were not propagated into the builder state. The run halted after Playwright, and the log was captured at tests/logs/check_20251231_233947.log. I am updating the scenario generation dependency assembly and will rerun the full checks.</p>
+              </article><article data-status="running" data-time="2025-12-31T23:38:47+11:00">
                 <h4>Iteration 055 checks started</h4>
                 <p><strong>Stage:</strong> test</p>
                 <p><strong>Notes:</strong> Started 	ests/run_iteration_checks.ps1 via powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to validate the builder prompt move, graph arrow wiring, and nodeCount scenario generation updates. The harness will run docker compose build/up, API smoke checks, and Playwright UI coverage in 	ests/ui/app.spec.js as part of the standard suite. Output will be captured in 	ests/logs/check_*.log by the transcript logger. Results will be folded back into the experiment results and history entries once the run completes.</p>
