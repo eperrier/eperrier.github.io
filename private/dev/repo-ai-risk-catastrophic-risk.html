@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">RUNPOD trigger commit prepared</div>
+            <div class="note">RUNPOD prefix gate removed</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 22:12 -0500</strong>
-            <div class="note">Stage: deploy</div>
+            <strong>2025-12-31 22:27 -0500</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>RUNPOD prefix gate removed</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-31 22:27 -0500</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration checks started for prefix removal</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 22:26 -0500</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>RUNPOD trigger commit prepared</strong>
               <div class="item-meta">Stage: deploy</div>
             </div>
             <div class="item-meta">2025-12-31 22:12 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks started for RUNPOD trigger</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:11 -0500</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>RUNPOD trigger iteration staged</strong>
-              <div class="item-meta">Stage: docs</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:10 -0500</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>112</strong>
+            <strong>114</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 22:12 -0500</strong>
+            <strong>2025-12-31 22:27 -0500</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T22:27:00-05:00">
+            <h4>RUNPOD prefix gate removed</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Restored automatic Runpod launches without RUNPOD prefix.</p>
+          </article>
+          <article data-status="running" data-time="2025-12-31T22:26:00-05:00">
+            <h4>Iteration checks started for prefix removal</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after removing prefix gate.</p>
+          </article>
           <article data-status="complete" data-time="2025-12-31T22:12:00-05:00">
             <h4>RUNPOD trigger commit prepared</h4>
             <p><strong>Stage:</strong> deploy</p>
