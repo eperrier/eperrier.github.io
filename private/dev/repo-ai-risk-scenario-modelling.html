@@ -363,8 +363,8 @@
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
-      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot active" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
+      <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration 054 checks passed</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 055 checks started</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 22:38 +1100</strong>
+            <strong>2025-12-31 23:38 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 055 checks started</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 23:38 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 054 checks passed</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 22:36 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 054 report heading fix</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 22:35 +1100</div>
           </li>
         </ul>
       </section>
@@ -711,7 +711,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>215</strong>
+            <strong>216</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -721,7 +721,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 22:38 +1100</strong>
+            <strong>2025-12-31 23:38 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -750,7 +750,12 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
-          <article data-status="complete" data-time="2025-12-31T22:38:49+11:00">
+  
+          <article data-status="running" data-time="2025-12-31T23:38:47+11:00">
+            <h4>Iteration 055 checks started</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Started 	ests/run_iteration_checks.ps1 via powershell -NoProfile -ExecutionPolicy Bypass -File tests/run_iteration_checks.ps1 to validate the builder prompt move, graph arrow wiring, and nodeCount scenario generation updates. The harness will run docker compose build/up, API smoke checks, and Playwright UI coverage in 	ests/ui/app.spec.js as part of the standard suite. Output will be captured in 	ests/logs/check_*.log by the transcript logger. Results will be folded back into the experiment results and history entries once the run completes.</p>
+          </article><article data-status="complete" data-time="2025-12-31T22:38:49+11:00">
             <h4>Iteration 054 checks passed</h4>
             <p><strong>Stage:</strong> test</p>
             <p><strong>Notes:</strong> Re-ran `tests/run_iteration_checks.ps1` after restoring the required HTML heading. Docker compose build/up and Playwright UI checks completed successfully, validating both root and `/reviews` autobuild reports plus the new detailed experiment entry. The detailed report references were updated to point to the latest verification log. Log captured at tests/logs/check_20251231_223703.log.</p>
