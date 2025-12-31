@@ -424,10 +424,10 @@
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2025-12-31 19:03 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
+              <td data-label="Last Update">2025-12-31 19:05 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 052 checks rerun (agent tools fix)</td>
+              <td data-label="Summary">Iteration 052 Playwright heading scoping</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -978,6 +978,16 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="complete" data-time="2025-12-31T19:05:57+11:00">
+                <h4>Iteration 052 Playwright heading scoping</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Scoped the Simulation heading assertion to the main panel to avoid strict-mode conflicts.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-31T19:05:20+11:00">
+                <h4>Iteration 052 checks failed (Simulation heading strict mode)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed due to multiple Simulation headings in strict mode. Log: tests/logs/check_20251231_190435.log.</p>
+              </article>
               <article data-status="running" data-time="2025-12-31T19:03:46+11:00">
                 <h4>Iteration 052 checks rerun (agent tools fix)</h4>
                 <p><strong>Stage:</strong> test</p>

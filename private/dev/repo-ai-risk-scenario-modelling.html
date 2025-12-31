@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 052 checks rerun (agent tools fix)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 052 Playwright heading scoping</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2025-12-31 19:03 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2025-12-31 19:05 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 052 Playwright debug run failed (Simulation heading)</strong>
-            <div class="note">Manual Playwright docker run failed waiting for the Simulation heading; traced to missing agent tools state wiring.</div>
+            <strong>Iteration 052 checks failed (Simulation heading strict mode)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 failed due to multiple Simulation headings in strict mode. Log: tests/logs/check_20251231_190435.log.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 052 Playwright heading scoping</strong>
+              <div class="item-meta">Stage: edit</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:05 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration 052 checks failed (Simulation heading strict mode)</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:05 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 052 checks rerun (agent tools fix)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2025-12-31 19:03 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 fix agent tools state wiring</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2025-12-31 19:02 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 052 Playwright debug run failed (Simulation heading)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2025-12-31 19:01 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 052 checks failed (Simulation heading strict mode)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed due to multiple Simulation headings in strict mode. Log: tests/logs/check_20251231_190435.log.</div>
+            </div>
+            <div class="item-meta">2025-12-31 19:05 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 052 Playwright debug run failed (Simulation heading)</strong>
@@ -594,22 +601,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>76%</strong>
+            <strong>75%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>158</strong>
+            <strong>160</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>20</strong>
+            <strong>21</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2025-12-31 19:03 +1100</strong>
+            <strong>2025-12-31 19:05 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -638,6 +645,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2025-12-31T19:05:57+11:00">
+            <h4>Iteration 052 Playwright heading scoping</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Scoped the Simulation heading assertion to the main panel to avoid strict-mode conflicts.</p>
+          </article>
+          <article data-status="error" data-time="2025-12-31T19:05:20+11:00">
+            <h4>Iteration 052 checks failed (Simulation heading strict mode)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed due to multiple Simulation headings in strict mode. Log: tests/logs/check_20251231_190435.log.</p>
+          </article>
           <article data-status="running" data-time="2025-12-31T19:03:46+11:00">
             <h4>Iteration 052 checks rerun (agent tools fix)</h4>
             <p><strong>Stage:</strong> test</p>
