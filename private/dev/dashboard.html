@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
-              <td data-label="Last Update">2026-01-01 08:35 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2026-01-01 08:36 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 056 checks failed (mouse-down connect)</td>
+              <td data-label="Summary">Iteration 056 checks rerun after connect-armed ref</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,11 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="running" data-time="2026-01-01T08:36:45+11:00">
+                <h4>Iteration 056 checks rerun after connect-armed ref</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after adding a connect-armed ref to ensure arrow tool state is honored by node handlers. Logs will be captured in tests/logs/check_*.log.</p>
+              </article>
               <article data-status="error" data-time="2026-01-01T08:35:34+11:00">
                 <h4>Iteration 056 checks failed (mouse-down connect)</h4>
                 <p><strong>Stage:</strong> test</p>
