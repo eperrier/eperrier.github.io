@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-01 18:14 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2026-01-01 18:15 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Checked Runpod active pod list</td>
+              <td data-label="Summary">Iteration checks started for active pod check</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -470,6 +470,16 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+              <article data-status="running" data-time="2026-01-01T18:15:40+11:00">
+                <h4>Iteration checks started for active pod check</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after the Runpod status check.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:15:50+11:00">
+                <h4>Iteration checks completed for active pod check</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the Runpod status check.</p>
+              </article>
               <article data-status="complete" data-time="2026-01-01T18:14:35+11:00">
                 <h4>Checked Runpod active pod list</h4>
                 <p><strong>Stage:</strong> review</p>
