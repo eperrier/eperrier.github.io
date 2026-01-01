@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Live OpenAI experiment run</div>
+            <div class="note">Live OpenAI experiment rerun complete</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 07:02 +1100</strong>
+            <strong>2026-01-02 07:03 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Live OpenAI experiment run</strong>
+              <strong>Live OpenAI experiment rerun complete</strong>
               <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-02 07:03 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Stabilized live OpenAI experiment runner</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
             <div class="item-meta">2026-01-02 07:02 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Removed mock OpenAI paths</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2026-01-02 07:00 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 056 checks passed after arrow preview assertion</strong>
+              <strong>Live OpenAI experiment run</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 08:59 +1100</div>
+            <div class="item-meta">2026-01-02 07:02 +1100</div>
           </li>
         </ul>
       </section>
@@ -816,7 +816,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>264</strong>
+            <strong>266</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -826,7 +826,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 07:02 +1100</strong>
+            <strong>2026-01-02 07:03 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -855,6 +855,16 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-02T07:03:54+11:00">
+            <h4>Live OpenAI experiment rerun complete</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Reran `experiments/exp_20260101_live_openai_calls/run.ps1` after suppressing docker stderr-driven errors. Live OpenAI scenario generation succeeded and logged to experiments/exp_20260101_live_openai_calls/logs/exp_exp_20260101_live_openai_calls_20260102_065912.log. Updated experiment notes/results plus the experiments index with the pass entry.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T07:02:54+11:00">
+            <h4>Stabilized live OpenAI experiment runner</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Adjusted `experiments/exp_20260101_live_openai_calls/run.ps1` to use cmd-wrapped docker compose calls and suppress stderr-triggered PowerShell errors. Documented the initial failures in `experiments/exp_20260101_live_openai_calls/notes.md` and refreshed `results.md`. Appended the new experiment entry to `experiments.md` and `dev/history.md`.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T07:02:24+11:00">
             <h4>Live OpenAI experiment run</h4>
             <p><strong>Stage:</strong> test</p>

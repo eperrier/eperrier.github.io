@@ -418,9 +418,9 @@
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-02 07:02 +1100</td>
+              <td data-label="Last Update">2026-01-02 07:03 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Live OpenAI experiment run</td>
+              <td data-label="Summary">Live OpenAI experiment rerun complete</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,16 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="complete" data-time="2026-01-02T07:03:54+11:00">
+                <h4>Live OpenAI experiment rerun complete</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Reran `experiments/exp_20260101_live_openai_calls/run.ps1` after suppressing docker stderr-driven errors. Live OpenAI scenario generation succeeded and logged to experiments/exp_20260101_live_openai_calls/logs/exp_exp_20260101_live_openai_calls_20260102_065912.log. Updated experiment notes/results plus the experiments index with the pass entry.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T07:02:54+11:00">
+                <h4>Stabilized live OpenAI experiment runner</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Adjusted `experiments/exp_20260101_live_openai_calls/run.ps1` to use cmd-wrapped docker compose calls and suppress stderr-triggered PowerShell errors. Documented the initial failures in `experiments/exp_20260101_live_openai_calls/notes.md` and refreshed `results.md`. Appended the new experiment entry to `experiments.md` and `dev/history.md`.</p>
+              </article>
               <article data-status="complete" data-time="2026-01-02T07:02:24+11:00">
                 <h4>Live OpenAI experiment run</h4>
                 <p><strong>Stage:</strong> test</p>
