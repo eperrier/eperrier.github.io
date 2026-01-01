@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration 059 verification restarted (update/agent loosen)</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Iteration 059 verification complete</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 07:37 +1100</strong>
+            <strong>2026-01-02 07:42 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 059 verification complete</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-02 07:42 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration 059 verification restarted (update/agent loosen)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: edit</div>
             </div>
             <div class="item-meta">2026-01-02 07:36 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 059 verification failed (update/agent timing)</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-02 07:35 +1100</div>
           </li>
         </ul>
       </section>
@@ -865,7 +865,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>290</strong>
+            <strong>291</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -875,7 +875,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 07:37 +1100</strong>
+            <strong>2026-01-02 07:42 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -904,6 +904,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-02T07:42:19+11:00">
+            <h4>Iteration 059 verification complete</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed. Log: tests/logs/check_20260102_073831.log.</p>
+          </article>
           <article data-status="running" data-time="2026-01-02T07:37:35+11:00">
             <h4>Iteration 059 verification restarted (update/agent loosen)</h4>
             <p><strong>Stage:</strong> test</p>
