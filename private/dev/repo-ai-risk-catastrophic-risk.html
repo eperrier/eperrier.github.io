@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed for alpha sweep config</div>
+            <div class="note">Iteration checks completed for alpha sweep dispatch</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 10:16 +1100</strong>
+            <strong>2026-01-02 10:18 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for alpha sweep config</strong>
+              <strong>Iteration checks completed for alpha sweep dispatch</strong>
               <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-02 10:18 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Iteration checks started for alpha sweep dispatch</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-02 10:17 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
+              <strong>Dispatched alpha sweep Runpod build</strong>
+              <div class="item-meta">Stage: build</div>
             </div>
             <div class="item-meta">2026-01-02 10:16 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks started for alpha sweep config</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-02 10:15 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Added transformer alpha sweep to Runpod config</strong>
-              <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2026-01-02 10:14 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>219</strong>
+            <strong>222</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 10:16 +1100</strong>
+            <strong>2026-01-02 10:18 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-02T10:18:39+11:00">
+            <h4>Iteration checks completed for alpha sweep dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the alpha sweep build.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T10:17:39+11:00">
+            <h4>Iteration checks started for alpha sweep dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the alpha sweep dispatch.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T10:16:39+11:00">
+            <h4>Dispatched alpha sweep Runpod build</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Triggered build_and_push.yml to run the transformer alpha sweep.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T10:16:23+11:00">
             <h4>Iteration checks completed for alpha sweep config</h4>
             <p><strong>Stage:</strong> test</p>
