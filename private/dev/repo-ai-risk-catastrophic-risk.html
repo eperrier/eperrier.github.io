@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed for Runpod restart guard</div>
+            <div class="note">Iteration checks completed for Runpod rerun dispatch</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 08:46 +1100</strong>
+            <strong>2026-01-02 08:56 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for Runpod restart guard</strong>
+              <strong>Iteration checks completed for Runpod rerun dispatch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 08:46 +1100</div>
+            <div class="item-meta">2026-01-02 08:56 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started for Runpod restart guard</strong>
+              <strong>Iteration checks started for Runpod rerun dispatch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 08:45 +1100</div>
+            <div class="item-meta">2026-01-02 08:55 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Hardened Runpod entrypoint against restarts</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Dispatched Runpod build after restart guard</strong>
+              <div class="item-meta">Stage: build</div>
             </div>
-            <div class="item-meta">2026-01-02 08:44 +1100</div>
+            <div class="item-meta">2026-01-02 08:54 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>207</strong>
+            <strong>210</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 08:46 +1100</strong>
+            <strong>2026-01-02 08:56 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-02T08:56:16+11:00">
+            <h4>Iteration checks completed for Runpod rerun dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the new Runpod build.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T08:55:16+11:00">
+            <h4>Iteration checks started for Runpod rerun dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the rerun dispatch update.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T08:54:16+11:00">
+            <h4>Dispatched Runpod build after restart guard</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Triggered build_and_push.yml to launch a new Runpod pod with the restart guard.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T08:46:20+11:00">
             <h4>Iteration checks completed for Runpod restart guard</h4>
             <p><strong>Stage:</strong> test</p>
