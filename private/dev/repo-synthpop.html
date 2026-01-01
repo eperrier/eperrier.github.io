@@ -396,7 +396,7 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill running">Running</span>
-            <div class="note">Starting AGI Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller)</div>
+            <div class="note">Starting AGI Iteration 242 — Autobuild v6 Iteration 3 (Proof Goal Extraction + Diagnostics Wiring)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 262 — Autobuild AUTO Real-Data Enforcement (tests failed)</strong>
-            <div class="note">tests/run_iteration_checks.ps1 failed again because update-synthpop.html was still missing the latest history entry. Regenerated update-synthpop.html with REPO_NAME set. Log: tests/logs/check_20260101_202314.log.</div>
+            <strong>Iteration 241 — Autobuild v6 Iteration 2 (Dedicated Proof Worker Container) (AGI Iteration 2 — Autobuild v6)</strong>
+            <div class="note">Iteration 241 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Starting AGI Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller)</strong>
+              <strong>Starting AGI Iteration 242 — Autobuild v6 Iteration 3 (Proof Goal Extraction + Diagnostics Wiring)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 20:42 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 262 — Autobuild AUTO Real-Data Enforcement (checks passed)</strong>
+              <strong>Iteration 241 — Autobuild v6 Iteration 2 (Dedicated Proof Worker Container) (AGI Iteration 2 — Autobuild v6)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 20:33 +1100</div>
+            <div class="item-meta">2026-01-01 20:42 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration 262 — Autobuild AUTO Real-Data Enforcement (tests rerun)</strong>
+              <strong>Starting AGI Iteration 241 — Autobuild v6 Iteration 2 (Dedicated Proof Worker Container)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 20:27 +1100</div>
+            <div class="item-meta">2026-01-01 20:42 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,20 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 241 — Autobuild v6 Iteration 2 (Dedicated Proof Worker Container) (AGI Iteration 2 — Autobuild v6)</strong>
+              <div class="item-meta">Iteration 241 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</div>
+            </div>
+            <div class="item-meta">2026-01-01 20:42 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller) (AGI Iteration 1 — Autobuild v6)</strong>
+              <div class="item-meta">Iteration 240 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</div>
+            </div>
+            <div class="item-meta">2026-01-01 20:42 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 262 — Autobuild AUTO Real-Data Enforcement (tests failed)</strong>
@@ -818,17 +832,17 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>80%</strong>
+            <strong>79%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>471</strong>
+            <strong>475</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>52</strong>
+            <strong>54</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
@@ -862,6 +876,26 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+                    <article data-status="running" data-time="2026-01-01T20:42:32+11:00">
+            <h4>Starting AGI Iteration 242 — Autobuild v6 Iteration 3 (Proof Goal Extraction + Diagnostics Wiring)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Starting Autobuild v6 iteration 3 using the no-stop runner to enforce tests, logs, and progress updates. This run records the start entry before applying the checks.</p>
+          </article>
+                    <article data-status="error" data-time="2026-01-01T20:42:27+11:00">
+            <h4>Iteration 241 — Autobuild v6 Iteration 2 (Dedicated Proof Worker Container) (AGI Iteration 2 — Autobuild v6)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration 241 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</p>
+          </article>
+                    <article data-status="running" data-time="2026-01-01T20:42:23+11:00">
+            <h4>Starting AGI Iteration 241 — Autobuild v6 Iteration 2 (Dedicated Proof Worker Container)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Starting Autobuild v6 iteration 2 using the no-stop runner to enforce tests, logs, and progress updates. This run records the start entry before applying the checks.</p>
+          </article>
+                    <article data-status="error" data-time="2026-01-01T20:42:17+11:00">
+            <h4>Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller) (AGI Iteration 1 — Autobuild v6)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Iteration 240 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</p>
+          </article>
                     <article data-status="running" data-time="2026-01-01T20:42:12+11:00">
             <h4>Starting AGI Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller)</h4>
             <p><strong>Stage:</strong> test</p>
