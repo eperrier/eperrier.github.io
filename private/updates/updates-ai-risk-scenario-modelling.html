@@ -1,4 +1,19 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+  <article data-status="running" data-time="2026-01-02T07:13:27+11:00">
+    <h4>Iteration 059 verification restarted (update retry)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Rerunning tests/run_iteration_checks.ps1 after adding retry logic to the scenario update check.</p>
+  </article>
+  <article data-status="complete" data-time="2026-01-02T07:12:27+11:00">
+    <h4>Add retry loop for live scenario updates</h4>
+    <p><strong>Stage:</strong> edit</p>
+    <p><strong>Notes:</strong> Added a retry loop around the /scenario/update call in `tests/run_iteration_checks.ps1`. Retries up to three times when the API returns no actions or transient errors. This stabilizes live OpenAI updates without reintroducing mock behavior.</p>
+  </article>
+  <article data-status="error" data-time="2026-01-02T07:11:27+11:00">
+    <h4>Iteration 059 verification failed (empty update actions)</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed with an OpenAI update returning no actionable changes. Log: tests/logs/check_20260102_071152.log. Adding retry logic before rerunning.</p>
+  </article>
   <article data-status="running" data-time="2026-01-02T07:11:10+11:00">
     <h4>Iteration 059 verification restarted (action check)</h4>
     <p><strong>Stage:</strong> test</p>
