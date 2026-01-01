@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Live OpenAI experiment rerun complete</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 059 verification started</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 07:03 +1100</strong>
+            <strong>2026-01-02 07:04 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 059 verification started</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-02 07:04 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Live OpenAI experiment rerun complete</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -430,13 +437,6 @@
             <div>
               <strong>Stabilized live OpenAI experiment runner</strong>
               <div class="item-meta">Stage: edit</div>
-            </div>
-            <div class="item-meta">2026-01-02 07:02 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Live OpenAI experiment run</strong>
-              <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-02 07:02 +1100</div>
           </li>
@@ -816,7 +816,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>266</strong>
+            <strong>267</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -826,7 +826,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 07:03 +1100</strong>
+            <strong>2026-01-02 07:04 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -855,6 +855,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-02T07:04:59+11:00">
+            <h4>Iteration 059 verification started</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 for the live OpenAI-only workflow after removing mock paths.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T07:03:54+11:00">
             <h4>Live OpenAI experiment rerun complete</h4>
             <p><strong>Stage:</strong> test</p>
