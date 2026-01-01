@@ -362,9 +362,9 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
+      <a class="server-dot active" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
       <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
-      <a class="server-dot active" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
       <a class="server-dot" href="repo-alpha.html" title="repo-alpha">RA</a>
@@ -395,12 +395,12 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill error">Error</span>
-            <div class="note">Iteration 261 — Autobuild v6 Iteration 22 (Non-Synthetic Exemplar Runs) (AGI Iteration 22 — Autobuild v6)</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Starting AGI Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller)</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 21:16 +1100</strong>
+            <strong>2026-01-02 09:28 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration 261 — Autobuild v6 Iteration 22 (Non-Synthetic Exemplar Runs) (AGI Iteration 22 — Autobuild v6)</strong>
-            <div class="note">Iteration 261 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</div>
+            <strong>Iteration 267 — Proof Worker (Lean/Coq) (checks blocked)</strong>
+            <div class="note">tests/run_iteration_checks.ps1 could not complete because the Docker Desktop engine/BuildKit driver did not connect during the proof-worker build. Latest log: tests/logs/check_20260102_075607.log; Docker must be started to rerun.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration 261 — Autobuild v6 Iteration 22 (Non-Synthetic Exemplar Runs) (AGI Iteration 22 — Autobuild v6)</strong>
+              <strong>Starting AGI Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 21:16 +1100</div>
+            <div class="item-meta">2026-01-02 09:28 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Starting AGI Iteration 261 — Autobuild v6 Iteration 22 (Non-Synthetic Exemplar Runs)</strong>
+              <strong>Iteration 267 — Proof Worker (Lean/Coq) (checks passed)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 21:15 +1100</div>
+            <div class="item-meta">2026-01-02 09:09 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Starting AGI Iteration 260 — Autobuild v6 Iteration 21 (Resume-from-Failure Checkpoints)</strong>
+              <strong>Iteration 267 — Proof Worker (Lean/Coq) (tests running)</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 21:14 +1100</div>
+            <div class="item-meta">2026-01-02 09:01 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,34 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 267 — Proof Worker (Lean/Coq) (checks blocked)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 could not complete because the Docker Desktop engine/BuildKit driver did not connect during the proof-worker build. Latest log: tests/logs/check_20260102_075607.log; Docker must be started to rerun.</div>
+            </div>
+            <div class="item-meta">2026-01-02 08:09 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 265 — Real-Data-Only Enforcement (checks failed)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed because update-synthpop.html was not regenerated with the latest iteration row. See tests/logs/check_20260101_230319.log.</div>
+            </div>
+            <div class="item-meta">2026-01-01 23:06 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 265 — Real-Data-Only Enforcement (checks failed)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed because update-synthpop.html was not regenerated for the latest history entry. See tests/logs/check_20260101_225534.log.</div>
+            </div>
+            <div class="item-meta">2026-01-01 23:02 +1100</div>
+          </li>
+          <li class="incident-item">
+            <div>
+              <strong>Iteration 265 — Real-Data-Only Enforcement (checks failed)</strong>
+              <div class="item-meta">tests/run_iteration_checks.ps1 failed. The autobuild v6 executor called docker compose with an unsupported --env-file flag (see tests/logs/check_20260101_225303.log).</div>
+            </div>
+            <div class="item-meta">2026-01-01 22:54 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration 261 — Autobuild v6 Iteration 22 (Non-Synthetic Exemplar Runs) (AGI Iteration 22 — Autobuild v6)</strong>
@@ -1068,17 +1096,17 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>541</strong>
+            <strong>573</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>87</strong>
+            <strong>91</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 21:16 +1100</strong>
+            <strong>2026-01-02 09:28 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -1107,6 +1135,150 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="synthpop" data-agent="Codex">
+                    <article data-status="running" data-time="2026-01-02T09:28:21+11:00">
+            <h4>Starting AGI Iteration 240 — Autobuild v6 Iteration 1 (Autonomous Plan Revision Controller)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Starting Autobuild v6 iteration 1 using the no-stop runner to enforce tests, logs, and progress updates. This run records the start entry before applying the checks.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T09:09:17+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (checks passed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed with log tests/logs/check_20260102_090153.log. Docker compose services were torn down after the run.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T09:01:30+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after fixing compose-down wait handling to verify clean teardown.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T09:01:06+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (wait-process fix)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Adjusted compose-down wait handling for Windows PowerShell by removing unsupported PassThru and using HasExited checks. Updated tests/run_iteration_checks.ps1 to track completion safely.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T08:53:11+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after fixing compose-down logging to confirm all checks pass cleanly.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T08:52:45+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (compose-down fix)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Fixed compose-down logging to avoid redirecting stdout/stderr to the same file in PowerShell. Updated tests/run_iteration_checks.ps1 to use separate temp logs and guard null process handles.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T08:41:21+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after Docker Desktop recovery to validate proof-worker builds and Lean/Coq fixtures.</p>
+          </article>
+          <article data-status="error" data-time="2026-01-02T08:09:44+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (checks blocked)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 could not complete because the Docker Desktop engine/BuildKit driver did not connect during the proof-worker build. Latest log: tests/logs/check_20260102_075607.log; Docker must be started to rerun.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T08:08:30+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Started tests/run_iteration_checks.ps1 after proof-worker build context and test harness updates. Log target was tests/logs/check_20260102_075607.log.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T08:07:30+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (edits updated)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Scoped proof-worker build context and set noninteractive apt to stabilize the container build, and added a BuildKit fallback plus safer compose-down handling in checks. Updated tests/run_iteration_checks.ps1 and proof-worker Dockerfile to reflect the new build path.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T06:58:00+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to verify proof-worker container and Lean/Coq fixtures.</p>
+          </article>  <article data-status="complete" data-time="2026-01-02T06:57:21+11:00">
+            <h4>Iteration 267 — Proof Worker (Lean/Coq) (edits complete)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added proof-worker container with Lean/Coq toolchains and a verification check that runs proof fixtures. Updated acceptance matrix and history for iteration 267.</p>
+          </article>  <article data-status="complete" data-time="2026-01-02T06:49:35+11:00">
+            <h4>Iteration 266 — Env Key Alignment (checks passed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed with log tests/logs/check_20260102_064211.log. Docker compose services were torn down after the run.</p>
+          </article>  <article data-status="running" data-time="2026-01-02T06:41:50+11:00">
+            <h4>Iteration 266 — Env Key Alignment (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after updating the history date.</p>
+          </article>  <article data-status="complete" data-time="2026-01-02T06:40:42+11:00">
+            <h4>Iteration 266 — Env Key Alignment (checks passed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed with log tests/logs/check_20260102_063239.log. Docker compose services were torn down after the run.</p>
+          </article>  <article data-status="running" data-time="2026-01-02T06:32:19+11:00">
+            <h4>Iteration 266 — Env Key Alignment (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to validate env key alignment and log updates.</p>
+          </article>  <article data-status="complete" data-time="2026-01-02T06:31:41+11:00">
+            <h4>Iteration 266 — Env Key Alignment (edits complete)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Renamed .env keys to match real-data requirements and added an acceptance check to enforce the new names. Updated history and acceptance matrix for iteration 266.</p>
+          </article>  <article data-status="complete" data-time="2026-01-01T23:16:48+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (checks passed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed with log tests/logs/check_20260101_230712.log. Docker compose services were torn down after the run.</p>
+          </article>  <article data-status="running" data-time="2026-01-01T23:06:49+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after regenerating update-synthpop.html with REPO_NAME set.</p>
+          </article>  <article data-status="error" data-time="2026-01-01T23:06:27+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (checks failed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed because update-synthpop.html was not regenerated with the latest iteration row. See tests/logs/check_20260101_230319.log.</p>
+          </article>  <article data-status="running" data-time="2026-01-01T23:02:56+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 after regenerating update-synthpop.html for the new history entry.</p>
+          </article>  <article data-status="error" data-time="2026-01-01T23:02:32+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (checks failed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed because update-synthpop.html was not regenerated for the latest history entry. See tests/logs/check_20260101_225534.log.</p>
+          </article>  <article data-status="running" data-time="2026-01-01T22:55:13+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Re-running tests/run_iteration_checks.ps1 after fixing the autobuild v6 executor environment handling.</p>
+          </article>  <article data-status="error" data-time="2026-01-01T22:54:50+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (checks failed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed. The autobuild v6 executor called docker compose with an unsupported --env-file flag (see tests/logs/check_20260101_225303.log).</p>
+          </article>  <article data-status="running" data-time="2026-01-01T22:52:41+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to validate real-data-only enforcement and autobuild v6 evidence.</p>
+          </article>  <article data-status="complete" data-time="2026-01-01T22:51:49+11:00">
+            <h4>Iteration 265 — Real-Data-Only Enforcement (edits complete)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Enforced real-data-only behavior in the research pipeline and init artifacts while blocking synthetic modes. Updated the v6 executor and acceptance checks to require real-data evidence and removed synthetic-only paths from the test harness.</p>
+          </article>  <article data-status="complete" data-time="2026-01-01T22:15:02+11:00">
+            <h4>Iteration 264 — Autobuild v6 Executor + Evidence Build (checks passed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed with log tests/logs/check_20260101_221033.log. Docker compose services were torn down after the run.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-01T22:10:10+11:00">
+            <h4>Iteration 264 — Autobuild v6 Executor + Evidence Build (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to verify autobuild v6 executor and updated acceptance coverage.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T22:09:29+11:00">
+            <h4>Iteration 264 — Autobuild v6 Executor + Evidence Build (edits complete)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added autobuild v6 executor to generate iteration evidence artifacts and wired run_autobuild to invoke it before checks. Updated v6 constraints, acceptance coverage, and added iteration_264_check.ps1.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T21:28:37+11:00">
+            <h4>Iteration 263 — Autobuild Runner History/Update Lock Tolerance (edits complete)</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Hardened scripts/run_autobuild.ps1 to tolerate history update locks and backfilled missing v6 history entries (254, 257). Added acceptance coverage and iteration_263_check.ps1 for the new runner-lock contract.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T21:27:31+11:00">
+            <h4>Iteration 263 — Autobuild Runner History/Update Lock Tolerance (checks passed)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 passed for Iteration 263 with log tests/logs/check_20260101_212304.log. Docker compose services were torn down after the run.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-01T21:22:14+11:00">
+            <h4>Iteration 263 — Autobuild Runner History/Update Lock Tolerance (tests running)</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running tests/run_iteration_checks.ps1 to validate history gap backfill and runner lock tolerance updates.</p>
+          </article>
                     <article data-status="error" data-time="2026-01-01T21:16:37+11:00">
             <h4>Iteration 261 — Autobuild v6 Iteration 22 (Non-Synthetic Exemplar Runs) (AGI Iteration 22 — Autobuild v6)</h4>
             <p><strong>Stage:</strong> test</p>
