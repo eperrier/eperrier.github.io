@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed after status log push</div>
+            <div class="note">Iteration checks completed for experiment entrypoint switch</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 22:26 +1100</strong>
+            <strong>2026-01-01 22:31 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed after status log push</strong>
+              <strong>Iteration checks completed for experiment entrypoint switch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 22:26 +1100</div>
+            <div class="item-meta">2026-01-01 22:31 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started after status log push</strong>
+              <strong>Iteration checks started for experiment entrypoint switch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 22:26 +1100</div>
+            <div class="item-meta">2026-01-01 22:31 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed after commit push</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Runpod pods now start the full experiment entrypoint</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2026-01-01 22:26 +1100</div>
+            <div class="item-meta">2026-01-01 22:31 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>187</strong>
+            <strong>190</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 22:26 +1100</strong>
+            <strong>2026-01-01 22:31 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-01T22:31:58+11:00">
+            <h4>Iteration checks completed for experiment entrypoint switch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after switching pods to the full experiment entrypoint.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-01T22:31:50+11:00">
+            <h4>Iteration checks started for experiment entrypoint switch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the full experiment run change.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T22:31:40+11:00">
+            <h4>Runpod pods now start the full experiment entrypoint</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Updated Runpod launch and retry workflows to call remote_entrypoint.sh.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T22:26:58+11:00">
             <h4>Iteration checks completed after status log push</h4>
             <p><strong>Stage:</strong> test</p>
