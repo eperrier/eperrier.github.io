@@ -417,10 +417,10 @@
           <tbody>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
-              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2026-01-02 07:04 +1100</td>
+              <td data-label="Latest Status"><span class="status-pill error">Error</span></td>
+              <td data-label="Last Update">2026-01-02 07:07 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration 059 verification started</td>
+              <td data-label="Summary">Iteration 059 verification failed (OpenAI key check)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
@@ -470,6 +470,16 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+              <article data-status="error" data-time="2026-01-02T07:07:32+11:00">
+                <h4>Iteration 059 verification failed (OpenAI key check)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> tests/run_iteration_checks.ps1 failed on the new OPENAI_API_KEY .env assertion. Log: tests/logs/check_20260102_070541.log. Updating the regex to properly detect non-empty keys before rerunning.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T07:06:32+11:00">
+                <h4>Fix OPENAI_API_KEY detection</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Corrected the PowerShell regex in `tests/run_iteration_checks.ps1` to use `\\S` as a regex token rather than a literal backslash. This keeps the live-key requirement but avoids false negatives on valid keys. Ready to rerun iteration checks.</p>
+              </article>
               <article data-status="running" data-time="2026-01-02T07:04:59+11:00">
                 <h4>Iteration 059 verification started</h4>
                 <p><strong>Stage:</strong> test</p>
