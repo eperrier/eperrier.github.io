@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed for entrypoint hardening</div>
+            <div class="note">Iteration checks completed after push retry</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 18:55 +1100</strong>
+            <strong>2026-01-01 20:48 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for entrypoint hardening</strong>
+              <strong>Iteration checks completed after push retry</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 18:55 +1100</div>
+            <div class="item-meta">2026-01-01 20:48 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Hardened Runpod entrypoint against push/report failures</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Iteration checks started after push retry</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 18:53 +1100</div>
+            <div class="item-meta">2026-01-01 20:47 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for Runpod stop/rerun</strong>
+              <strong>Iteration checks completed for build dispatch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-01 18:37 +1100</div>
+            <div class="item-meta">2026-01-01 20:47 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>172</strong>
+            <strong>177</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 18:55 +1100</strong>
+            <strong>2026-01-01 20:48 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-01T20:48:02+11:00">
+            <h4>Iteration checks completed after push retry</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the second push attempt.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-01T20:47:57+11:00">
+            <h4>Iteration checks started after push retry</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before reattempting push.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T20:47:02+11:00">
+            <h4>Iteration checks completed for build dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the workflow dispatch attempt.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-01T20:45:44+11:00">
+            <h4>Iteration checks started for build dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after triggering the main build workflow.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-01T20:45:39+11:00">
+            <h4>Triggered updated build workflow on main</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Dispatched build_and_push.yml and logged the dispatch details for the runpod image.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-01T18:55:20+11:00">
             <h4>Iteration checks completed for entrypoint hardening</h4>
             <p><strong>Stage:</strong> test</p>

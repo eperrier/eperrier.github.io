@@ -418,16 +418,16 @@
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
               <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
-              <td data-label="Last Update">2026-01-01 20:49 +1100</td>
+              <td data-label="Last Update">2026-01-01 20:50 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Starting AGI Iteration 245 — Autobuild v6 Iteration 6 (ICML-Scale Manuscript Synthesis)</td>
+              <td data-label="Summary">Starting AGI Iteration 248 — Autobuild v6 Iteration 9 (Evidence-Driven Experiment Scheduling)</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-01 18:55 +1100</td>
+              <td data-label="Last Update">2026-01-01 20:48 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration checks completed for entrypoint hardening</td>
+              <td data-label="Summary">Iteration checks completed after push retry</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
@@ -470,6 +470,31 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="synthpop" data-agent="Codex">
+                        <article data-status="running" data-time="2026-01-01T20:50:52+11:00">
+                <h4>Starting AGI Iteration 248 — Autobuild v6 Iteration 9 (Evidence-Driven Experiment Scheduling)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting Autobuild v6 iteration 9 using the no-stop runner to enforce tests, logs, and progress updates. This run records the start entry before applying the checks.</p>
+              </article>
+                        <article data-status="error" data-time="2026-01-01T20:50:45+11:00">
+                <h4>Iteration 247 — Autobuild v6 Iteration 8 (Tool-Building Workflow) (AGI Iteration 8 — Autobuild v6)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration 247 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</p>
+              </article>
+                        <article data-status="running" data-time="2026-01-01T20:50:39+11:00">
+                <h4>Starting AGI Iteration 247 — Autobuild v6 Iteration 8 (Tool-Building Workflow)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting Autobuild v6 iteration 8 using the no-stop runner to enforce tests, logs, and progress updates. This run records the start entry before applying the checks.</p>
+              </article>
+                        <article data-status="error" data-time="2026-01-01T20:50:32+11:00">
+                <h4>Iteration 246 — Autobuild v6 Iteration 7 (Reproducibility Pack + Validation Hardening) (AGI Iteration 7 — Autobuild v6)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Iteration 246 failed during checks. Error: Iteration checks exited with code 1.. Logged and continuing per AUTO override unless StopOnFailure is set.</p>
+              </article>
+                        <article data-status="running" data-time="2026-01-01T20:50:28+11:00">
+                <h4>Starting AGI Iteration 246 — Autobuild v6 Iteration 7 (Reproducibility Pack + Validation Hardening)</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Starting Autobuild v6 iteration 7 using the no-stop runner to enforce tests, logs, and progress updates. This run records the start entry before applying the checks.</p>
+              </article>
                         <article data-status="running" data-time="2026-01-01T20:49:32+11:00">
                 <h4>Starting AGI Iteration 245 — Autobuild v6 Iteration 6 (ICML-Scale Manuscript Synthesis)</h4>
                 <p><strong>Stage:</strong> test</p>
@@ -2933,6 +2958,31 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+              <article data-status="complete" data-time="2026-01-01T20:48:02+11:00">
+                <h4>Iteration checks completed after push retry</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the second push attempt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T20:47:57+11:00">
+                <h4>Iteration checks started after push retry</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before reattempting push.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T20:47:02+11:00">
+                <h4>Iteration checks completed for build dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the workflow dispatch attempt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T20:45:44+11:00">
+                <h4>Iteration checks started for build dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after triggering the main build workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T20:45:39+11:00">
+                <h4>Triggered updated build workflow on main</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Dispatched build_and_push.yml and logged the dispatch details for the runpod image.</p>
+              </article>
               <article data-status="complete" data-time="2026-01-01T18:55:20+11:00">
                 <h4>Iteration checks completed for entrypoint hardening</h4>
                 <p><strong>Stage:</strong> test</p>
