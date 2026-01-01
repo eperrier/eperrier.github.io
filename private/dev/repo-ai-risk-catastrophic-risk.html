@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration checks started for active pod check</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Stopped active Runpod pod and re-dispatched build</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-01 18:15 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2026-01-01 18:35 +1100</strong>
+            <div class="note">Stage: build</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Stopped active Runpod pod and re-dispatched build</strong>
+              <div class="item-meta">Stage: build</div>
+            </div>
+            <div class="item-meta">2026-01-01 18:35 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Iteration checks started for active pod check</strong>
               <div class="item-meta">Stage: test</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-01 18:15 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Checked Runpod active pod list</strong>
-              <div class="item-meta">Stage: review</div>
-            </div>
-            <div class="item-meta">2026-01-01 18:14 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>167</strong>
+            <strong>168</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-01 18:15 +1100</strong>
+            <strong>2026-01-01 18:35 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-01T18:35:00+11:00">
+            <h4>Stopped active Runpod pod and re-dispatched build</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Terminated active grokking pod via API and triggered Build and Push on main.</p>
+          </article>
           <article data-status="running" data-time="2026-01-01T18:15:40+11:00">
             <h4>Iteration checks started for active pod check</h4>
             <p><strong>Stage:</strong> test</p>
