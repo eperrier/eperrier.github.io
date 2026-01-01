@@ -1,4 +1,14 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+  <article data-status="complete" data-time="2026-01-02T07:02:24+11:00">
+    <h4>Live OpenAI experiment run</h4>
+    <p><strong>Stage:</strong> test</p>
+    <p><strong>Notes:</strong> Ran `experiments/exp_20260101_live_openai_calls/run.ps1` to build and start docker services and call `/scenario/generate` with live OpenAI. Verified meta.mode=live with >=3 tasks, then tore down containers. Log captured at experiments/exp_20260101_live_openai_calls/logs/exp_exp_20260101_live_openai_calls_20260102_065912.log and experiment notes/results updated.</p>
+  </article>
+  <article data-status="complete" data-time="2026-01-02T07:00:24+11:00">
+    <h4>Removed mock OpenAI paths</h4>
+    <p><strong>Stage:</strong> edit</p>
+    <p><strong>Notes:</strong> Removed OPENAI_MOCK passthrough from `docker-compose.yml` and deleted mock LLM fallback paths in `api/server.py`. Enforced live OpenAI schema validation and update-action requirements, plus agent runs always call OpenAI. Updated `tests/run_iteration_checks.ps1` and added `experiments/exp_20260101_live_openai_calls` assets for the live-only workflow.</p>
+  </article>
                         <article data-status=\"complete\" data-time=\"2026-01-01T10:15:09+11:00\">
     <h4>Iteration 058 verification complete</h4>
     <p><strong>Stage:</strong> test</p>
