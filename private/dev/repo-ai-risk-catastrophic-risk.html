@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Dispatched Runpod experiment run</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration checks started for Runpod dispatch</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-03 09:33 +1100</strong>
-            <div class="note">Stage: build</div>
+            <strong>2026-01-03 09:34 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration checks started for Runpod dispatch</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-03 09:34 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Dispatched Runpod experiment run</strong>
               <div class="item-meta">Stage: build</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: test</div>
             </div>
             <div class="item-meta">2026-01-03 09:04 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration checks started for theorem artifact updates</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-03 09:03 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>260</strong>
+            <strong>261</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-03 09:33 +1100</strong>
+            <strong>2026-01-03 09:34 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-03T09:34:29+11:00">
+            <h4>Iteration checks started for Runpod dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the final Runpod run.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-03T09:33:42+11:00">
             <h4>Dispatched Runpod experiment run</h4>
             <p><strong>Stage:</strong> build</p>
