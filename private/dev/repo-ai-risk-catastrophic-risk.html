@@ -362,8 +362,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot active" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Dispatched Runpod build workflow</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration checks re-run after log pattern fix</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 19:43 +1100</strong>
-            <div class="note">Stage: build</div>
+            <strong>2026-01-03 07:10 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Dispatched Runpod build workflow</strong>
-              <div class="item-meta">Stage: build</div>
+              <strong>Iteration checks re-run after log pattern fix</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 19:43 +1100</div>
+            <div class="item-meta">2026-01-03 07:10 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started for Runpod dispatch</strong>
+              <strong>Iteration checks completed for logs (6) analysis</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 19:44 +1100</div>
+            <div class="item-meta">2026-01-03 07:10 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for Runpod dispatch</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Analyzed logs (6) run</strong>
+              <div class="item-meta">Stage: review</div>
             </div>
-            <div class="item-meta">2026-01-02 19:44 +1100</div>
+            <div class="item-meta">2026-01-03 07:08 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>240</strong>
+            <strong>245</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 19:43 +1100</strong>
+            <strong>2026-01-03 07:10 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,31 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-03T07:10:00+11:00">
+            <h4>Iteration checks re-run after log pattern fix</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Retried run_iteration_checks.ps1 after adjusting the logs (6) reference pattern.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-03T07:10:04+11:00">
+            <h4>Iteration checks completed for logs (6) analysis</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating the logs-6 analysis check.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-03T07:08:40+11:00">
+            <h4>Analyzed logs (6) run</h4>
+            <p><strong>Stage:</strong> review</p>
+            <p><strong>Notes:</strong> Summarized baseline, sweep, and tail-test outcomes from runpod/logs/logs (6).txt.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-03T07:08:45+11:00">
+            <h4>Iteration checks started for logs (6) analysis</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding the logs (6) analysis summary.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-03T07:08:48+11:00">
+            <h4>Iteration checks completed for logs (6) analysis</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating analysis checks.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T19:43:05+11:00">
             <h4>Dispatched Runpod build workflow</h4>
             <p><strong>Stage:</strong> build</p>

@@ -375,8 +375,8 @@
   <div class="app-shell">
     <aside class="server-rail">
       <a class="server-dot active" href="dashboard.html" title="Dashboard">CD</a>
-      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-ai-risk-catastrophic-risk.html" title="ai-risk-catastrophic-risk">AR</a>
+      <a class="server-dot" href="repo-ai-risk-scenario-modelling.html" title="ai-risk-scenario-modelling">AR</a>
       <a class="server-dot" href="repo-synthpop.html" title="synthpop">SY</a>
       <a class="server-dot" href="repo-lma-agent-studio.html" title="lma-agent-studio">LA</a>
       <a class="server-dot" href="repo-beta.html" title="repo-beta">RB</a>
@@ -416,18 +416,18 @@
           </thead>
           <tbody>
             <tr>
+              <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
+              <td data-label="Latest Status"><span class="status-pill running">Running</span></td>
+              <td data-label="Last Update">2026-01-03 07:10 +1100</td>
+              <td data-label="Agent">Codex</td>
+              <td data-label="Summary">Iteration checks re-run after log pattern fix</td>
+            </tr>
+            <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
               <td data-label="Last Update">2026-01-02 20:14 +1100</td>
               <td data-label="Agent">Codex</td>
               <td data-label="Summary">Document iteration 060 results</td>
-            </tr>
-            <tr>
-              <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
-              <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-02 19:43 +1100</td>
-              <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Dispatched Runpod build workflow</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-synthpop.html">synthpop</a></td>
@@ -464,6 +464,1239 @@
       <section class="card">
         <h2>Repo Histories (Append-Only)</h2>
         <div class="history-grid">
+          <div class="repo-block">
+            <div class="repo-header">
+              <h3>ai-risk-catastrophic-risk</h3>
+              <span>Agent: Codex</span>
+            </div>
+            <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+              <article data-status="running" data-time="2026-01-03T07:10:00+11:00">
+                <h4>Iteration checks re-run after log pattern fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Retried run_iteration_checks.ps1 after adjusting the logs (6) reference pattern.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-03T07:10:04+11:00">
+                <h4>Iteration checks completed for logs (6) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating the logs-6 analysis check.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-03T07:08:40+11:00">
+                <h4>Analyzed logs (6) run</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Summarized baseline, sweep, and tail-test outcomes from runpod/logs/logs (6).txt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-03T07:08:45+11:00">
+                <h4>Iteration checks started for logs (6) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding the logs (6) analysis summary.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-03T07:08:48+11:00">
+                <h4>Iteration checks completed for logs (6) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating analysis checks.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T19:43:05+11:00">
+                <h4>Dispatched Runpod build workflow</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Triggered build_and_push.yml on main to launch the Runpod experiment.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T19:44:00+11:00">
+                <h4>Iteration checks started for Runpod dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod build.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T19:44:05+11:00">
+                <h4>Iteration checks completed for Runpod dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the Runpod dispatch update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T16:54:40+11:00">
+                <h4>Saved registry snapshot per run output</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Updated the Runpod remote entrypoint to copy experiment-registry.jsonl into each run output directory.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T16:54:45+11:00">
+                <h4>Iteration checks started for registry snapshot update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating the registry snapshot handling.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T16:54:50+11:00">
+                <h4>Iteration checks completed for registry snapshot update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after registry snapshot changes.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:50:50+11:00">
+                <h4>Expanded theorem report with artifact locations and analysis</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Regenerated markdown, HTML, and LaTeX reports with a fuller hypothesis assessment and artifact location guidance.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T15:50:55+11:00">
+                <h4>Iteration checks started after report expansion</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the expanded theorem report iteration.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:51:00+11:00">
+                <h4>Iteration checks completed for expanded theorem report</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the report and checks were updated.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:37:10+11:00">
+                <h4>Iteration checks completed after ASCII cleanup</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after regenerating the theorem report outputs.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T15:37:05+11:00">
+                <h4>Iteration checks started after report refresh</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 following the theorem report update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:37:00+11:00">
+                <h4>Refreshed theorem report to ASCII-only output</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Regenerated markdown, HTML, and LaTeX outputs after updating the report generator text.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:31:56+11:00">        
+                <h4>Iteration checks completed for theorem report</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after generating the theorem report outputs.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T15:30:56+11:00">
+                <h4>Iteration checks started for theorem report</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the theorem report iteration.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:29:56+11:00">
+                <h4>Generated theorem report from logs (5)</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Built markdown, HTML, and LaTeX reports from logs (5) using the new generator.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:14:26+11:00">
+                <h4>Iteration checks completed for logs (5) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after analyzing logs (5).txt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T15:13:26+11:00">
+                <h4>Iteration checks started for logs (5) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the logs (5) analysis.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T15:12:26+11:00">
+                <h4>Reviewed logs (5) alpha sweep run</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Summarized alpha sweep progress and evidence from runpod/logs/logs (5).txt.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T10:18:39+11:00">
+                <h4>Iteration checks completed for alpha sweep dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the alpha sweep build.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T10:17:39+11:00">
+                <h4>Iteration checks started for alpha sweep dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the alpha sweep dispatch.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T10:16:39+11:00">
+                <h4>Dispatched alpha sweep Runpod build</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Triggered build_and_push.yml to run the transformer alpha sweep.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T10:16:23+11:00">
+                <h4>Iteration checks completed for alpha sweep config</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after adding the transformer alpha sweep config.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T10:15:23+11:00">
+                <h4>Iteration checks started for alpha sweep config</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the alpha sweep config update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T10:14:23+11:00">
+                <h4>Added transformer alpha sweep to Runpod config</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Extended config.json with alpha_sweep_transformer_p61 to run weight-decay sweeps.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T09:29:36+11:00">
+                <h4>Iteration checks completed for logs (3) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after analyzing logs (3).txt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T09:28:36+11:00">
+                <h4>Iteration checks started for logs (3) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the logs (3) analysis.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T09:27:36+11:00">
+                <h4>Reviewed logs (3) grokking run</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Summarized grokking evidence, stop point, and missing sweep steps.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T09:11:37+11:00">
+                <h4>Iteration checks completed for logs (2) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after analyzing logs (2).txt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T09:10:37+11:00">
+                <h4>Iteration checks started for logs (2) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the logs (2) analysis.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T09:09:37+11:00">
+                <h4>Reviewed logs (2) grokking run</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Summarized grokking evidence and gaps from runpod/logs/logs (2).txt.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:56:16+11:00">
+                <h4>Iteration checks completed for Runpod rerun dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the new Runpod build.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T08:55:16+11:00">
+                <h4>Iteration checks started for Runpod rerun dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the rerun dispatch update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:54:16+11:00">
+                <h4>Dispatched Runpod build after restart guard</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Triggered build_and_push.yml to launch a new Runpod pod with the restart guard.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:46:20+11:00">
+                <h4>Iteration checks completed for Runpod restart guard</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after adding restart guard logic to the Runpod entrypoint.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T08:45:20+11:00">
+                <h4>Iteration checks started for Runpod restart guard</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the entrypoint restart guard update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:44:20+11:00">
+                <h4>Hardened Runpod entrypoint against restarts</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added idle guard and sentinel to prevent container restart loops from rerunning experiments.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:29:48+11:00">
+                <h4>Iteration checks completed for Runpod rerun gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating the rerun gate iteration artifacts.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T08:28:48+11:00">
+                <h4>Iteration checks started for Runpod rerun gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the rerun gate update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:27:48+11:00">
+                <h4>Logged Runpod rerun gate updates</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Refreshed iteration scripts, history, and build dispatch log for the rerun check.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:13:45+11:00">
+                <h4>Iteration checks completed for MLP config switch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after switching Runpod to config.json.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T08:13:37+11:00">
+                <h4>Iteration checks started for MLP config switch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the config.json update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T08:13:29+11:00">
+                <h4>Switched Runpod config to include MLP experiments</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Updated launch and retry workflows to run config.json with MLP and transformer runs.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T06:52:24+11:00">
+                <h4>Iteration checks completed for Runpod dispatch verification</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching and monitoring the build/launch.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-02T06:52:16+11:00">
+                <h4>Iteration checks started for Runpod dispatch verification</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the Runpod dispatch iteration.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-02T06:52:08+11:00">
+                <h4>Dispatched manual build and monitored Runpod launch</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Triggered build_and_push.yml and confirmed the launch workflow used remote_entrypoint.sh.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:36:23+11:00">
+                <h4>Iteration checks completed for manual build dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the manual build.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:36:15+11:00">
+                <h4>Iteration checks started for manual build dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the manual build dispatch iteration.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:36:07+11:00">
+                <h4>Dispatched Runpod manual build</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Triggered build_and_push.yml on main and logged the dispatch.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:33:29+11:00">
+                <h4>Iteration checks completed after entrypoint push</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the push for the full experiment entrypoint.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:33:23+11:00">
+                <h4>Iteration checks started after entrypoint push</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before pushing the entrypoint update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:31:58+11:00">
+                <h4>Iteration checks completed for experiment entrypoint switch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after switching pods to the full experiment entrypoint.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:31:50+11:00">
+                <h4>Iteration checks started for experiment entrypoint switch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the full experiment run change.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:31:40+11:00">
+                <h4>Runpod pods now start the full experiment entrypoint</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Updated Runpod launch and retry workflows to call remote_entrypoint.sh.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:26:58+11:00">
+                <h4>Iteration checks completed after status log push</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the status log update push.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:26:52+11:00">
+                <h4>Iteration checks started after status log push</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before pushing the status log update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:26:10+11:00">
+                <h4>Iteration checks completed after commit push</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the post-commit push.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:26:04+11:00">
+                <h4>Iteration checks started after commit push</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before pushing the results-branch update.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:22:41+11:00">
+                <h4>Iteration checks completed for results-branch gating</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating manual build and results branch workflows.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:22:33+11:00">
+                <h4>Iteration checks started for results-branch gating</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the updated Runpod pipeline.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:22:25+11:00">
+                <h4>Updated Runpod workflows for manual build and results branch</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Gated builds to manual dispatch, moved results to the results branch, and added smoke runner fallback.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:05:58+11:00">
+                <h4>Iteration checks completed for restart review</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after reviewing the Runpod restart issue.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T22:05:41+11:00">
+                <h4>Iteration checks started for restart review</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the review iteration.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T22:05:30+11:00">
+                <h4>Logged Runpod restart review metadata</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Updated iteration metadata and check scripts without changing runtime behavior.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T20:48:02+11:00">
+                <h4>Iteration checks completed after push retry</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the second push attempt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T20:47:57+11:00">
+                <h4>Iteration checks started after push retry</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before reattempting push.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T20:47:02+11:00">
+                <h4>Iteration checks completed for build dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the workflow dispatch attempt.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T20:45:44+11:00">
+                <h4>Iteration checks started for build dispatch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after triggering the main build workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T20:45:39+11:00">
+                <h4>Triggered updated build workflow on main</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Dispatched build_and_push.yml and logged the dispatch details for the runpod image.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:55:20+11:00">
+                <h4>Iteration checks completed for entrypoint hardening</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after entrypoint resiliency updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:53:50+11:00">
+                <h4>Hardened Runpod entrypoint against push/report failures</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added non-fatal handling for report generation and git push to avoid container restarts.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:37:20+11:00">
+                <h4>Iteration checks completed for Runpod stop/rerun</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after stopping the pod and dispatching build.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T18:35:50+11:00">
+                <h4>Iteration checks started for Runpod stop/rerun</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after stop and rerun operations.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:35:00+11:00">
+                <h4>Stopped active Runpod pod and re-dispatched build</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Terminated active grokking pod via API and triggered Build and Push on main.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T18:15:40+11:00">
+                <h4>Iteration checks started for active pod check</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after the Runpod status check.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:15:50+11:00">
+                <h4>Iteration checks completed for active pod check</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the Runpod status check.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T18:14:35+11:00">
+                <h4>Checked Runpod active pod list</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Queried Runpod API for active grokking pods after adding API key.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T17:55:10+11:00">
+                <h4>Iteration checks completed for main-branch update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after restricting build workflow to main.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T17:54:05+11:00">
+                <h4>Restricted build workflow to main branch</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Build-and-push now triggers only on main.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T17:54:12+11:00">
+                <h4>Iteration checks started for main-branch update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after main branch workflow updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T14:11:30+11:00">
+                <h4>Iteration checks completed for smoke runner</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after smoke runner changes.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T14:10:20+11:00">
+                <h4>Iteration checks started for smoke runner</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after switching Runpod to the smoke runner.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T14:09:05+11:00">
+                <h4>Added Runpod smoke runner entrypoint</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Launch/retry workflows now start a minimal heartbeat script for restart diagnostics.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T12:25:35+11:00">
+                <h4>Iteration checks completed for Runpod rerun</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after rerunning the Runpod workflow.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T12:24:40+11:00">
+                <h4>Iteration checks started for Runpod rerun</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T12:23:55+11:00">
+                <h4>Dispatched Runpod build workflow rerun</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Triggered Build and Push Docker Image workflow for a fresh Runpod launch.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T10:09:10+11:00">
+                <h4>Iteration checks completed for Runpod rerun request</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the Runpod build.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T10:08:30+11:00">
+                <h4>Iteration checks started for Runpod rerun request</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod build.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T10:07:10+11:00">
+                <h4>Triggered Runpod rebuild workflow dispatch</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Dispatched the Build and Push Docker Image workflow to relaunch Runpod with the runpod tag.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:51:20+11:00">
+                <h4>Iteration checks completed for single-tag policy</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after single-tag workflow updates.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T09:49:45+11:00">
+                <h4>Iteration checks started for single-tag policy</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after single-tag workflow change.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:49:05+11:00">
+                <h4>Switched build to single runpod image tag</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Build-and-push now publishes only grokking-exp:runpod and skips tag cleanup.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:43:25+11:00">
+                <h4>Iteration checks completed for manifest review</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the review-only iteration updates.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T09:42:30+11:00">
+                <h4>Iteration checks started for manifest review</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after review metadata updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:41:15+11:00">
+                <h4>Recorded iteration metadata for Runpod manifest review</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Logged iteration metadata for manifest-unknown workflow review.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:29:55+11:00">
+                <h4>Iteration checks completed for runpod tag change</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after fixing Runpod tag selection.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T09:27:45+11:00">
+                <h4>Iteration checks started for runpod tag change</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after switching Runpod to the runpod tag.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:26:45+11:00">
+                <h4>Switched Runpod launches to fixed runpod image tag</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Runpod launch and retry workflows now always use grokking-exp:runpod.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:19:05+11:00">
+                <h4>Iteration checks completed for logs (1) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the logs (1) analysis updates.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T09:18:10+11:00">
+                <h4>Iteration checks started for logs (1) analysis</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding logs (1) analysis.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T09:17:30+11:00">
+                <h4>Documented Docker Hub tag failure in logs (1)</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added manifest-unknown analysis and mitigations for Runpod pulls.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T08:17:12+11:00">
+                <h4>Iteration checks completed for final v8 setup</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after final v8 changes.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T08:16:12+11:00">
+                <h4>Iteration checks started for final v8 setup</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after final v8 changes.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T08:14:49+11:00">
+                <h4>Runpod workflows pointed to v8 config</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Updated workflow triggers and config path for v8 alpha sweep runs.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T08:13:36+11:00">
+                <h4>Iteration checks completed for v8 runpod implementation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after v8 implementation changes.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T08:12:36+11:00">
+                <h4>Iteration checks started for v8 runpod implementation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v8 implementation changes.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T08:09:57+11:00">
+                <h4>Iteration checks completed for v8 implementation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after v8 alpha sweep updates.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T08:08:57+11:00">
+                <h4>Iteration checks started for v8 implementation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v8 alpha sweep updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T08:09:00+11:00">
+                <h4>Implemented v8 alpha sweep configuration and analysis</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added v8 config and multi-mode tail analysis support for alpha sweeps.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T07:11:07+11:00">
+                <h4>Iteration checks completed for proposal update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating history verification.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T07:10:07+11:00">
+                <h4>Iteration checks started for proposal update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal v8 updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T07:10:01+11:00">
+                <h4>Iteration checks completed for research-proposals v8</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after proposal v8 updates.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T07:09:01+11:00">
+                <h4>Iteration checks started for research-proposals v8</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal v8 updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T07:09:16+11:00">
+                <h4>Drafted research-proposals v8 alpha sweep plan</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added theorem-aligned alpha sweep design and speed plan for experiments.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T07:03:53+11:00">
+                <h4>Iteration checks completed for theorem interpretation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating overnight interpretation.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T07:02:53+11:00">
+                <h4>Iteration checks started for theorem interpretation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after interpretation updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T07:02:49+11:00">
+                <h4>Interpreted overnight results vs theorem aim</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added interpretation section linking results to research-proposals theorem goals.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T06:57:44+11:00">
+                <h4>Iteration checks completed for summary update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating history verification.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T06:56:44+11:00">
+                <h4>Iteration checks started for summary update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating history verification.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T06:56:26+11:00">
+                <h4>Iteration checks completed for overnight summaries</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after regenerating chunk summaries.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T06:55:26+11:00">
+                <h4>Iteration checks started for overnight summaries</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after summary automation updates.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T06:55:35+11:00">
+                <h4>Chunk summaries generated for overnight results</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Automated per-chunk analysis and refreshed overnight-analysis.md.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T06:47:43+11:00">
+                <h4>Iteration checks completed for overnight chunking</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed for chunking automation.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-01T06:46:41+11:00">
+                <h4>Iteration checks started for overnight chunking</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding chunking automation.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-01T06:45:03+11:00">
+                <h4>Overnight results chunking automated</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added a streaming chunker with manifest output for overnight Runpod logs.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T22:40:00-05:00">
+                <h4>Runpod launch iteration prepared</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Prepared iteration bookkeeping for Runpod launch trigger.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T22:39:00-05:00">
+                <h4>Iteration checks started for Runpod launch</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 before launching Runpod.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T22:27:00-05:00">
+                <h4>RUNPOD prefix gate removed</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Restored automatic Runpod launches without RUNPOD prefix.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T22:26:00-05:00">
+                <h4>Iteration checks started for prefix removal</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after removing prefix gate.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T22:12:00-05:00">
+                <h4>RUNPOD trigger commit prepared</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Prepared RUNPOD: trigger commit to start MLP-only run.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T22:11:00-05:00">
+                <h4>Iteration checks started for RUNPOD trigger</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 before triggering Runpod.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T22:10:00-05:00">
+                <h4>RUNPOD trigger iteration staged</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Logged trigger-only iteration updates and hooks.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T21:58:00-05:00">
+                <h4>Iteration checks completed for MLP-only Runpod config</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified MLP-only config path for Runpod runs.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T21:57:00-05:00">
+                <h4>Iteration checks started for MLP-only Runpod config</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after config update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T21:56:00-05:00">
+                <h4>MLP-only Runpod config added</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added MLP-only config and wired CONFIG_PATH for Runpod runs.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T20:02:00-05:00">
+                <h4>Iteration checks completed for MLP-only proposal + runpod tag alias</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified v7 proposal and Runpod tag fallback updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T20:01:00-05:00">
+                <h4>Iteration checks started for MLP-only proposal + runpod tag alias</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v7 update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T20:00:00-05:00">
+                <h4>MLP-only grokking proposal added</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added v7 proposal focusing on reliable MLP grokking for theorem linkage.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T19:54:00-05:00">
+                <h4>Iteration checks completed for Runpod fallback + stop workflow</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified Runpod tag fallback logic, stop workflow, and iteration hooks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T19:53:00-05:00">
+                <h4>Iteration checks started for Runpod fallback + stop workflow</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T19:52:00-05:00">
+                <h4>Runpod tag fallback and stop workflow added</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added Docker Hub tag fallback for launch/retry and manual stop workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T17:19:00-05:00">
+                <h4>Iteration checks completed for Option A plan update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified research-proposals-v5.md transformer plan update.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T17:18:00-05:00">
+                <h4>Iteration checks started for Option A plan update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v5 update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T17:17:00-05:00">
+                <h4>Option A transformer plan added to v5</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Updated v5 proposal to focus on transformer distributional test.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T16:26:00-05:00">
+                <h4>Iteration checks completed for RUNPOD prefix gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified RUNPOD: gating documentation and workflow guards.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T16:25:00-05:00">
+                <h4>Iteration checks started for RUNPOD prefix gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after gating updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T16:24:00-05:00">
+                <h4>RUNPOD prefix gating documented</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Updated Runpod docs/workflow to require RUNPOD: prefix for launches.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T15:52:00-05:00">
+                <h4>Iteration checks completed for Option A proposal</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified research-proposals-v6.md and updated iteration hooks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T15:51:00-05:00">
+                <h4>Iteration checks started for Option A proposal</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal addition.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T15:50:00-05:00">
+                <h4>Option A transformer proposal drafted</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added transformer distributional test plan for theorem validation.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T12:01:00-05:00">
+                <h4>Iteration checks completed for single pod guard</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified new guard to skip launches when any grokking pod is active.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T12:00:00-05:00">
+                <h4>Iteration checks started for single pod guard</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T11:59:00-05:00">
+                <h4>Runpod launches gated by active pod</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Launch and retry workflows now skip when any grokking pod is active.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T11:27:00-05:00">
+                <h4>Iteration checks completed for tail-test report fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified run_experiment tail-test report generation after indentation fix.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T11:26:00-05:00">
+                <h4>Iteration checks started for tail-test report fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after code fix.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T11:25:00-05:00">
+                <h4>Tail-test report indentation corrected</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Fixed run table loop indentation in run_experiment.py.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T11:00:00-05:00">
+                <h4>Iteration checks completed for Runpod launch guards</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified concurrency and active-pod guards plus poll 403 handling.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T10:59:00-05:00">
+                <h4>Iteration checks started for Runpod launch guards</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T10:58:00-05:00">
+                <h4>Runpod launch concurrency and poll handling updated</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Added active pod guard and tolerated 403 poll updates for launch and retry workflows.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T10:45:00-05:00">
+                <h4>Iteration checks completed for Runpod retry fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Ran tests/run_iteration_checks.ps1 after retry workflow update.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T10:44:00-05:00">
+                <h4>Iteration checks started for Runpod retry fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow change.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T10:43:00-05:00">
+                <h4>Runpod retry workflow output parsing fixed</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Switched retry status output to GITHUB_OUTPUT and updated iteration hooks.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:33:00-05:00">        
+                <h4>Iteration checks completed for risk proxy update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified tail-test risk proxy integration after history update.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T09:32:00-05:00">
+                <h4>Iteration checks started for risk proxy update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after final edits.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:26:00-05:00">
+                <h4>Risk proxy added to tail-test outputs</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Tail-test now reports risk proxy stats and uses known grokking dims.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:25:00-05:00">
+                <h4>Iteration checks completed for risk proxy update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified tail-test risk proxy integration.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T09:24:00-05:00">
+                <h4>Iteration checks started for risk proxy update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after experiment update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:12:00-05:00">
+                <h4>Iteration checks completed for results restructuring</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified final commit after push-triggered checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T09:11:00-05:00">
+                <h4>Iteration checks started for results restructuring</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 from pre-push hook.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:09:00-05:00">
+                <h4>Iteration checks completed for results restructuring</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified results folder migration after final edits.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T09:08:00-05:00">
+                <h4>Iteration checks started for results restructuring</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:05:00-05:00">
+                <h4>Results branches retired; main results folder enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Archived results branches locally, gitignored results-legacy, and switched Runpod pushes to /results on main.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T09:04:00-05:00">
+                <h4>Iteration checks completed for results restructuring</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified results folder wiring and workflow triggers.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T09:03:00-05:00">
+                <h4>Iteration checks started for results restructuring</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after results branch cleanup.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T08:40:00-05:00">
+                <h4>Iteration checks completed for proposal v5</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified proposal v5 updates after final changes.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T08:39:00-05:00">
+                <h4>Iteration checks started for proposal v5</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T00:46:00-05:00">
+                <h4>Research proposal v5 drafted</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Focused on reusing grokking evidence to link capability transition to risk.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T00:45:00-05:00">
+                <h4>Iteration checks completed for proposal v5</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified v5 proposal and checklist updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T00:44:00-05:00">
+                <h4>Iteration checks started for proposal v5</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T00:26:00-05:00">
+                <h4>Iteration checks completed for expedited strategy</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified research-proposals-v4.md after final updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T00:25:00-05:00">
+                <h4>Iteration checks started for expedited strategy</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T00:14:00-05:00">
+                <h4>Expedited grokking strategy documented</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added plan to reuse known grokking regimes and focus on theorem tests.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-31T00:13:00-05:00">
+                <h4>Iteration checks completed for expedited strategy</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified research-proposals-v4.md updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-31T00:12:00-05:00">
+                <h4>Iteration checks started for expedited strategy</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after doc update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T23:41:00-05:00">
+                <h4>Iteration checks completed for automation options</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified automation options summary after final updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T23:40:00-05:00">
+                <h4>Iteration checks started for automation options</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T22:05:00-05:00">
+                <h4>Automation options summary added</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Documented fully automated vs PR-gated loop plus stop controls.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T22:04:00-05:00">
+                <h4>Iteration checks completed for automation options</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified new automation-options-v1.md entry.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T22:03:00-05:00">
+                <h4>Iteration checks started for automation options</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after doc update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T21:55:00-05:00">
+                <h4>Iteration checks completed for proposal v4</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified proposal v4 entries after final updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T21:54:00-05:00">
+                <h4>Iteration checks started for proposal v4</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T18:38:00-05:00">
+                <h4>Research proposal v4 drafted</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added visualization requirements and per-attempt Runpod reporting guidance.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T18:37:00-05:00">
+                <h4>Iteration checks completed for proposal v4</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified new proposal file and checklist updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T18:36:00-05:00">
+                <h4>Iteration checks started for proposal v4</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T18:30:00-05:00">
+                <h4>Iteration checks completed for log summary</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified log link and summary entries after final updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T18:29:00-05:00">
+                <h4>Iteration checks started for log summary</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T13:10:00-05:00">
+                <h4>Runpod logs linked with summary</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Log: <a href="https://github.com/eperrier/ai-risk-catastrophic-risk/blob/master/runpod/logs/logs.txt">runpod/logs/logs.txt</a>. Summary: adaptive runs show R2 escalations; grokking achieved in MLP/transformer attempts; tail-test seeds (200–207) report t_val in ~3000–3600 range.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T13:09:00-05:00">
+                <h4>Iteration checks completed for log summary</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified updates for log link and summary entry.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T13:08:00-05:00">
+                <h4>Iteration checks started for log summary</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding log summary.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T12:46:00-05:00">
+                <h4>Iteration checks completed for status polling gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified updates after final workflow edits.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T12:45:00-05:00">
+                <h4>Iteration checks started for status polling gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after latest changes.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T12:52:00-05:00">
+                <h4>Runpod status polling gated when idle</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Added RUNPOD_STATUS_POLL gating and auto-disable when no pods are active.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T12:51:00-05:00">
+                <h4>Iteration checks completed for status polling gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow gating and launch/retry toggles.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T12:50:00-05:00">
+                <h4>Iteration checks started for status polling gate</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after gating status polling.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T12:28:00-05:00">
+                <h4>Iteration checks completed for Runpod status cron</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-verified status workflow wiring after history/log updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T12:27:00-05:00">
+                <h4>Iteration checks started for Runpod status cron</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updates to history and status log.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T12:26:00-05:00">
+                <h4>Runpod status polling workflow added</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Added a 10-minute cron to append active pod status to the updates log and documented it.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-30T12:25:00-05:00">
+                <h4>Iteration checks completed for Runpod status cron</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified status workflow wiring and documentation updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-30T12:24:00-05:00">
+                <h4>Iteration checks started for Runpod status cron</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding the cron-based status update.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:32:00-05:00">
+                <h4>GPU-enabled image configuration applied</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Updated base image and torch build for CUDA support in Runpod.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:31:00-05:00">
+                <h4>Iteration checks completed for GPU enablement</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified CUDA base image and requirements updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T04:30:00-05:00">
+                <h4>Iteration checks started for GPU enablement</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks after switching to CUDA-enabled base image.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:07:00-05:00">
+                <h4>Registry auth parsing fix applied</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Added safe handling for auth list responses and required token checks.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T04:06:00-05:00">
+                <h4>Iteration checks completed for registry auth parsing</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow changes and tests.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T04:05:00-05:00">
+                <h4>Iteration checks started for registry auth parsing fix</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Validating updates to handle registry auth API responses safely.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T03:07:00-05:00">
+                <h4>Registry auth auto-create enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Launch workflow now creates or reuses Docker Hub registry auth automatically.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T03:06:00-05:00">
+                <h4>Iteration checks completed for registry auth automation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified registry auth auto-create and docs update.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T03:05:00-05:00">
+                <h4>Iteration checks started for registry auth automation</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks after adding auto-create for Runpod registry auth.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:52:00-05:00">
+                <h4>Pod pull failure detection enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Launch workflow now polls pod status and flags image pull failures.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:51:00-05:00">
+                <h4>Iteration checks completed for pod pull detection</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow polling logic and docs updates.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:50:00-05:00">
+                <h4>Iteration checks started for pod pull failure detection</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks after adding pod status polling for unauthorized image pulls.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:37:00-05:00">
+                <h4>Launch failure notification enabled</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Runpod launch failures now open a GitHub issue to alert you.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:36:00-05:00">
+                <h4>Iteration checks completed for launch notice</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow permissions and notification step.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:35:00-05:00">
+                <h4>Iteration checks started for launch notification</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Validating notification updates for Runpod launch failures.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:22:00-05:00">
+                <h4>Remote pipeline trigger committed</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Pushed changes to trigger Docker build, Runpod launch, and results PR workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:21:00-05:00">
+                <h4>Iteration checks completed for remote trigger</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified checks before kicking off the automated pipeline.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:20:00-05:00">
+                <h4>Iteration checks started for remote trigger</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running checks before triggering the automated Runpod pipeline.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:07:00-05:00">
+                <h4>GPU fallback automation applied</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Added retry workflow and timeout-driven GPU escalation for Runpod runs.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T02:06:00-05:00">
+                <h4>Iteration checks completed for fallback changes</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified updated workflows, entrypoint status file, and docs.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T02:05:00-05:00">
+                <h4>Iteration checks started for GPU fallback</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running automated checks for Runpod fallback and retry workflow updates.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:33:00-05:00">
+                <h4>Docker Hub cleanup rule applied</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Build workflow now keeps only the two most recent image tags.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:32:00-05:00">
+                <h4>Iteration checks completed for cleanup change</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified workflow updates and retention note checks.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T01:30:00-05:00">
+                <h4>Iteration checks started for Docker Hub cleanup</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Validating workflow updates for Docker Hub tag retention.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:21:00-05:00">
+                <h4>Iteration checks completed</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Verified update logging workflow and dashboard publish action wiring.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T01:20:00-05:00">
+                <h4>Iteration checks started</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running required iteration checks for update logging workflow.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-29T01:10:00-05:00">
+                <h4>Initialized update log + dashboard publisher</h4>
+                <p><strong>Stage:</strong> docs</p>
+                <p><strong>Notes:</strong> Added update log and publish workflow scaffolding for dashboard sync.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-29T00:45:00-05:00">
+                <h4>Adaptive run queued for review</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Monitoring registry updates while results are still processing.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T23:50:00-05:00">
+                <h4>Registry reports refreshed after local run</h4>
+                <p><strong>Stage:</strong> review</p>
+                <p><strong>Notes:</strong> Consolidated results and regenerated summary reports for grokking attempts.</p>
+              </article>
+              <article data-status="error" data-time="2025-12-28T22:20:00-05:00">
+                <h4>Docker build failed on missing dependency</h4>
+                <p><strong>Stage:</strong> build</p>
+                <p><strong>Notes:</strong> Build stopped due to requirements file path mismatch.</p>
+              </article>
+              <article data-status="complete" data-time="2025-12-28T21:10:00-05:00">
+                <h4>Tail-test plots added for pilot run</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Generated CCDF/fit plots for tail-test outputs.</p>
+              </article>
+              <article data-status="running" data-time="2025-12-28T19:40:00-05:00">
+                <h4>Preparing adaptive experiment batch</h4>
+                <p><strong>Stage:</strong> deploy</p>
+                <p><strong>Notes:</strong> Configs staged for a multi-run adaptive suite.</p>
+              </article>
+            </section>
+          </div>
           <div class="repo-block">
             <div class="repo-header">
               <h3>ai-risk-scenario-modelling</h3>
@@ -2105,1214 +3338,6 @@
                 <h4>Simulation service scaffolding underway</h4>
                 <p><strong>Stage:</strong> build</p>
                 <p><strong>Notes:</strong> Initial container scaffolding for the API stack.</p>
-              </article>
-            </section>
-          </div>
-          <div class="repo-block">
-            <div class="repo-header">
-              <h3>ai-risk-catastrophic-risk</h3>
-              <span>Agent: Codex</span>
-            </div>
-            <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
-              <article data-status="complete" data-time="2026-01-02T19:43:05+11:00">
-                <h4>Dispatched Runpod build workflow</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Triggered build_and_push.yml on main to launch the Runpod experiment.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T19:44:00+11:00">
-                <h4>Iteration checks started for Runpod dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod build.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T19:44:05+11:00">
-                <h4>Iteration checks completed for Runpod dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the Runpod dispatch update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T16:54:40+11:00">
-                <h4>Saved registry snapshot per run output</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Updated the Runpod remote entrypoint to copy experiment-registry.jsonl into each run output directory.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T16:54:45+11:00">
-                <h4>Iteration checks started for registry snapshot update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating the registry snapshot handling.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T16:54:50+11:00">
-                <h4>Iteration checks completed for registry snapshot update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after registry snapshot changes.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:50:50+11:00">
-                <h4>Expanded theorem report with artifact locations and analysis</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Regenerated markdown, HTML, and LaTeX reports with a fuller hypothesis assessment and artifact location guidance.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T15:50:55+11:00">
-                <h4>Iteration checks started after report expansion</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the expanded theorem report iteration.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:51:00+11:00">
-                <h4>Iteration checks completed for expanded theorem report</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the report and checks were updated.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:37:10+11:00">
-                <h4>Iteration checks completed after ASCII cleanup</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after regenerating the theorem report outputs.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T15:37:05+11:00">
-                <h4>Iteration checks started after report refresh</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 following the theorem report update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:37:00+11:00">
-                <h4>Refreshed theorem report to ASCII-only output</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Regenerated markdown, HTML, and LaTeX outputs after updating the report generator text.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:31:56+11:00">        
-                <h4>Iteration checks completed for theorem report</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after generating the theorem report outputs.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T15:30:56+11:00">
-                <h4>Iteration checks started for theorem report</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the theorem report iteration.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:29:56+11:00">
-                <h4>Generated theorem report from logs (5)</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Built markdown, HTML, and LaTeX reports from logs (5) using the new generator.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:14:26+11:00">
-                <h4>Iteration checks completed for logs (5) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after analyzing logs (5).txt.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T15:13:26+11:00">
-                <h4>Iteration checks started for logs (5) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the logs (5) analysis.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T15:12:26+11:00">
-                <h4>Reviewed logs (5) alpha sweep run</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Summarized alpha sweep progress and evidence from runpod/logs/logs (5).txt.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T10:18:39+11:00">
-                <h4>Iteration checks completed for alpha sweep dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the alpha sweep build.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T10:17:39+11:00">
-                <h4>Iteration checks started for alpha sweep dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the alpha sweep dispatch.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T10:16:39+11:00">
-                <h4>Dispatched alpha sweep Runpod build</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Triggered build_and_push.yml to run the transformer alpha sweep.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T10:16:23+11:00">
-                <h4>Iteration checks completed for alpha sweep config</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after adding the transformer alpha sweep config.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T10:15:23+11:00">
-                <h4>Iteration checks started for alpha sweep config</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the alpha sweep config update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T10:14:23+11:00">
-                <h4>Added transformer alpha sweep to Runpod config</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Extended config.json with alpha_sweep_transformer_p61 to run weight-decay sweeps.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T09:29:36+11:00">
-                <h4>Iteration checks completed for logs (3) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after analyzing logs (3).txt.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T09:28:36+11:00">
-                <h4>Iteration checks started for logs (3) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the logs (3) analysis.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T09:27:36+11:00">
-                <h4>Reviewed logs (3) grokking run</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Summarized grokking evidence, stop point, and missing sweep steps.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T09:11:37+11:00">
-                <h4>Iteration checks completed for logs (2) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after analyzing logs (2).txt.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T09:10:37+11:00">
-                <h4>Iteration checks started for logs (2) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the logs (2) analysis.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T09:09:37+11:00">
-                <h4>Reviewed logs (2) grokking run</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Summarized grokking evidence and gaps from runpod/logs/logs (2).txt.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:56:16+11:00">
-                <h4>Iteration checks completed for Runpod rerun dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the new Runpod build.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T08:55:16+11:00">
-                <h4>Iteration checks started for Runpod rerun dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the rerun dispatch update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:54:16+11:00">
-                <h4>Dispatched Runpod build after restart guard</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Triggered build_and_push.yml to launch a new Runpod pod with the restart guard.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:46:20+11:00">
-                <h4>Iteration checks completed for Runpod restart guard</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after adding restart guard logic to the Runpod entrypoint.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T08:45:20+11:00">
-                <h4>Iteration checks started for Runpod restart guard</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the entrypoint restart guard update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:44:20+11:00">
-                <h4>Hardened Runpod entrypoint against restarts</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added idle guard and sentinel to prevent container restart loops from rerunning experiments.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:29:48+11:00">
-                <h4>Iteration checks completed for Runpod rerun gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating the rerun gate iteration artifacts.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T08:28:48+11:00">
-                <h4>Iteration checks started for Runpod rerun gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the rerun gate update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:27:48+11:00">
-                <h4>Logged Runpod rerun gate updates</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Refreshed iteration scripts, history, and build dispatch log for the rerun check.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:13:45+11:00">
-                <h4>Iteration checks completed for MLP config switch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after switching Runpod to config.json.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T08:13:37+11:00">
-                <h4>Iteration checks started for MLP config switch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the config.json update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T08:13:29+11:00">
-                <h4>Switched Runpod config to include MLP experiments</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Updated launch and retry workflows to run config.json with MLP and transformer runs.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T06:52:24+11:00">
-                <h4>Iteration checks completed for Runpod dispatch verification</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching and monitoring the build/launch.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-02T06:52:16+11:00">
-                <h4>Iteration checks started for Runpod dispatch verification</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the Runpod dispatch iteration.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-02T06:52:08+11:00">
-                <h4>Dispatched manual build and monitored Runpod launch</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Triggered build_and_push.yml and confirmed the launch workflow used remote_entrypoint.sh.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:36:23+11:00">
-                <h4>Iteration checks completed for manual build dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the manual build.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:36:15+11:00">
-                <h4>Iteration checks started for manual build dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the manual build dispatch iteration.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:36:07+11:00">
-                <h4>Dispatched Runpod manual build</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Triggered build_and_push.yml on main and logged the dispatch.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:33:29+11:00">
-                <h4>Iteration checks completed after entrypoint push</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the push for the full experiment entrypoint.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:33:23+11:00">
-                <h4>Iteration checks started after entrypoint push</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before pushing the entrypoint update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:31:58+11:00">
-                <h4>Iteration checks completed for experiment entrypoint switch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after switching pods to the full experiment entrypoint.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:31:50+11:00">
-                <h4>Iteration checks started for experiment entrypoint switch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the full experiment run change.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:31:40+11:00">
-                <h4>Runpod pods now start the full experiment entrypoint</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Updated Runpod launch and retry workflows to call remote_entrypoint.sh.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:26:58+11:00">
-                <h4>Iteration checks completed after status log push</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the status log update push.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:26:52+11:00">
-                <h4>Iteration checks started after status log push</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before pushing the status log update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:26:10+11:00">
-                <h4>Iteration checks completed after commit push</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the post-commit push.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:26:04+11:00">
-                <h4>Iteration checks started after commit push</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before pushing the results-branch update.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:22:41+11:00">
-                <h4>Iteration checks completed for results-branch gating</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating manual build and results branch workflows.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:22:33+11:00">
-                <h4>Iteration checks started for results-branch gating</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the updated Runpod pipeline.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:22:25+11:00">
-                <h4>Updated Runpod workflows for manual build and results branch</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Gated builds to manual dispatch, moved results to the results branch, and added smoke runner fallback.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:05:58+11:00">
-                <h4>Iteration checks completed for restart review</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after reviewing the Runpod restart issue.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T22:05:41+11:00">
-                <h4>Iteration checks started for restart review</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 for the review iteration.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T22:05:30+11:00">
-                <h4>Logged Runpod restart review metadata</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Updated iteration metadata and check scripts without changing runtime behavior.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T20:48:02+11:00">
-                <h4>Iteration checks completed after push retry</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed during the second push attempt.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T20:47:57+11:00">
-                <h4>Iteration checks started after push retry</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Auto-running run_iteration_checks.ps1 before reattempting push.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T20:47:02+11:00">
-                <h4>Iteration checks completed for build dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the workflow dispatch attempt.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T20:45:44+11:00">
-                <h4>Iteration checks started for build dispatch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after triggering the main build workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T20:45:39+11:00">
-                <h4>Triggered updated build workflow on main</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Dispatched build_and_push.yml and logged the dispatch details for the runpod image.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T18:55:20+11:00">
-                <h4>Iteration checks completed for entrypoint hardening</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after entrypoint resiliency updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T18:53:50+11:00">
-                <h4>Hardened Runpod entrypoint against push/report failures</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added non-fatal handling for report generation and git push to avoid container restarts.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T18:37:20+11:00">
-                <h4>Iteration checks completed for Runpod stop/rerun</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after stopping the pod and dispatching build.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T18:35:50+11:00">
-                <h4>Iteration checks started for Runpod stop/rerun</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after stop and rerun operations.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T18:35:00+11:00">
-                <h4>Stopped active Runpod pod and re-dispatched build</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Terminated active grokking pod via API and triggered Build and Push on main.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T18:15:40+11:00">
-                <h4>Iteration checks started for active pod check</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after the Runpod status check.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T18:15:50+11:00">
-                <h4>Iteration checks completed for active pod check</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the Runpod status check.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T18:14:35+11:00">
-                <h4>Checked Runpod active pod list</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Queried Runpod API for active grokking pods after adding API key.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T17:55:10+11:00">
-                <h4>Iteration checks completed for main-branch update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after restricting build workflow to main.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T17:54:05+11:00">
-                <h4>Restricted build workflow to main branch</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Build-and-push now triggers only on main.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T17:54:12+11:00">
-                <h4>Iteration checks started for main-branch update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after main branch workflow updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T14:11:30+11:00">
-                <h4>Iteration checks completed for smoke runner</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after smoke runner changes.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T14:10:20+11:00">
-                <h4>Iteration checks started for smoke runner</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after switching Runpod to the smoke runner.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T14:09:05+11:00">
-                <h4>Added Runpod smoke runner entrypoint</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Launch/retry workflows now start a minimal heartbeat script for restart diagnostics.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T12:25:35+11:00">
-                <h4>Iteration checks completed for Runpod rerun</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after rerunning the Runpod workflow.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T12:24:40+11:00">
-                <h4>Iteration checks started for Runpod rerun</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T12:23:55+11:00">
-                <h4>Dispatched Runpod build workflow rerun</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Triggered Build and Push Docker Image workflow for a fresh Runpod launch.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T10:09:10+11:00">
-                <h4>Iteration checks completed for Runpod rerun request</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after dispatching the Runpod build.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T10:08:30+11:00">
-                <h4>Iteration checks started for Runpod rerun request</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod build.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T10:07:10+11:00">
-                <h4>Triggered Runpod rebuild workflow dispatch</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Dispatched the Build and Push Docker Image workflow to relaunch Runpod with the runpod tag.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:51:20+11:00">
-                <h4>Iteration checks completed for single-tag policy</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after single-tag workflow updates.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T09:49:45+11:00">
-                <h4>Iteration checks started for single-tag policy</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after single-tag workflow change.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:49:05+11:00">
-                <h4>Switched build to single runpod image tag</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Build-and-push now publishes only grokking-exp:runpod and skips tag cleanup.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:43:25+11:00">
-                <h4>Iteration checks completed for manifest review</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the review-only iteration updates.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T09:42:30+11:00">
-                <h4>Iteration checks started for manifest review</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after review metadata updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:41:15+11:00">
-                <h4>Recorded iteration metadata for Runpod manifest review</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Logged iteration metadata for manifest-unknown workflow review.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:29:55+11:00">
-                <h4>Iteration checks completed for runpod tag change</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after fixing Runpod tag selection.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T09:27:45+11:00">
-                <h4>Iteration checks started for runpod tag change</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after switching Runpod to the runpod tag.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:26:45+11:00">
-                <h4>Switched Runpod launches to fixed runpod image tag</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Runpod launch and retry workflows now always use grokking-exp:runpod.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:19:05+11:00">
-                <h4>Iteration checks completed for logs (1) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the logs (1) analysis updates.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T09:18:10+11:00">
-                <h4>Iteration checks started for logs (1) analysis</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding logs (1) analysis.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T09:17:30+11:00">
-                <h4>Documented Docker Hub tag failure in logs (1)</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added manifest-unknown analysis and mitigations for Runpod pulls.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T08:17:12+11:00">
-                <h4>Iteration checks completed for final v8 setup</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after final v8 changes.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T08:16:12+11:00">
-                <h4>Iteration checks started for final v8 setup</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after final v8 changes.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T08:14:49+11:00">
-                <h4>Runpod workflows pointed to v8 config</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Updated workflow triggers and config path for v8 alpha sweep runs.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T08:13:36+11:00">
-                <h4>Iteration checks completed for v8 runpod implementation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after v8 implementation changes.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T08:12:36+11:00">
-                <h4>Iteration checks started for v8 runpod implementation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v8 implementation changes.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T08:09:57+11:00">
-                <h4>Iteration checks completed for v8 implementation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after v8 alpha sweep updates.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T08:08:57+11:00">
-                <h4>Iteration checks started for v8 implementation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v8 alpha sweep updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T08:09:00+11:00">
-                <h4>Implemented v8 alpha sweep configuration and analysis</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added v8 config and multi-mode tail analysis support for alpha sweeps.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T07:11:07+11:00">
-                <h4>Iteration checks completed for proposal update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating history verification.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T07:10:07+11:00">
-                <h4>Iteration checks started for proposal update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal v8 updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T07:10:01+11:00">
-                <h4>Iteration checks completed for research-proposals v8</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after proposal v8 updates.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T07:09:01+11:00">
-                <h4>Iteration checks started for research-proposals v8</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal v8 updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T07:09:16+11:00">
-                <h4>Drafted research-proposals v8 alpha sweep plan</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added theorem-aligned alpha sweep design and speed plan for experiments.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T07:03:53+11:00">
-                <h4>Iteration checks completed for theorem interpretation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating overnight interpretation.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T07:02:53+11:00">
-                <h4>Iteration checks started for theorem interpretation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after interpretation updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T07:02:49+11:00">
-                <h4>Interpreted overnight results vs theorem aim</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added interpretation section linking results to research-proposals theorem goals.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T06:57:44+11:00">
-                <h4>Iteration checks completed for summary update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after updating history verification.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T06:56:44+11:00">
-                <h4>Iteration checks started for summary update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating history verification.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T06:56:26+11:00">
-                <h4>Iteration checks completed for overnight summaries</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after regenerating chunk summaries.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T06:55:26+11:00">
-                <h4>Iteration checks started for overnight summaries</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after summary automation updates.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T06:55:35+11:00">
-                <h4>Chunk summaries generated for overnight results</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Automated per-chunk analysis and refreshed overnight-analysis.md.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T06:47:43+11:00">
-                <h4>Iteration checks completed for overnight chunking</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed for chunking automation.</p>
-              </article>
-              <article data-status="running" data-time="2026-01-01T06:46:41+11:00">
-                <h4>Iteration checks started for overnight chunking</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding chunking automation.</p>
-              </article>
-              <article data-status="complete" data-time="2026-01-01T06:45:03+11:00">
-                <h4>Overnight results chunking automated</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added a streaming chunker with manifest output for overnight Runpod logs.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T22:40:00-05:00">
-                <h4>Runpod launch iteration prepared</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Prepared iteration bookkeeping for Runpod launch trigger.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T22:39:00-05:00">
-                <h4>Iteration checks started for Runpod launch</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 before launching Runpod.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T22:27:00-05:00">
-                <h4>RUNPOD prefix gate removed</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Restored automatic Runpod launches without RUNPOD prefix.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T22:26:00-05:00">
-                <h4>Iteration checks started for prefix removal</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after removing prefix gate.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T22:12:00-05:00">
-                <h4>RUNPOD trigger commit prepared</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Prepared RUNPOD: trigger commit to start MLP-only run.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T22:11:00-05:00">
-                <h4>Iteration checks started for RUNPOD trigger</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 before triggering Runpod.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T22:10:00-05:00">
-                <h4>RUNPOD trigger iteration staged</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Logged trigger-only iteration updates and hooks.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T21:58:00-05:00">
-                <h4>Iteration checks completed for MLP-only Runpod config</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified MLP-only config path for Runpod runs.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T21:57:00-05:00">
-                <h4>Iteration checks started for MLP-only Runpod config</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after config update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T21:56:00-05:00">
-                <h4>MLP-only Runpod config added</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added MLP-only config and wired CONFIG_PATH for Runpod runs.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T20:02:00-05:00">
-                <h4>Iteration checks completed for MLP-only proposal + runpod tag alias</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified v7 proposal and Runpod tag fallback updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T20:01:00-05:00">
-                <h4>Iteration checks started for MLP-only proposal + runpod tag alias</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v7 update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T20:00:00-05:00">
-                <h4>MLP-only grokking proposal added</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added v7 proposal focusing on reliable MLP grokking for theorem linkage.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T19:54:00-05:00">
-                <h4>Iteration checks completed for Runpod fallback + stop workflow</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified Runpod tag fallback logic, stop workflow, and iteration hooks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T19:53:00-05:00">
-                <h4>Iteration checks started for Runpod fallback + stop workflow</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T19:52:00-05:00">
-                <h4>Runpod tag fallback and stop workflow added</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added Docker Hub tag fallback for launch/retry and manual stop workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T17:19:00-05:00">
-                <h4>Iteration checks completed for Option A plan update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified research-proposals-v5.md transformer plan update.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T17:18:00-05:00">
-                <h4>Iteration checks started for Option A plan update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after v5 update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T17:17:00-05:00">
-                <h4>Option A transformer plan added to v5</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Updated v5 proposal to focus on transformer distributional test.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T16:26:00-05:00">
-                <h4>Iteration checks completed for RUNPOD prefix gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified RUNPOD: gating documentation and workflow guards.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T16:25:00-05:00">
-                <h4>Iteration checks started for RUNPOD prefix gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after gating updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T16:24:00-05:00">
-                <h4>RUNPOD prefix gating documented</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Updated Runpod docs/workflow to require RUNPOD: prefix for launches.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T15:52:00-05:00">
-                <h4>Iteration checks completed for Option A proposal</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified research-proposals-v6.md and updated iteration hooks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T15:51:00-05:00">
-                <h4>Iteration checks started for Option A proposal</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal addition.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T15:50:00-05:00">
-                <h4>Option A transformer proposal drafted</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added transformer distributional test plan for theorem validation.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T12:01:00-05:00">
-                <h4>Iteration checks completed for single pod guard</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified new guard to skip launches when any grokking pod is active.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T12:00:00-05:00">
-                <h4>Iteration checks started for single pod guard</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T11:59:00-05:00">
-                <h4>Runpod launches gated by active pod</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Launch and retry workflows now skip when any grokking pod is active.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T11:27:00-05:00">
-                <h4>Iteration checks completed for tail-test report fix</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified run_experiment tail-test report generation after indentation fix.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T11:26:00-05:00">
-                <h4>Iteration checks started for tail-test report fix</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after code fix.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T11:25:00-05:00">
-                <h4>Tail-test report indentation corrected</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Fixed run table loop indentation in run_experiment.py.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T11:00:00-05:00">
-                <h4>Iteration checks completed for Runpod launch guards</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified concurrency and active-pod guards plus poll 403 handling.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T10:59:00-05:00">
-                <h4>Iteration checks started for Runpod launch guards</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T10:58:00-05:00">
-                <h4>Runpod launch concurrency and poll handling updated</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Added active pod guard and tolerated 403 poll updates for launch and retry workflows.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T10:45:00-05:00">
-                <h4>Iteration checks completed for Runpod retry fix</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Ran tests/run_iteration_checks.ps1 after retry workflow update.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T10:44:00-05:00">
-                <h4>Iteration checks started for Runpod retry fix</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after workflow change.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T10:43:00-05:00">
-                <h4>Runpod retry workflow output parsing fixed</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Switched retry status output to GITHUB_OUTPUT and updated iteration hooks.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:33:00-05:00">        
-                <h4>Iteration checks completed for risk proxy update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified tail-test risk proxy integration after history update.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T09:32:00-05:00">
-                <h4>Iteration checks started for risk proxy update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after final edits.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:26:00-05:00">
-                <h4>Risk proxy added to tail-test outputs</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Tail-test now reports risk proxy stats and uses known grokking dims.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:25:00-05:00">
-                <h4>Iteration checks completed for risk proxy update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified tail-test risk proxy integration.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T09:24:00-05:00">
-                <h4>Iteration checks started for risk proxy update</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after experiment update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:12:00-05:00">
-                <h4>Iteration checks completed for results restructuring</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified final commit after push-triggered checks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T09:11:00-05:00">
-                <h4>Iteration checks started for results restructuring</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 from pre-push hook.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:09:00-05:00">
-                <h4>Iteration checks completed for results restructuring</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified results folder migration after final edits.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T09:08:00-05:00">
-                <h4>Iteration checks started for results restructuring</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:05:00-05:00">
-                <h4>Results branches retired; main results folder enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Archived results branches locally, gitignored results-legacy, and switched Runpod pushes to /results on main.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T09:04:00-05:00">
-                <h4>Iteration checks completed for results restructuring</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified results folder wiring and workflow triggers.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T09:03:00-05:00">
-                <h4>Iteration checks started for results restructuring</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after results branch cleanup.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T08:40:00-05:00">
-                <h4>Iteration checks completed for proposal v5</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified proposal v5 updates after final changes.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T08:39:00-05:00">
-                <h4>Iteration checks started for proposal v5</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T00:46:00-05:00">
-                <h4>Research proposal v5 drafted</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Focused on reusing grokking evidence to link capability transition to risk.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T00:45:00-05:00">
-                <h4>Iteration checks completed for proposal v5</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified v5 proposal and checklist updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T00:44:00-05:00">
-                <h4>Iteration checks started for proposal v5</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T00:26:00-05:00">
-                <h4>Iteration checks completed for expedited strategy</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified research-proposals-v4.md after final updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T00:25:00-05:00">
-                <h4>Iteration checks started for expedited strategy</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T00:14:00-05:00">
-                <h4>Expedited grokking strategy documented</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added plan to reuse known grokking regimes and focus on theorem tests.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-31T00:13:00-05:00">
-                <h4>Iteration checks completed for expedited strategy</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified research-proposals-v4.md updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-31T00:12:00-05:00">
-                <h4>Iteration checks started for expedited strategy</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after doc update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T23:41:00-05:00">
-                <h4>Iteration checks completed for automation options</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified automation options summary after final updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T23:40:00-05:00">
-                <h4>Iteration checks started for automation options</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T22:05:00-05:00">
-                <h4>Automation options summary added</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Documented fully automated vs PR-gated loop plus stop controls.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T22:04:00-05:00">
-                <h4>Iteration checks completed for automation options</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified new automation-options-v1.md entry.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T22:03:00-05:00">
-                <h4>Iteration checks started for automation options</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after doc update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T21:55:00-05:00">
-                <h4>Iteration checks completed for proposal v4</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified proposal v4 entries after final updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T21:54:00-05:00">
-                <h4>Iteration checks started for proposal v4</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T18:38:00-05:00">
-                <h4>Research proposal v4 drafted</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added visualization requirements and per-attempt Runpod reporting guidance.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T18:37:00-05:00">
-                <h4>Iteration checks completed for proposal v4</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified new proposal file and checklist updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T18:36:00-05:00">
-                <h4>Iteration checks started for proposal v4</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after proposal update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T18:30:00-05:00">
-                <h4>Iteration checks completed for log summary</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified log link and summary entries after final updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T18:29:00-05:00">
-                <h4>Iteration checks started for log summary</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after history update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T13:10:00-05:00">
-                <h4>Runpod logs linked with summary</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Log: <a href="https://github.com/eperrier/ai-risk-catastrophic-risk/blob/master/runpod/logs/logs.txt">runpod/logs/logs.txt</a>. Summary: adaptive runs show R2 escalations; grokking achieved in MLP/transformer attempts; tail-test seeds (200–207) report t_val in ~3000–3600 range.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T13:09:00-05:00">
-                <h4>Iteration checks completed for log summary</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified updates for log link and summary entry.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T13:08:00-05:00">
-                <h4>Iteration checks started for log summary</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding log summary.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T12:46:00-05:00">
-                <h4>Iteration checks completed for status polling gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified updates after final workflow edits.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T12:45:00-05:00">
-                <h4>Iteration checks started for status polling gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after latest changes.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T12:52:00-05:00">
-                <h4>Runpod status polling gated when idle</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Added RUNPOD_STATUS_POLL gating and auto-disable when no pods are active.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T12:51:00-05:00">
-                <h4>Iteration checks completed for status polling gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow gating and launch/retry toggles.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T12:50:00-05:00">
-                <h4>Iteration checks started for status polling gate</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after gating status polling.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T12:28:00-05:00">
-                <h4>Iteration checks completed for Runpod status cron</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Re-verified status workflow wiring after history/log updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T12:27:00-05:00">
-                <h4>Iteration checks started for Runpod status cron</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updates to history and status log.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T12:26:00-05:00">
-                <h4>Runpod status polling workflow added</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Added a 10-minute cron to append active pod status to the updates log and documented it.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-30T12:25:00-05:00">
-                <h4>Iteration checks completed for Runpod status cron</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified status workflow wiring and documentation updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-30T12:24:00-05:00">
-                <h4>Iteration checks started for Runpod status cron</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after adding the cron-based status update.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:32:00-05:00">
-                <h4>GPU-enabled image configuration applied</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Updated base image and torch build for CUDA support in Runpod.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:31:00-05:00">
-                <h4>Iteration checks completed for GPU enablement</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified CUDA base image and requirements updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T04:30:00-05:00">
-                <h4>Iteration checks started for GPU enablement</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks after switching to CUDA-enabled base image.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:07:00-05:00">
-                <h4>Registry auth parsing fix applied</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Added safe handling for auth list responses and required token checks.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T04:06:00-05:00">
-                <h4>Iteration checks completed for registry auth parsing</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow changes and tests.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T04:05:00-05:00">
-                <h4>Iteration checks started for registry auth parsing fix</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Validating updates to handle registry auth API responses safely.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T03:07:00-05:00">
-                <h4>Registry auth auto-create enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Launch workflow now creates or reuses Docker Hub registry auth automatically.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T03:06:00-05:00">
-                <h4>Iteration checks completed for registry auth automation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified registry auth auto-create and docs update.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T03:05:00-05:00">
-                <h4>Iteration checks started for registry auth automation</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks after adding auto-create for Runpod registry auth.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:52:00-05:00">
-                <h4>Pod pull failure detection enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Launch workflow now polls pod status and flags image pull failures.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:51:00-05:00">
-                <h4>Iteration checks completed for pod pull detection</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow polling logic and docs updates.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:50:00-05:00">
-                <h4>Iteration checks started for pod pull failure detection</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks after adding pod status polling for unauthorized image pulls.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:37:00-05:00">
-                <h4>Launch failure notification enabled</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Runpod launch failures now open a GitHub issue to alert you.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:36:00-05:00">
-                <h4>Iteration checks completed for launch notice</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow permissions and notification step.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:35:00-05:00">
-                <h4>Iteration checks started for launch notification</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Validating notification updates for Runpod launch failures.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:22:00-05:00">
-                <h4>Remote pipeline trigger committed</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Pushed changes to trigger Docker build, Runpod launch, and results PR workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:21:00-05:00">
-                <h4>Iteration checks completed for remote trigger</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified checks before kicking off the automated pipeline.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:20:00-05:00">
-                <h4>Iteration checks started for remote trigger</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running checks before triggering the automated Runpod pipeline.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:07:00-05:00">
-                <h4>GPU fallback automation applied</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Added retry workflow and timeout-driven GPU escalation for Runpod runs.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T02:06:00-05:00">
-                <h4>Iteration checks completed for fallback changes</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified updated workflows, entrypoint status file, and docs.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T02:05:00-05:00">
-                <h4>Iteration checks started for GPU fallback</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running automated checks for Runpod fallback and retry workflow updates.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:33:00-05:00">
-                <h4>Docker Hub cleanup rule applied</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Build workflow now keeps only the two most recent image tags.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:32:00-05:00">
-                <h4>Iteration checks completed for cleanup change</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified workflow updates and retention note checks.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T01:30:00-05:00">
-                <h4>Iteration checks started for Docker Hub cleanup</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Validating workflow updates for Docker Hub tag retention.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:21:00-05:00">
-                <h4>Iteration checks completed</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Verified update logging workflow and dashboard publish action wiring.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T01:20:00-05:00">
-                <h4>Iteration checks started</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Running required iteration checks for update logging workflow.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-29T01:10:00-05:00">
-                <h4>Initialized update log + dashboard publisher</h4>
-                <p><strong>Stage:</strong> docs</p>
-                <p><strong>Notes:</strong> Added update log and publish workflow scaffolding for dashboard sync.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-29T00:45:00-05:00">
-                <h4>Adaptive run queued for review</h4>
-                <p><strong>Stage:</strong> test</p>
-                <p><strong>Notes:</strong> Monitoring registry updates while results are still processing.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T23:50:00-05:00">
-                <h4>Registry reports refreshed after local run</h4>
-                <p><strong>Stage:</strong> review</p>
-                <p><strong>Notes:</strong> Consolidated results and regenerated summary reports for grokking attempts.</p>
-              </article>
-              <article data-status="error" data-time="2025-12-28T22:20:00-05:00">
-                <h4>Docker build failed on missing dependency</h4>
-                <p><strong>Stage:</strong> build</p>
-                <p><strong>Notes:</strong> Build stopped due to requirements file path mismatch.</p>
-              </article>
-              <article data-status="complete" data-time="2025-12-28T21:10:00-05:00">
-                <h4>Tail-test plots added for pilot run</h4>
-                <p><strong>Stage:</strong> edit</p>
-                <p><strong>Notes:</strong> Generated CCDF/fit plots for tail-test outputs.</p>
-              </article>
-              <article data-status="running" data-time="2025-12-28T19:40:00-05:00">
-                <h4>Preparing adaptive experiment batch</h4>
-                <p><strong>Stage:</strong> deploy</p>
-                <p><strong>Notes:</strong> Configs staged for a multi-run adaptive suite.</p>
               </article>
             </section>
           </div>
