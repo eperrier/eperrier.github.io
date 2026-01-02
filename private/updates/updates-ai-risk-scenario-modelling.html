@@ -1,5 +1,10 @@
 <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
-  <article data-status="complete" data-time="2026-01-02T07:43:56+11:00">
+  <article data-status="complete" data-time="2026-01-02T20:05:29+11:00">
+    <h4>Added Tesla vehicle workflow example + experiment run</h4>
+    <p><strong>Stage:</strong> edit</p>
+    <p><strong>Notes:</strong> Added `workflow-examples/tesla_vehicle/tesla_vehicle_workflow.py` and README documenting the 7-node Tesla vehicle workflow toy model and failure modes. Created experiment `exp_20260102_tesla_vehicle_workflow` with plan/notes/results plus a run script, then executed `powershell -NoProfile -ExecutionPolicy Bypass -File experiments/exp_20260102_tesla_vehicle_workflow/run.ps1` (log: experiments/exp_20260102_tesla_vehicle_workflow/logs/exp_exp_20260102_tesla_vehicle_workflow_20260102_200416.log). Updated `tests/run_iteration_checks.ps1` to validate the workflow example and added `tests/iteration_060_check.ps1` with experiment registry updates.</p>
+  </article>
+  <article data-status="complete" data-time="2026-01-02T07:43:56+11:00">        
     <h4>Document iteration 059 results</h4>
     <p><strong>Stage:</strong> docs</p>
     <p><strong>Notes:</strong> Updated `history.md` with iteration 059 contracts and verification log. Recorded the iteration check log path in `experiments/exp_20260101_live_openai_calls/results.md`. Prepared final iteration notes after the successful test run.</p>
