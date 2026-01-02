@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill running">Running</span>
-            <div class="note">Iteration checks re-run after log pattern fix</div>
+            <span class="status-pill complete">Complete</span>
+            <div class="note">Added tail-test artifacts for theorem calculations</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-03 07:10 +1100</strong>
-            <div class="note">Stage: test</div>
+            <strong>2026-01-03 07:21 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks re-run after log pattern fix</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Added tail-test artifacts for theorem calculations</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2026-01-03 07:10 +1100</div>
+            <div class="item-meta">2026-01-03 07:21 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for logs (6) analysis</strong>
+              <strong>Iteration checks started for tail-test artifacts</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-03 07:10 +1100</div>
+            <div class="item-meta">2026-01-03 07:21 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Analyzed logs (6) run</strong>
-              <div class="item-meta">Stage: review</div>
+              <strong>Iteration checks completed for tail-test artifacts</strong>
+              <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-03 07:08 +1100</div>
+            <div class="item-meta">2026-01-03 07:21 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>245</strong>
+            <strong>248</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-03 07:10 +1100</strong>
+            <strong>2026-01-03 07:21 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-03T07:21:00+11:00">
+            <h4>Added tail-test artifacts for theorem calculations</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Updated run_experiment.py to emit tail_runs.csv/jsonl and tail_summaries.json plus alpha logging.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-03T07:21:05+11:00">
+            <h4>Iteration checks started for tail-test artifacts</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating tail-test artifacts.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-03T07:21:10+11:00">
+            <h4>Iteration checks completed for tail-test artifacts</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after tail artifact updates.</p>
+          </article>
           <article data-status="running" data-time="2026-01-03T07:10:00+11:00">
             <h4>Iteration checks re-run after log pattern fix</h4>
             <p><strong>Stage:</strong> test</p>
