@@ -395,13 +395,13 @@
         <div class="overview-grid">
           <div class="mini-card">
             <span class="label">Latest status</span>
-            <span class="status-pill complete">Complete</span>
-            <div class="note">Added Tesla vehicle workflow example + experiment run</div>
+            <span class="status-pill running">Running</span>
+            <div class="note">Iteration 060 verification running</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 20:05 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-02 20:06 +1100</strong>
+            <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,6 +421,13 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
+              <strong>Iteration 060 verification running</strong>
+              <div class="item-meta">Stage: test</div>
+            </div>
+            <div class="item-meta">2026-01-02 20:06 +1100</div>
+          </li>
+          <li class="activity-item">
+            <div>
               <strong>Added Tesla vehicle workflow example + experiment run</strong>
               <div class="item-meta">Stage: edit</div>
             </div>
@@ -432,13 +439,6 @@
               <div class="item-meta">Stage: docs</div>
             </div>
             <div class="item-meta">2026-01-02 07:43 +1100</div>
-          </li>
-          <li class="activity-item">
-            <div>
-              <strong>Iteration 059 verification complete</strong>
-              <div class="item-meta">Stage: test</div>
-            </div>
-            <div class="item-meta">2026-01-02 07:42 +1100</div>
           </li>
         </ul>
       </section>
@@ -865,7 +865,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>293</strong>
+            <strong>294</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -875,7 +875,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 20:05 +1100</strong>
+            <strong>2026-01-02 20:06 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -904,6 +904,11 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-scenario-modelling" data-agent="Codex">
+          <article data-status="running" data-time="2026-01-02T20:06:33+11:00">
+            <h4>Iteration 060 verification running</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Starting tests/run_iteration_checks.ps1 for the Tesla vehicle workflow example, experiment registry updates, and live OpenAI coverage. Output will be captured under tests/logs/check_*.log.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T20:05:29+11:00">
             <h4>Added Tesla vehicle workflow example + experiment run</h4>
             <p><strong>Stage:</strong> edit</p>
