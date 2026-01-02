@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Expanded theorem report with artifact locations and analysis</div>
+            <div class="note">Saved registry snapshot per run output</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 15:50 +1100</strong>
-            <div class="note">Stage: docs</div>
+            <strong>2026-01-02 16:54 +1100</strong>
+            <div class="note">Stage: edit</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Expanded theorem report with artifact locations and analysis</strong>
-              <div class="item-meta">Stage: docs</div>
+              <strong>Saved registry snapshot per run output</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2026-01-02 15:50 +1100</div>
+            <div class="item-meta">2026-01-02 16:54 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started after report expansion</strong>
+              <strong>Iteration checks started for registry snapshot update</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 15:50 +1100</div>
+            <div class="item-meta">2026-01-02 16:54 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for expanded theorem report</strong>
+              <strong>Iteration checks completed for registry snapshot update</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 15:51 +1100</div>
+            <div class="item-meta">2026-01-02 16:54 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>234</strong>
+            <strong>237</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 15:50 +1100</strong>
+            <strong>2026-01-02 16:54 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-02T16:54:40+11:00">
+            <h4>Saved registry snapshot per run output</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Updated the Runpod remote entrypoint to copy experiment-registry.jsonl into each run output directory.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T16:54:45+11:00">
+            <h4>Iteration checks started for registry snapshot update</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating the registry snapshot handling.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T16:54:50+11:00">
+            <h4>Iteration checks completed for registry snapshot update</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after registry snapshot changes.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T15:50:50+11:00">
             <h4>Expanded theorem report with artifact locations and analysis</h4>
             <p><strong>Stage:</strong> docs</p>
