@@ -396,12 +396,12 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Saved registry snapshot per run output</div>
+            <div class="note">Dispatched Runpod build workflow</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-02 16:54 +1100</strong>
-            <div class="note">Stage: edit</div>
+            <strong>2026-01-02 19:43 +1100</strong>
+            <div class="note">Stage: build</div>
           </div>
           <div class="mini-card">
             <span class="label">Agent</span>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Saved registry snapshot per run output</strong>
-              <div class="item-meta">Stage: edit</div>
+              <strong>Dispatched Runpod build workflow</strong>
+              <div class="item-meta">Stage: build</div>
             </div>
-            <div class="item-meta">2026-01-02 16:54 +1100</div>
+            <div class="item-meta">2026-01-02 19:43 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks started for registry snapshot update</strong>
+              <strong>Iteration checks started for Runpod dispatch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 16:54 +1100</div>
+            <div class="item-meta">2026-01-02 19:44 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for registry snapshot update</strong>
+              <strong>Iteration checks completed for Runpod dispatch</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-02 16:54 +1100</div>
+            <div class="item-meta">2026-01-02 19:44 +1100</div>
           </li>
         </ul>
       </section>
@@ -466,7 +466,7 @@
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>237</strong>
+            <strong>240</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
@@ -476,7 +476,7 @@
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-02 16:54 +1100</strong>
+            <strong>2026-01-02 19:43 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -505,6 +505,21 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-02T19:43:05+11:00">
+            <h4>Dispatched Runpod build workflow</h4>
+            <p><strong>Stage:</strong> build</p>
+            <p><strong>Notes:</strong> Triggered build_and_push.yml on main to launch the Runpod experiment.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-02T19:44:00+11:00">
+            <h4>Iteration checks started for Runpod dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after dispatching the Runpod build.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-02T19:44:05+11:00">
+            <h4>Iteration checks completed for Runpod dispatch</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed after the Runpod dispatch update.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-02T16:54:40+11:00">
             <h4>Saved registry snapshot per run output</h4>
             <p><strong>Stage:</strong> edit</p>
