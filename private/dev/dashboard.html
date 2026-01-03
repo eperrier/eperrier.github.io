@@ -418,9 +418,9 @@
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-catastrophic-risk.html">ai-risk-catastrophic-risk</a></td>
               <td data-label="Latest Status"><span class="status-pill complete">Complete</span></td>
-              <td data-label="Last Update">2026-01-03 13:35 +1100</td>
+              <td data-label="Last Update">2026-01-03 13:54 +1100</td>
               <td data-label="Agent">Codex</td>
-              <td data-label="Summary">Iteration checks completed for logs (9) analysis update</td>
+              <td data-label="Summary">Iteration checks completed for t_mem/alpha rerun update</td>
             </tr>
             <tr>
               <td data-label="Repo"><a class="repo-link" href="repo-ai-risk-scenario-modelling.html">ai-risk-scenario-modelling</a></td>
@@ -470,6 +470,31 @@
               <span>Agent: Codex</span>
             </div>
             <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+              <article data-status="complete" data-time="2026-01-03T13:54:08+11:00">
+                <h4>Iteration checks completed for t_mem/alpha rerun update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 passed; log saved to tests/logs/check_20260103_135400.log.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-03T13:53:40+11:00">
+                <h4>Iteration checks restarted for t_mem/alpha rerun update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Re-running run_iteration_checks.ps1 after fixing alpha_param checks.</p>
+              </article>
+              <article data-status="error" data-time="2026-01-03T13:53:21+11:00">
+                <h4>Iteration checks failed for t_mem/alpha rerun update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> run_iteration_checks.ps1 failed; log saved to tests/logs/check_20260103_135254.log.</p>
+              </article>
+              <article data-status="running" data-time="2026-01-03T13:52:35+11:00">
+                <h4>Iteration checks started for t_mem/alpha rerun update</h4>
+                <p><strong>Stage:</strong> test</p>
+                <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after updating t_mem detection and alpha mapping.</p>
+              </article>
+              <article data-status="complete" data-time="2026-01-03T13:52:18+11:00">
+                <h4>Updated t_mem detection and alpha mapping for rerun</h4>
+                <p><strong>Stage:</strong> edit</p>
+                <p><strong>Notes:</strong> Removed val_acc gate from t_mem, inverted alpha definition, and logged a new build dispatch.</p>
+              </article>
               <article data-status="complete" data-time="2026-01-03T13:35:48+11:00">
                 <h4>Iteration checks completed for logs (9) analysis update</h4>
                 <p><strong>Stage:</strong> test</p>
