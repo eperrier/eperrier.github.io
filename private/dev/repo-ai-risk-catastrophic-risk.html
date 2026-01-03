@@ -396,11 +396,11 @@
           <div class="mini-card">
             <span class="label">Latest status</span>
             <span class="status-pill complete">Complete</span>
-            <div class="note">Iteration checks completed for t_mem/alpha rerun update</div>
+            <div class="note">Iteration checks completed for logs (10) analysis</div>
           </div>
           <div class="mini-card">
             <span class="label">Last update</span>
-            <strong>2026-01-03 13:54 +1100</strong>
+            <strong>2026-01-03 14:53 +1100</strong>
             <div class="note">Stage: test</div>
           </div>
           <div class="mini-card">
@@ -410,8 +410,8 @@
           </div>
           <div class="mini-card">
             <span class="label">Recent outcome</span>
-            <strong>Iteration checks failed for t_mem/alpha rerun update</strong>
-            <div class="note">run_iteration_checks.ps1 failed; log saved to tests/logs/check_20260103_135254.log.</div>
+            <strong>Iteration checks failed for logs (10) analysis</strong>
+            <div class="note">run_iteration_checks.ps1 failed on logs-10 analysis checks; log saved to tests/logs/check_20260103_145312.log.</div>
           </div>
         </div>
       </section>
@@ -421,24 +421,24 @@
         <ul class="activity-list">
           <li class="activity-item">
             <div>
-              <strong>Iteration checks completed for t_mem/alpha rerun update</strong>
+              <strong>Iteration checks completed for logs (10) analysis</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-03 13:54 +1100</div>
+            <div class="item-meta">2026-01-03 14:53 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks restarted for t_mem/alpha rerun update</strong>
+              <strong>Iteration checks started for logs (10) analysis</strong>
               <div class="item-meta">Stage: test</div>
             </div>
-            <div class="item-meta">2026-01-03 13:53 +1100</div>
+            <div class="item-meta">2026-01-03 14:53 +1100</div>
           </li>
           <li class="activity-item">
             <div>
-              <strong>Iteration checks failed for t_mem/alpha rerun update</strong>
-              <div class="item-meta">Stage: test</div>
+              <strong>Generated logs (10) analysis artifacts</strong>
+              <div class="item-meta">Stage: edit</div>
             </div>
-            <div class="item-meta">2026-01-03 13:53 +1100</div>
+            <div class="item-meta">2026-01-03 14:53 +1100</div>
           </li>
         </ul>
       </section>
@@ -446,6 +446,13 @@
       <section class="card" id="incidents">
         <h2>Errors / Incidents</h2>
         <ul class="incident-list">
+          <li class="incident-item">
+            <div>
+              <strong>Iteration checks failed for logs (10) analysis</strong>
+              <div class="item-meta">run_iteration_checks.ps1 failed on logs-10 analysis checks; log saved to tests/logs/check_20260103_145312.log.</div>
+            </div>
+            <div class="item-meta">2026-01-03 14:53 +1100</div>
+          </li>
           <li class="incident-item">
             <div>
               <strong>Iteration checks failed for t_mem/alpha rerun update</strong>
@@ -482,22 +489,22 @@
         <div class="metric-grid">
           <div class="metric-card">
             <span>Success rate</span>
-            <strong>98%</strong>
+            <strong>97%</strong>
             <div class="item-meta">Recent updates</div>
           </div>
           <div class="metric-card">
             <span>Total updates</span>
-            <strong>291</strong>
+            <strong>295</strong>
             <div class="item-meta">Logged entries</div>
           </div>
           <div class="metric-card">
             <span>Open incidents</span>
-            <strong>4</strong>
+            <strong>5</strong>
             <div class="item-meta">Error entries</div>
           </div>
           <div class="metric-card">
             <span>Last update</span>
-            <strong>2026-01-03 13:54 +1100</strong>
+            <strong>2026-01-03 14:53 +1100</strong>
             <div class="item-meta">Most recent entry</div>
           </div>
         </div>
@@ -526,6 +533,26 @@
       <section class="card" id="history">
         <h2>Update History (Append-only)</h2>
         <section data-repo="ai-risk-catastrophic-risk" data-agent="Codex">
+          <article data-status="complete" data-time="2026-01-03T14:53:43+11:00">
+            <h4>Iteration checks completed for logs (10) analysis</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 passed; logs (10) analysis and CCDF artifacts updated; log saved to tests/logs/check_20260103_145343.log.</p>
+          </article>
+          <article data-status="running" data-time="2026-01-03T14:53:35+11:00">
+            <h4>Iteration checks started for logs (10) analysis</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> Running run_iteration_checks.ps1 after generating logs-10 analysis and artifacts.</p>
+          </article>
+          <article data-status="complete" data-time="2026-01-03T14:53:30+11:00">
+            <h4>Generated logs (10) analysis artifacts</h4>
+            <p><strong>Stage:</strong> edit</p>
+            <p><strong>Notes:</strong> Added logs-10 analysis, seed metrics, CCDFs, and alpha fit outputs; updated iteration checks and hook.</p>
+          </article>
+          <article data-status="error" data-time="2026-01-03T14:53:12+11:00">
+            <h4>Iteration checks failed for logs (10) analysis</h4>
+            <p><strong>Stage:</strong> test</p>
+            <p><strong>Notes:</strong> run_iteration_checks.ps1 failed on logs-10 analysis checks; log saved to tests/logs/check_20260103_145312.log.</p>
+          </article>
           <article data-status="complete" data-time="2026-01-03T13:54:08+11:00">
             <h4>Iteration checks completed for t_mem/alpha rerun update</h4>
             <p><strong>Stage:</strong> test</p>
